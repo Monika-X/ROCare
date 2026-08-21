@@ -1989,3 +1989,98 @@
   color: var(--color-text-muted);
   margin-top: 4px;
 }
+
+/* --------------------------------------------------------------------------
+   8. About Premium Redesign
+   -------------------------------------------------------------------------- */
+.about-premium {
+  background-color: var(--color-background);
+}
+
+.about-premium .hero-section {
+  padding: 140px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-premium .hero-copy {
+  border: 1px solid rgba(20, 154, 154, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .about-premium .hero-copy {
+  background: rgba(23, 35, 38, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Interactive Blueprint tabs */
+.lux-discipline-btn {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 18px 24px;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.lux-discipline-btn:hover {
+  background: var(--color-soft);
+}
+
+.lux-discipline-btn.active {
+  background: var(--color-soft);
+  border-left-color: var(--color-primary);
+}
+
+.lux-discipline-btn h3 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .lux-discipline-btn:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+[data-theme="dark"] .lux-discipline-btn.active {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Interactive Molecular Stage Selector */
+.lux-stage-btn {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 18px 24px;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.lux-stage-btn:hover {
+  background: var(--color-soft);
+}
+
+.lux-stage-btn.active {
+  background: var(--color-soft);
+  border-left-color: var(--color-primary);
+}
+
+.lux-stage-btn h3 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .lux-stage-btn:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+[data-theme="dark"] .lux-stage-btn.active {
+  background: rgba(255, 255, 255, 0.05);
+}

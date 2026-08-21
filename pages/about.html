@@ -6,7 +6,11 @@
     <title>ROCare | About</title>
     <link rel="icon" type="image/png" href="../assets/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/redesign.css">
 </head>
 <body>
     <header class="header">
@@ -38,57 +42,162 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="about-premium">
+        <!-- Elevated Hero Section -->
         <section class="hero-section section-shell">
             <div class="container hero-grid">
-                <div class="hero-copy">
-                    <span class="eyebrow">About ROCare</span>
-                    <h1>Built for trust, clean work, and long-term water care.</h1>
-                    <p>ROCare combines purifier expertise with service discipline, so customers know what is being installed, repaired, replaced, and maintained.</p>
+                <div class="hero-copy premium-glass-card reveal active" style="padding: 40px; border-radius: var(--radius-md);">
+                    <span class="eyebrow"><i class="ri-history-line" style="color: var(--color-secondary);"></i> Our Philosophy</span>
+                    <h1 style="font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 4.5vw, 3.8rem); line-height: 1.15; font-weight: 600;">Crafting Pristine <span class="gradient-text">Hydration.</span></h1>
+                    <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 30px; color: var(--color-text-muted);">ROCare combines purifier expertise with service discipline, ensuring every home and office receives untainted, pure molecular water with zero hassle.</p>
                     <div class="hero-actions">
                         <a class="btn btn-primary" href="contact.html">Contact Team</a>
                         <a class="btn btn-outline" href="services.html">View Services</a>
                     </div>
                 </div>
-                <figure class="hero-media reveal">
-                    <img src="https://images.unsplash.com/photo-1669211659110-3f3db4119b65?auto=format&fit=crop&w=1400&q=80" alt="Countertop water purifier in a modern kitchen" loading="eager">
+                <figure class="hero-media reveal active" style="position: relative;">
+                    <div style="position: absolute; top: -20px; left: -20px; width: 60px; height: 60px; background: radial-gradient(circle, rgba(20,154,154,0.2) 0%, transparent 75%); animation: float 6s infinite alternate; border-radius: 50%;"></div>
+                    <img src="https://images.unsplash.com/photo-1669211659110-3f3db4119b65?auto=format&fit=crop&w=1400&q=80" alt="Countertop water purifier in a modern kitchen" loading="eager" style="border-radius: var(--radius-md); box-shadow: var(--shadow-lg);">
                     <figcaption>ROCare water service experience</figcaption>
                 </figure>
             </div>
         </section>
+
+        <!-- Elevated Overview / Stats -->
         <section class="section-shell">
             <div class="container section-intro">
                 <span class="eyebrow">Overview</span>
-                <h2>Our promise is simple</h2>
+                <h2 style="font-family: 'Playfair Display', serif;">Our promise is simple</h2>
                 <p>Recommend honestly, install neatly, maintain regularly, and leave every customer with water they can trust.</p>
-                <div class="stat-grid">
-                <div class="stat-card"><strong>2023</strong><span>founded</span></div>
-                <div class="stat-card"><strong>100%</strong><span>service-focused</span></div>
-                <div class="stat-card"><strong>6 checks</strong><span>per visit</span></div>
-            </div>
+                <div class="stat-grid" style="margin-top: 50px;">
+                    <div class="stat-card premium-glass-card reveal active"><strong>2023</strong><span>founded</span></div>
+                    <div class="stat-card premium-glass-card reveal active"><strong>100%</strong><span>service-focused</span></div>
+                    <div class="stat-card premium-glass-card reveal active"><strong>6 checks</strong><span>per visit</span></div>
+                </div>
             </div>
         </section>
+
+        <!-- Elevated Highlights -->
         <section class="section-shell section-surface">
             <div class="container">
                 <div class="section-heading">
                     <span class="eyebrow">Highlights</span>
-                    <h2>What this page helps you do</h2>
+                    <h2 style="font-family: 'Playfair Display', serif;">Pillars of Integrity</h2>
                 </div>
                 <div class="card-grid">
-                <article class="content-card reveal"><i class="ri-hand-heart-line"></i><h3>Customer-first advice</h3><p>We explain tradeoffs clearly instead of pushing a one-size product.</p></article>
-                <article class="content-card reveal"><i class="ri-medal-line"></i><h3>Trained technicians</h3><p>Every visit follows a checklist for hygiene, leakage, pressure, and performance.</p></article>
-                <article class="content-card reveal"><i class="ri-file-list-3-line"></i><h3>Clear records</h3><p>Service notes, replaced parts, and recommended next steps stay easy to track.</p></article>
-            </div>
+                    <article class="content-card premium-glass-card reveal active" style="padding: 35px; border-radius: var(--radius-md); transition: transform 0.3s ease, border-color 0.3s ease;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-soft); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <i class="ri-hand-heart-line" style="font-size: 1.6rem; color: var(--color-primary);"></i>
+                        </div>
+                        <h3>Customer-first advice</h3>
+                        <p>We explain tradeoffs clearly instead of pushing a one-size-fits-all product.</p>
+                    </article>
+                    <article class="content-card premium-glass-card reveal active" style="padding: 35px; border-radius: var(--radius-md); transition: transform 0.3s ease, border-color 0.3s ease;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-soft); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <i class="ri-medal-line" style="font-size: 1.6rem; color: var(--color-primary);"></i>
+                        </div>
+                        <h3>Trained technicians</h3>
+                        <p>Every visit follows a strict checklist for hygiene, leakage, pressure, and performance.</p>
+                    </article>
+                    <article class="content-card premium-glass-card reveal active" style="padding: 35px; border-radius: var(--radius-md); transition: transform 0.3s ease, border-color 0.3s ease;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-soft); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <i class="ri-file-list-3-line" style="font-size: 1.6rem; color: var(--color-primary);"></i>
+                        </div>
+                        <h3>Clear records</h3>
+                        <p>Service notes, replaced parts, and recommended next steps stay easy to track on your dashboard.</p>
+                    </article>
+                </div>
             </div>
         </section>
+
+        <!-- Brand Pillars Interactive Diagnostics Tab Widget -->
+        <section class="section-shell">
+            <div class="container" style="max-width: 950px; text-align: center;">
+                <div class="section-heading">
+                    <span class="eyebrow">Molecular Diagnostics</span>
+                    <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 600; margin-bottom: 12px;">Molecular Purity Calibration</h2>
+                    <p>Track how raw source water evolves into custom-mineralized wellness hydration through ROCare stages.</p>
+                </div>
+                
+                <div class="premium-glass-card" style="padding: 40px; margin-top: 35px; text-align: left; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: stretch; border-radius: var(--radius-md);">
+                    <!-- Stage Selector (Left Column) -->
+                    <div style="display: flex; flex-direction: column; gap: 16px; justify-content: center;">
+                        <button class="lux-stage-btn active" data-stage="raw" style="background: none; border: none; text-align: left; padding: 18px 24px; border-radius: var(--radius-sm); border-left: 3px solid var(--color-primary); cursor: pointer; transition: all 0.3s ease; width: 100%;">
+                            <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--color-secondary); font-weight: 800;">Phase 01</span>
+                            <h3 style="font-size: 1.15rem; color: var(--color-primary); margin-top: 2px;">Raw Source Input</h3>
+                            <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px;">Unfiltered ground or tap water with variable particulate loads.</p>
+                        </button>
+                        <button class="lux-stage-btn" data-stage="carbon" style="background: none; border: none; text-align: left; padding: 18px 24px; border-radius: var(--radius-sm); border-left: 3px solid transparent; cursor: pointer; transition: all 0.3s ease; width: 100%;">
+                            <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--color-text-muted); font-weight: 800;">Phase 02</span>
+                            <h3 style="font-size: 1.15rem; color: var(--color-text-main); margin-top: 2px;">Adsorption & Pre-Carbon</h3>
+                            <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px;">Extracts chlorine, organic sediments, and chemical odors.</p>
+                        </button>
+                        <button class="lux-stage-btn" data-stage="ro" style="background: none; border: none; text-align: left; padding: 18px 24px; border-radius: var(--radius-sm); border-left: 3px solid transparent; cursor: pointer; transition: all 0.3s ease; width: 100%;">
+                            <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--color-text-muted); font-weight: 800;">Phase 03</span>
+                            <h3 style="font-size: 1.15rem; color: var(--color-text-main); margin-top: 2px;">RO Molecular Shield</h3>
+                            <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px;">Pushes water through semi-permeable pores to remove 99% TDS.</p>
+                        </button>
+                        <button class="lux-stage-btn" data-stage="remin" style="background: none; border: none; text-align: left; padding: 18px 24px; border-radius: var(--radius-sm); border-left: 3px solid transparent; cursor: pointer; transition: all 0.3s ease; width: 100%;">
+                            <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--color-text-muted); font-weight: 800;">Phase 04</span>
+                            <h3 style="font-size: 1.15rem; color: var(--color-text-main); margin-top: 2px;">Bespoke Mineral Tuning</h3>
+                            <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px;">Injects trace Calcium and Magnesium for alkaline balance.</p>
+                        </button>
+                    </div>
+                    
+                    <!-- Metrics Detail Panel (Right Column) -->
+                    <div id="lux-stage-panel" style="padding: 35px; background: var(--color-soft); border-radius: var(--radius-sm); display: flex; flex-direction: column; justify-content: space-between; border-left: 4px solid var(--color-secondary);">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                                <h4 id="stage-title" style="color: var(--color-primary); font-size: 1.4rem; font-family: 'Playfair Display', serif;">Raw Source Input</h4>
+                                <div style="background: rgba(20, 154, 154, 0.1); padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 800; color: var(--color-primary);" id="stage-purity-tag">35% Purity</div>
+                            </div>
+                            <p id="stage-desc" style="font-size: 0.95rem; line-height: 1.6; color: var(--color-text-muted); margin-bottom: 25px;">Raw tap or borewell water contains heavy mineral ions, suspended sediments, organic pathogens, and chlorine. It has uncontrolled hardness and inconsistent pH levels.</p>
+                            
+                            <!-- Visual Progress Bars -->
+                            <div style="display: flex; flex-direction: column; gap: 18px;">
+                                <div>
+                                    <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; margin-bottom: 6px;">
+                                        <span>Total Dissolved Solids (TDS)</span>
+                                        <span id="bar-tds-val" style="color: var(--color-primary);">280 PPM</span>
+                                    </div>
+                                    <div style="height: 6px; background: rgba(0,0,0,0.1); border-radius: 3px; overflow: hidden;">
+                                        <div id="bar-tds" style="height: 100%; width: 80%; background: #c85f4a; transition: width 0.6s ease, background 0.6s ease;"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; margin-bottom: 6px;">
+                                        <span>pH Index Calibration</span>
+                                        <span id="bar-ph-val" style="color: var(--color-primary);">6.8 pH (Neutral)</span>
+                                    </div>
+                                    <div style="height: 6px; background: rgba(0,0,0,0.1); border-radius: 3px; overflow: hidden;">
+                                        <div id="bar-ph" style="height: 100%; width: 68%; background: #e7b65f; transition: width 0.6s ease, background 0.6s ease;"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; margin-bottom: 6px;">
+                                        <span>Bio-Safety Ratio</span>
+                                        <span id="bar-bio-val" style="color: var(--color-primary);">35% Sterile</span>
+                                    </div>
+                                    <div style="height: 6px; background: rgba(0,0,0,0.1); border-radius: 3px; overflow: hidden;">
+                                        <div id="bar-bio" style="height: 100%; width: 35%; background: #c85f4a; transition: width 0.6s ease, background 0.6s ease;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Elevated Process / Split Section -->
         <section class="section-shell split-section">
             <div class="container split-grid">
-                <div class="split-media reveal">
-                    <img src="https://images.unsplash.com/photo-1617155093730-a8bf47be792d?auto=format&fit=crop&w=1400&q=80" alt="Clear water sample in a laboratory beaker" loading="lazy">
+                <div class="split-media reveal active">
+                    <img src="https://images.unsplash.com/photo-1617155093730-a8bf47be792d?auto=format&fit=crop&w=1400&q=80" alt="Clear water sample in a laboratory beaker" loading="lazy" style="border-radius: var(--radius-md); box-shadow: var(--shadow-lg);">
                 </div>
-                <div class="split-copy">
+                <div class="split-copy premium-glass-card reveal active" style="padding: 40px; border-radius: var(--radius-md);">
                     <span class="eyebrow">Process</span>
-                    <h2>A premium service mindset</h2>
+                    <h2 style="font-family: 'Playfair Display', serif;">A premium service mindset</h2>
                     <p>Our work is quiet, tidy, and specific: the right tool, the right filter, and the right explanation at the right time.</p>
                     <ol class="step-list">
                         <li>Listen to the water issue and usage pattern.</li>
@@ -98,29 +207,42 @@
                 </div>
             </div>
         </section>
+
+        <!-- Elevated Resources -->
         <section class="section-shell section-surface">
             <div class="container">
                 <div class="section-heading">
                     <span class="eyebrow">Resources</span>
-                    <h2>What ROCare stands for</h2>
+                    <h2 style="font-family: 'Playfair Display', serif;">What ROCare stands for</h2>
                 </div>
                 <div class="resource-grid">
-                <article class="content-card reveal"><h3>Purity</h3><p>Better taste, odor control, and contaminant reduction.</p></article>
-                <article class="content-card reveal"><h3>Reliability</h3><p>Predictable visits and practical service windows.</p></article>
-                <article class="content-card reveal"><h3>Clarity</h3><p>Transparent estimates and no surprise replacements.</p></article>
-            </div>
+                    <article class="content-card premium-glass-card reveal active" style="padding: 30px;">
+                        <h3>Purity</h3>
+                        <p>Better taste, odor control, and contaminant reduction.</p>
+                    </article>
+                    <article class="content-card premium-glass-card reveal active" style="padding: 30px;">
+                        <h3>Reliability</h3>
+                        <p>Predictable visits and practical service windows.</p>
+                    </article>
+                    <article class="content-card premium-glass-card reveal active" style="padding: 30px;">
+                        <h3>Clarity</h3>
+                        <p>Transparent estimates and no surprise replacements.</p>
+                    </article>
+                </div>
             </div>
         </section>
+
+        <!-- Elevated Final CTA -->
         <section class="section-shell final-cta">
             <div class="container cta-grid">
-                <div>
+                <div class="premium-glass-card reveal active" style="padding: 40px; border-radius: var(--radius-md);">
                     <span class="eyebrow">Next step</span>
-                    <h2>Meet ROCare through a service visit</h2>
+                    <h2 style="font-family: 'Playfair Display', serif;">Meet ROCare through a service visit</h2>
                     <p>The best way to judge us is by the care we bring into your kitchen.</p>
                     <a class="btn btn-primary" href="contact.html">Contact Team</a>
                 </div>
-                <div class="cta-panel reveal">
-                    <i class="ri-customer-service-2-line"></i>
+                <div class="cta-panel premium-glass-card reveal active" style="padding: 40px; border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: center;">
+                    <i class="ri-customer-service-2-line" style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 15px;"></i>
                     <strong>ROCare support</strong>
                     <span>Service booking, product help, AMC renewals, and urgent purifier care.</span>
                 </div>
@@ -173,5 +295,113 @@
         </div>
     </footer>
     <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const stageBtns = document.querySelectorAll('.lux-stage-btn');
+            const stageTitle = document.getElementById('stage-title');
+            const stageDesc = document.getElementById('stage-desc');
+            const purityTag = document.getElementById('stage-purity-tag');
+            
+            const barTds = document.getElementById('bar-tds');
+            const barTdsVal = document.getElementById('bar-tds-val');
+            const barPh = document.getElementById('bar-ph');
+            const barPhVal = document.getElementById('bar-ph-val');
+            const barBio = document.getElementById('bar-bio');
+            const barBioVal = document.getElementById('bar-bio-val');
+            
+            const stageData = {
+                raw: {
+                    title: 'Raw Source Input',
+                    purity: '35% Purity',
+                    desc: 'Raw tap or borewell water contains heavy mineral ions, suspended sediments, organic pathogens, and chlorine. It has uncontrolled hardness and inconsistent pH levels.',
+                    tdsVal: '280 PPM',
+                    tdsWidth: '80%',
+                    tdsColor: '#c85f4a',
+                    phVal: '6.8 pH (Neutral)',
+                    phWidth: '68%',
+                    phColor: '#e7b65f',
+                    bioVal: '35% Sterile',
+                    bioWidth: '35%',
+                    bioColor: '#c85f4a'
+                },
+                carbon: {
+                    title: 'Adsorption & Pre-Carbon',
+                    purity: '55% Purity',
+                    desc: 'The active carbon pre-filters adsorb dissolved chlorine, heavy particulate matter, volatile organic chemicals, and bad taste agents. This stage protects downstream membranes.',
+                    tdsVal: '260 PPM',
+                    tdsWidth: '74%',
+                    tdsColor: '#e7b65f',
+                    phVal: '6.8 pH (Neutral)',
+                    phWidth: '68%',
+                    phColor: '#e7b65f',
+                    bioVal: '55% Sterile',
+                    bioWidth: '55%',
+                    bioColor: '#e7b65f'
+                },
+                ro: {
+                    title: 'RO Molecular Shield',
+                    purity: '98% Purity',
+                    desc: 'Water is pushed through a 0.0001 micron semi-permeable membrane. This filters out heavy metals (lead, arsenic), microplastics, viruses, and reduces TDS down to near-distilled pure molecules.',
+                    tdsVal: '15 PPM (Low Minerals)',
+                    tdsWidth: '8%',
+                    tdsColor: '#149a9a',
+                    phVal: '5.8 pH (Slightly Acidic)',
+                    phWidth: '58%',
+                    phColor: '#e7b65f',
+                    bioVal: '99.9% Sterile',
+                    bioWidth: '100%',
+                    bioColor: '#149a9a'
+                },
+                remin: {
+                    title: 'Bespoke Mineral Tuning',
+                    purity: '99.9% Purity',
+                    desc: 'Pure RO water passes through a luxury remineralizer shell which adds balanced doses of Calcium and Magnesium. This calibrates the water back to an optimal alkaline level for crisp, sweet taste and ideal hydration.',
+                    tdsVal: '75 PPM (Perfect Balance)',
+                    tdsWidth: '25%',
+                    tdsColor: '#149a9a',
+                    phVal: '7.4 pH (Alkaline)',
+                    phWidth: '74%',
+                    phColor: '#149a9a',
+                    bioVal: '100% Sterile',
+                    bioWidth: '100%',
+                    bioColor: '#149a9a'
+                }
+            };
+            
+            stageBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    stageBtns.forEach(b => {
+                        b.classList.remove('active');
+                        b.style.borderLeftColor = 'transparent';
+                        b.querySelector('h3').style.color = 'var(--color-text-main)';
+                    });
+                    
+                    btn.classList.add('active');
+                    btn.style.borderLeftColor = 'var(--color-primary)';
+                    btn.querySelector('h3').style.color = 'var(--color-primary)';
+                    
+                    const stage = btn.dataset.stage;
+                    const data = stageData[stage];
+                    
+                    stageTitle.textContent = data.title;
+                    stageDesc.textContent = data.desc;
+                    purityTag.textContent = data.purity;
+                    
+                    // Update progress bars
+                    barTds.style.width = data.tdsWidth;
+                    barTds.style.backgroundColor = data.tdsColor;
+                    barTdsVal.textContent = data.tdsVal;
+                    
+                    barPh.style.width = data.phWidth;
+                    barPh.style.backgroundColor = data.phColor;
+                    barPhVal.textContent = data.phVal;
+                    
+                    barBio.style.width = data.bioWidth;
+                    barBio.style.backgroundColor = data.bioColor;
+                    barBioVal.textContent = data.bioVal;
+                });
+            });
+        });
+    </script>
 </body>
 </html>
