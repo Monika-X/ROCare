@@ -2176,3 +2176,39 @@
     grid-template-columns: 1fr !important;
   }
 }
+
+/* Blog Premium Page Styles */
+.blog-premium {
+  background-color: var(--color-background);
+}
+
+.blog-premium .content-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 15px 30px rgba(20, 154, 154, 0.08);
+}
+
+/* Category Filter Bar Pills */
+.lux-filter-btn {
+  transition: all 0.3s ease;
+}
+
+.lux-filter-btn:hover {
+  background: var(--color-soft) !important;
+  color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+
+[data-theme="dark"] .lux-filter-btn {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="dark"] .lux-filter-btn.active {
+  background: rgba(20, 154, 154, 0.2) !important;
+  border-color: var(--color-primary) !important;
+  color: var(--color-primary) !important;
+}
+
+[data-theme="dark"] .lux-filter-btn:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+}

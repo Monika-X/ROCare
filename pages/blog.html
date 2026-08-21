@@ -6,7 +6,11 @@
     <title>ROCare | Blog</title>
     <link rel="icon" type="image/png" href="../assets/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/redesign.css">
 </head>
 <body>
     <header class="header">
@@ -38,89 +42,211 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="blog-premium">
+        <!-- Elevated Hero Section -->
         <section class="hero-section section-shell">
             <div class="container hero-grid">
-                <div class="hero-copy">
-                    <span class="eyebrow">Water journal</span>
-                    <h1>Helpful guides for purifier owners.</h1>
-                    <p>Practical articles about filter life, RO performance, taste changes, AMC timing, and choosing the right water purifier.</p>
+                <div class="hero-copy premium-glass-card reveal active" style="padding: 40px; border-radius: var(--radius-md);">
+                    <span class="eyebrow"><i class="ri-article-line" style="color: var(--color-secondary);"></i> The Water Journal</span>
+                    <h1 style="font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 4.5vw, 3.8rem); line-height: 1.15; font-weight: 600;">Insights on Purity & <span class="gradient-text">Wellness.</span></h1>
+                    <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 30px; color: var(--color-text-muted);">Explore professional guidance, filtration science, seasonal water diagnostic shifts, and buying guides prepared by ROCare specialists.</p>
                     <div class="hero-actions">
                         <a class="btn btn-primary" href="contact.html">Ask a Question</a>
                         <a class="btn btn-outline" href="services.html">View Services</a>
                     </div>
                 </div>
-                <figure class="hero-media reveal">
-                    <img src="https://images.unsplash.com/photo-1662926912214-1a1bd0a07227?auto=format&fit=crop&w=1400&q=80" alt="Water pouring into a glass" loading="eager">
+                <figure class="hero-media reveal active" style="position: relative;">
+                    <div style="position: absolute; top: -20px; right: -20px; width: 60px; height: 60px; background: radial-gradient(circle, rgba(20,154,154,0.2) 0%, transparent 75%); animation: float 6s infinite alternate; border-radius: 50%;"></div>
+                    <img src="https://images.unsplash.com/photo-1662926912214-1a1bd0a07227?auto=format&fit=crop&w=1400&q=80" alt="Water pouring into a glass" loading="eager" style="border-radius: var(--radius-md); box-shadow: var(--shadow-lg);">
                     <figcaption>ROCare water service experience</figcaption>
                 </figure>
             </div>
         </section>
-        <section class="section-shell">
-            <div class="container section-intro">
-                <span class="eyebrow">Overview</span>
-                <h2>Know what your purifier is telling you</h2>
-                <p>Small symptoms like slower flow or changed taste can be early signs of filter exhaustion, pressure issues, or overdue service.</p>
-                <div class="stat-grid">
-                <div class="stat-card"><strong>12</strong><span>owner guides</span></div>
-                <div class="stat-card"><strong>4</strong><span>buying topics</span></div>
-                <div class="stat-card"><strong>6</strong><span>care checks</span></div>
-            </div>
-            </div>
-        </section>
+
+        <!-- Dynamic Blog Deck Grid Section with 12 Cards -->
         <section class="section-shell section-surface">
             <div class="container">
-                <div class="section-heading">
-                    <span class="eyebrow">Highlights</span>
-                    <h2>What this page helps you do</h2>
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <span class="eyebrow">All Articles</span>
+                    <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 4vw, 3rem); margin-bottom: 24px;">Latest Journal Entries</h2>
+                    
+                    <div class="lux-filter-bar" style="display: flex; justify-content: center; gap: 12px; margin-bottom: 40px; flex-wrap: wrap;">
+                        <button class="lux-filter-btn active" data-filter="all" style="padding: 10px 24px; border-radius: 25px; border: 1px solid rgba(20,154,154,0.2); background: rgba(20,154,154,0.1); color: var(--color-primary); cursor: pointer; transition: all 0.3s ease; font-weight: 600; font-size: 0.9rem;">All</button>
+                        <button class="lux-filter-btn" data-filter="diagnostics" style="padding: 10px 24px; border-radius: 25px; border: 1px solid rgba(0,0,0,0.06); background: transparent; color: var(--color-text-muted); cursor: pointer; transition: all 0.3s ease; font-weight: 600; font-size: 0.9rem;">Diagnostics</button>
+                        <button class="lux-filter-btn" data-filter="technology" style="padding: 10px 24px; border-radius: 25px; border: 1px solid rgba(0,0,0,0.06); background: transparent; color: var(--color-text-muted); cursor: pointer; transition: all 0.3s ease; font-weight: 600; font-size: 0.9rem;">Technology</button>
+                        <button class="lux-filter-btn" data-filter="wellness" style="padding: 10px 24px; border-radius: 25px; border: 1px solid rgba(0,0,0,0.06); background: transparent; color: var(--color-text-muted); cursor: pointer; transition: all 0.3s ease; font-weight: 600; font-size: 0.9rem;">Wellness</button>
+                        <button class="lux-filter-btn" data-filter="maintenance" style="padding: 10px 24px; border-radius: 25px; border: 1px solid rgba(0,0,0,0.06); background: transparent; color: var(--color-text-muted); cursor: pointer; transition: all 0.3s ease; font-weight: 600; font-size: 0.9rem;">Maintenance</button>
+                        <button class="lux-filter-btn" data-filter="others" style="padding: 10px 24px; border-radius: 25px; border: 1px solid rgba(0,0,0,0.06); background: transparent; color: var(--color-text-muted); cursor: pointer; transition: all 0.3s ease; font-weight: 600; font-size: 0.9rem;">Other Guides</button>
+                    </div>
                 </div>
-                <div class="card-grid">
-                <article class="content-card reveal"><i class="ri-article-line"></i><h3>Buying guides</h3><p>Learn how to compare RO, UV, UF, alkaline, and commercial systems.</p></article>
-                <article class="content-card reveal"><i class="ri-flask-line"></i><h3>Water quality</h3><p>Understand TDS, odor, hardness, and seasonal changes.</p></article>
-                <article class="content-card reveal"><i class="ri-settings-3-line"></i><h3>Maintenance tips</h3><p>Simple checks that keep your purifier stable between visits.</p></article>
-            </div>
+                
+                <div class="card-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 32px;">
+                    
+                    <!-- Card 1 -->
+                    <article class="content-card premium-glass-card reveal active" data-category="diagnostics" style="padding: 24px; border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: space-between; min-height: 420px; transition: transform 0.3s ease, opacity 0.3s ease, scale 0.3s ease;">
+                        <div>
+                            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-secondary); font-weight: 800; letter-spacing: 1px;">Diagnostics</span>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 500; margin: 10px 0 12px; line-height: 1.3;"><a href="blog-details.html">Understanding TDS Levels in Drinking Water</a></h3>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 20px;">What do parts per million actually mean for your health, tea extraction, and daily taste profiles?</p>
+                        </div>
+                        <a href="blog-details.html" style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 6px;">Read Article <i class="ri-arrow-right-line"></i></a>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="content-card premium-glass-card reveal active" data-category="technology" style="padding: 24px; border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: space-between; min-height: 420px; transition: transform 0.3s ease, opacity 0.3s ease, scale 0.3s ease;">
+                        <div>
+                            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-secondary); font-weight: 800; letter-spacing: 1px;">Technology</span>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 500; margin: 10px 0 12px; line-height: 1.3;"><a href="blog-details.html">The Blueprint of RO Membranes</a></h3>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 20px;">Why household inlet pressure directly dictates the filtration life of thin-film composite membranes.</p>
+                        </div>
+                        <a href="blog-details.html" style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 6px;">Read Article <i class="ri-arrow-right-line"></i></a>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="content-card premium-glass-card reveal active" data-category="wellness" style="padding: 24px; border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: space-between; min-height: 420px; transition: transform 0.3s ease, opacity 0.3s ease, scale 0.3s ease;">
+                        <div>
+                            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-secondary); font-weight: 800; letter-spacing: 1px;">Wellness</span>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 500; margin: 10px 0 12px; line-height: 1.3;"><a href="blog-details.html">Alkaline vs. Acidic Hydration</a></h3>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 20px;">Exploring the physiological science of pH values and how remineralizers optimize digestion benchmarks.</p>
+                        </div>
+                        <a href="blog-details.html" style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 6px;">Read Article <i class="ri-arrow-right-line"></i></a>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="content-card premium-glass-card reveal active" data-category="maintenance" style="padding: 24px; border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: space-between; min-height: 420px; transition: transform 0.3s ease, opacity 0.3s ease, scale 0.3s ease;">
+                        <div>
+                            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-secondary); font-weight: 800; letter-spacing: 1px;">Maintenance</span>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 500; margin: 10px 0 12px; line-height: 1.3;"><a href="blog-details.html">Signs Your Carbon Filter is Exhausted</a></h3>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 20px;">Why waiting for odor changes to swap pre-carbon cartridges is a risk to downstream systems.</p>
+                        </div>
+                        <a href="blog-details.html" style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 6px;">Read Article <i class="ri-arrow-right-line"></i></a>
+                    </article>
+
+                    <!-- Card 5 -->
+                    <article class="content-card premium-glass-card reveal active" data-category="technology" style="padding: 24px; border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: space-between; min-height: 420px; transition: transform 0.3s ease, opacity 0.3s ease, scale 0.3s ease;">
+                        <div>
+                            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-secondary); font-weight: 800; letter-spacing: 1px;">Technology</span>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 500; margin: 10px 0 12px; line-height: 1.3;"><a href="blog-details.html">UV vs. UF Sterilization</a></h3>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 20px;">How ultraviolet reactors and ultrafiltration capillaries guard municipal tap water from microbes.</p>
+                        </div>
+                        <a href="blog-details.html" style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 6px;">Read Article <i class="ri-arrow-right-line"></i></a>
+                    </article>
+
+                    <!-- Card 6 -->
+                    <article class="content-card premium-glass-card reveal active" data-category="maintenance" style="padding: 24px; border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: space-between; min-height: 420px; transition: transform 0.3s ease, opacity 0.3s ease, scale 0.3s ease;">
+                        <div>
+                            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-secondary); font-weight: 800; letter-spacing: 1px;">Maintenance</span>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 500; margin: 10px 0 12px; line-height: 1.3;"><a href="blog-details.html">The True Cost of Neglected AMC</a></h3>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 20px;">Delayed service can load debris onto primary booster pumps, leading to costly failure rates.</p>
+                        </div>
+                        <a href="blog-details.html" style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 6px;">Read Article <i class="ri-arrow-right-line"></i></a>
+                    </article>
+
+                    <!-- Card 7 -->
+                    <article class="content-card premium-glass-card reveal active" data-category="others" style="padding: 24px; border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: space-between; min-height: 420px; transition: transform 0.3s ease, opacity 0.3s ease, scale 0.3s ease;">
+                        <div>
+                            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-secondary); font-weight: 800; letter-spacing: 1px;">Kitchen Design</span>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 500; margin: 10px 0 12px; line-height: 1.3;"><a href="blog-details.html">Under-Sink vs. Countertop Models</a></h3>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 20px;">Balancing space, filtration ease, and aesthetic appeal in modern architecturally curated kitchens.</p>
+                        </div>
+                        <a href="blog-details.html" style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 6px;">Read Article <i class="ri-arrow-right-line"></i></a>
+                    </article>
+
+                    <!-- Card 8 -->
+                    <article class="content-card premium-glass-card reveal active" data-category="diagnostics" style="padding: 24px; border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: space-between; min-height: 420px; transition: transform 0.3s ease, opacity 0.3s ease, scale 0.3s ease;">
+                        <div>
+                            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-secondary); font-weight: 800; letter-spacing: 1px;">Diagnostics</span>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 500; margin: 10px 0 12px; line-height: 1.3;"><a href="blog-details.html">Active Minerals: Calcium & Magnesium</a></h3>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 20px;">Why custom remineralizers bypass distilled dry water states to offer crisp, health-promoting taste calibration.</p>
+                        </div>
+                        <a href="blog-details.html" style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 6px;">Read Article <i class="ri-arrow-right-line"></i></a>
+                    </article>
+
+                    <!-- Card 9 -->
+                    <article class="content-card premium-glass-card reveal active" data-category="others" style="padding: 24px; border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: space-between; min-height: 420px; transition: transform 0.3s ease, opacity 0.3s ease, scale 0.3s ease;">
+                        <div>
+                            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-secondary); font-weight: 800; letter-spacing: 1px;">Commercial</span>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 500; margin: 10px 0 12px; line-height: 1.3;"><a href="blog-details.html">A Guide to Commercial RO Systems</a></h3>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 20px;">Scaling pure molecular water safely for higher volume spaces like clinics, offices, and restaurants.</p>
+                        </div>
+                        <a href="blog-details.html" style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 6px;">Read Article <i class="ri-arrow-right-line"></i></a>
+                    </article>
+
+                    <!-- Card 10 -->
+                    <article class="content-card premium-glass-card reveal active" data-category="diagnostics" style="padding: 24px; border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: space-between; min-height: 420px; transition: transform 0.3s ease, opacity 0.3s ease, scale 0.3s ease;">
+                        <div>
+                            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-secondary); font-weight: 800; letter-spacing: 1px;">Diagnostics</span>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 500; margin: 10px 0 12px; line-height: 1.3;"><a href="blog-details.html">Seasonal Shifts in Borewell Inputs</a></h3>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 20px;">How heavy monsoons alter groundwater tables and what pre-treatment steps prevent filter choking.</p>
+                        </div>
+                        <a href="blog-details.html" style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 6px;">Read Article <i class="ri-arrow-right-line"></i></a>
+                    </article>
+
+                    <!-- Card 11 -->
+                    <article class="content-card premium-glass-card reveal active" data-category="wellness" style="padding: 24px; border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: space-between; min-height: 420px; transition: transform 0.3s ease, opacity 0.3s ease, scale 0.3s ease;">
+                        <div>
+                            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-secondary); font-weight: 800; letter-spacing: 1px;">Wellness</span>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 500; margin: 10px 0 12px; line-height: 1.3;"><a href="blog-details.html">Water Hardness and Kitchen Ware</a></h3>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 20px;">How high dissolved calcium scales degrade internal plumbing systems, kettle coils, and dishwashers.</p>
+                        </div>
+                        <a href="blog-details.html" style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 6px;">Read Article <i class="ri-arrow-right-line"></i></a>
+                    </article>
+
+                    <!-- Card 12 -->
+                    <article class="content-card premium-glass-card reveal active" data-category="maintenance" style="padding: 24px; border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: space-between; min-height: 420px; transition: transform 0.3s ease, opacity 0.3s ease, scale 0.3s ease;">
+                        <div>
+                            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-secondary); font-weight: 800; letter-spacing: 1px;">Maintenance</span>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 500; margin: 10px 0 12px; line-height: 1.3;"><a href="blog-details.html">Demystifying AMC Contracts</a></h3>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 20px;">What parameters and physical checks a transparent annual care package must cover.</p>
+                        </div>
+                        <a href="blog-details.html" style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 6px;">Read Article <i class="ri-arrow-right-line"></i></a>
+                    </article>
+
+                    <!-- Card 13 -->
+                    <article class="content-card premium-glass-card reveal active" data-category="technology" style="padding: 24px; border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: space-between; min-height: 420px; transition: transform 0.3s ease, opacity 0.3s ease, scale 0.3s ease;">
+                        <div>
+                            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-secondary); font-weight: 800; letter-spacing: 1px;">Technology</span>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 500; margin: 10px 0 12px; line-height: 1.3;"><a href="blog-details.html">Understanding Copper & Alkaline Filters</a></h3>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 20px;">How active copper and alkaline stages introduce beneficial ions back into RO purified water.</p>
+                        </div>
+                        <a href="blog-details.html" style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 6px;">Read Article <i class="ri-arrow-right-line"></i></a>
+                    </article>
+
+                    <!-- Card 14 -->
+                    <article class="content-card premium-glass-card reveal active" data-category="wellness" style="padding: 24px; border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: space-between; min-height: 420px; transition: transform 0.3s ease, opacity 0.3s ease, scale 0.3s ease;">
+                        <div>
+                            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-secondary); font-weight: 800; letter-spacing: 1px;">Wellness</span>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 500; margin: 10px 0 12px; line-height: 1.3;"><a href="blog-details.html">The Impact of Microplastics in Water</a></h3>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 20px;">How hollow-fiber ultrafiltration shields families from microscopic polymer residues.</p>
+                        </div>
+                        <a href="blog-details.html" style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 6px;">Read Article <i class="ri-arrow-right-line"></i></a>
+                    </article>
+
+                    <!-- Card 15 -->
+                    <article class="content-card premium-glass-card reveal active" data-category="maintenance" style="padding: 24px; border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: space-between; min-height: 420px; transition: transform 0.3s ease, opacity 0.3s ease, scale 0.3s ease;">
+                        <div>
+                            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-secondary); font-weight: 800; letter-spacing: 1px;">Maintenance</span>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 500; margin: 10px 0 12px; line-height: 1.3;"><a href="blog-details.html">How to Flush Your Storage Tank</a></h3>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 20px;">A step-by-step guidance on sanitizing the RO storage tank after periods of non-use.</p>
+                        </div>
+                        <a href="blog-details.html" style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 6px;">Read Article <i class="ri-arrow-right-line"></i></a>
+                    </article>
+
+                </div>
             </div>
         </section>
-        <section class="section-shell split-section">
-            <div class="container split-grid">
-                <div class="split-media reveal">
-                    <img src="https://images.unsplash.com/photo-1617155093730-a8bf47be792d?auto=format&fit=crop&w=1400&q=80" alt="Water sample in a laboratory beaker" loading="lazy">
-                </div>
-                <div class="split-copy">
-                    <span class="eyebrow">Process</span>
-                    <h2>Featured article</h2>
-                    <p>When should you replace RO filters? A practical guide to taste, flow, and service timing.</p>
-                    <ol class="step-list">
-                        <li>Watch for slower filling and changed taste.</li>
-                        <li>Check the service label or app note.</li>
-                        <li>Book replacement before membrane stress increases.</li>
-                    </ol>
-                </div>
-            </div>
-        </section>
-        <section class="section-shell section-surface">
-            <div class="container">
-                <div class="section-heading">
-                    <span class="eyebrow">Resources</span>
-                    <h2>Latest posts</h2>
-                </div>
-                <div class="resource-grid">
-                <article class="content-card reveal"><h3>How RO membranes age</h3><p>Why pressure, source water, and pre-filters affect membrane life.</p></article>
-                <article class="content-card reveal"><h3>UV vs UF vs RO</h3><p>A simple breakdown of purifier technologies.</p></article>
-                <article class="content-card reveal"><h3>AMC explained</h3><p>What a good annual maintenance plan should include.</p></article>
-            </div>
-            </div>
-        </section>
+
+        <!-- Elevated Final CTA -->
         <section class="section-shell final-cta">
             <div class="container cta-grid">
-                <div>
+                <div class="premium-glass-card reveal active" style="padding: 40px; border-radius: var(--radius-md);">
                     <span class="eyebrow">Next step</span>
-                    <h2>Want a topic covered?</h2>
-                    <p>Ask ROCare to explain a purifier issue in plain language.</p>
+                    <h2 style="font-family: 'Playfair Display', serif;">Want a topic covered?</h2>
+                    <p>Ask ROCare to explain a purifier issue in plain, transparent language.</p>
                     <a class="btn btn-primary" href="contact.html">Ask a Question</a>
                 </div>
-                <div class="cta-panel reveal">
-                    <i class="ri-customer-service-2-line"></i>
+                <div class="cta-panel premium-glass-card reveal active" style="padding: 40px; border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: center;">
+                    <i class="ri-customer-service-2-line" style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 15px;"></i>
                     <strong>ROCare support</strong>
                     <span>Service booking, product help, AMC renewals, and urgent purifier care.</span>
                 </div>
@@ -173,5 +299,46 @@
         </div>
     </footer>
     <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.lux-filter-btn');
+            const blogCards = document.querySelectorAll('.card-grid .content-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active button state
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active');
+                        b.style.background = 'transparent';
+                        b.style.borderColor = 'rgba(0,0,0,0.06)';
+                        b.style.color = 'var(--color-text-muted)';
+                    });
+                    
+                    btn.classList.add('active');
+                    btn.style.background = 'rgba(20,154,154,0.1)';
+                    btn.style.borderColor = 'var(--color-primary)';
+                    btn.style.color = 'var(--color-primary)';
+                    
+                    const filterValue = btn.dataset.filter;
+                    
+                    blogCards.forEach(card => {
+                        if (filterValue === 'all' || card.dataset.category === filterValue) {
+                            card.style.display = 'flex';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'scale(1)';
+                            }, 50);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'scale(0.95)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
