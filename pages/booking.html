@@ -6,7 +6,11 @@
     <title>ROCare | Book Service</title>
     <link rel="icon" type="image/png" href="../assets/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/redesign.css">
 </head>
 <body>
     <header class="header">
@@ -38,94 +42,183 @@
             </div>
         </div>
     </header>
-    <main>
-        <section class="hero-section section-shell">
-            <div class="container hero-grid">
-                <div class="hero-copy">
-                    <span class="eyebrow">Book a visit</span>
-                    <h1>Schedule purifier service with the details technicians need.</h1>
-                    <p>Tell ROCare the purifier brand, issue, address area, and preferred time so the first visit is more productive.</p>
-                    <div class="hero-actions">
-                        <a class="btn btn-primary" href="#booking-form">Send Booking</a>
-                        <a class="btn btn-outline" href="services.html">View Services</a>
+    <main class="booking-premium">
+        <!-- Premium Hero -->
+        <section class="booking-hero" style="background-image: url('https://images.unsplash.com/photo-1662454377919-82ef4c6cd708?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5, 7, 12, 0.82), rgba(5, 7, 12, 0.72)); z-index: 0;"></div>
+            <div class="booking-hero-orb"></div>
+            <div class="container" style="max-width: 780px; position: relative; z-index: 2;">
+                <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-accent); font-weight: 800; letter-spacing: 3px; display: block; margin-bottom: 14px;">Reserve Your Slot</span>
+                <h1 style="font-family: 'Playfair Display', serif; font-size: clamp(2.6rem, 5vw, 4rem); font-weight: 500; line-height: 1.15; margin-bottom: 20px; color: #fff;">Book a Precision Service Visit</h1>
+                <p style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.75); line-height: 1.65; max-width: 620px; margin: 0 auto;">Pick your service, choose a time window, and share the essentials. A certified technician arrives prepared with the right filters, fittings, and tools.</p>
+                <div class="booking-trust-strip">
+                    <span class="booking-trust-chip"><i class="ri-flashlight-fill"></i> 24 hr response target</span>
+                    <span class="booking-trust-chip"><i class="ri-shield-check-fill"></i> Certified technicians</span>
+                    <span class="booking-trust-chip"><i class="ri-price-tag-3-fill"></i> Upfront estimates</span>
+                    <span class="booking-trust-chip"><i class="ri-tools-fill"></i> Genuine spare parts</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Workspace -->
+        <section class="container">
+            <div class="booking-workspace">
+                <!-- Multi-step form panel -->
+                <div class="premium-glass-card" style="padding: 40px; border-radius: var(--radius-md);">
+                    <form id="booking-form" novalidate>
+                        <!-- Step 1: Service -->
+                        <div class="booking-step">
+                            <div class="booking-step-header">
+                                <span class="booking-step-num">1</span>
+                                <div>
+                                    <h3>Choose your service</h3>
+                                    <p>Every option includes on-site diagnosis and an upfront quote.</p>
+                                </div>
+                            </div>
+                            <div class="service-pick-grid" id="service-pick-grid">
+                                <button type="button" class="service-pick-card active" data-service="RO Repair Visit" data-price="499" data-desc="Leakage, flow, pump, taste, or power issues">
+                                    <i class="ri-tools-line"></i>
+                                    <strong>Repair Visit</strong>
+                                    <span>from &#8377;499</span>
+                                </button>
+                                <button type="button" class="service-pick-card" data-service="Purifier Installation" data-price="899" data-desc="New setup or relocation">
+                                    <i class="ri-install-line"></i>
+                                    <strong>Installation</strong>
+                                    <span>from &#8377;899</span>
+                                </button>
+                                <button type="button" class="service-pick-card" data-service="AMC Maintenance Visit" data-price="299" data-desc="Scheduled filter replacement and checks">
+                                    <i class="ri-calendar-check-line"></i>
+                                    <strong>AMC Visit</strong>
+                                    <span>from &#8377;299</span>
+                                </button>
+                                <button type="button" class="service-pick-card" data-service="Product Consultation" data-price="0" data-desc="Guided buying advice, zero visit fee">
+                                    <i class="ri-chat-smile-3-line"></i>
+                                    <strong>Consultation</strong>
+                                    <span>Free</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Schedule -->
+                        <div class="booking-step">
+                            <div class="booking-step-header">
+                                <span class="booking-step-num">2</span>
+                                <div>
+                                    <h3>Pick date &amp; time window</h3>
+                                    <p>Three daily windows, seven days a week.</p>
+                                </div>
+                            </div>
+                            <div class="slot-row">
+                                <div class="date-field">
+                                    <label for="booking-date">Preferred date</label>
+                                    <input type="date" id="booking-date" required>
+                                </div>
+                                <div class="time-slot-grid" id="time-slot-grid">
+                                    <button type="button" class="time-slot-btn active" data-slot="Morning (8 AM &ndash; 12 PM)">Morning<small>8 AM &ndash; 12 PM</small></button>
+                                    <button type="button" class="time-slot-btn" data-slot="Afternoon (12 PM &ndash; 4 PM)">Afternoon<small>12 PM &ndash; 4 PM</small></button>
+                                    <button type="button" class="time-slot-btn" data-slot="Evening (4 PM &ndash; 8 PM)">Evening<small>4 PM &ndash; 8 PM</small></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Details -->
+                        <div class="booking-step">
+                            <div class="booking-step-header">
+                                <span class="booking-step-num">3</span>
+                                <div>
+                                    <h3>Your details</h3>
+                                    <p>The technician uses this to prepare before arrival.</p>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="form-name" placeholder="Full name" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="tel" id="form-phone" placeholder="Phone number (+91 ...)" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="form-address" placeholder="Address & locality (e.g. Velachery, Chennai)" required>
+                            </div>
+                            <div class="input-group">
+                                <textarea id="form-notes" placeholder="Purifier brand, model, and issue symptoms (optional)"></textarea>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary" type="submit" style="width: 100%; padding: 15px; font-weight: 700; border-radius: var(--radius-sm); margin-top: 26px;">Confirm Booking Request</button>
+                        <p style="font-size: 0.78rem; color: var(--color-text-muted); text-align: center; margin-top: 12px;">No advance payment. You approve the final quote after on-site diagnosis.</p>
+                    </form>
+
+                    <!-- Success state -->
+                    <div class="booking-success" id="booking-success">
+                        <div class="success-ring"><i class="ri-checkbox-circle-fill"></i></div>
+                        <h3>Booking request received</h3>
+                        <p id="success-summary">A coordinator will call you shortly to confirm your slot.</p>
+                        <button class="btn btn-outline" type="button" id="book-again-btn">Make Another Booking</button>
                     </div>
                 </div>
-                <figure class="hero-media reveal">
-                    <img src="https://images.unsplash.com/photo-1662454377919-82ef4c6cd708?auto=format&fit=crop&w=1400&q=80" alt="Under-sink purifier system" loading="eager">
-                    <figcaption>ROCare water service experience</figcaption>
-                </figure>
+
+                <!-- Live summary rail -->
+                <aside style="display: grid; gap: 20px;">
+                    <div class="premium-glass-card booking-summary-card">
+                        <div>
+                            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-primary); font-weight: 800; letter-spacing: 1px;">Booking Summary</span>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 500; margin-top: 6px;">Your Visit at a Glance</h3>
+                        </div>
+                        <div>
+                            <div class="summary-line"><span>Service</span><strong id="sum-service">Repair Visit</strong></div>
+                            <div class="summary-line"><span>Date</span><strong id="sum-date" class="placeholder">Not selected</strong></div>
+                            <div class="summary-line"><span>Time window</span><strong id="sum-slot">Morning</strong></div>
+                            <div class="summary-line"><span>Location</span><strong id="sum-address" class="placeholder">Not entered</strong></div>
+                            <div class="summary-total">
+                                <span>Estimated visit charge</span>
+                                <strong id="sum-price">&#8377;499</strong>
+                            </div>
+                        </div>
+                        <div class="summary-note">
+                            <i class="ri-information-line"></i>
+                            <span>The estimate covers inspection and standard labour. Filter or part costs are quoted separately and only applied after your approval.</span>
+                        </div>
+                    </div>
+                    <div class="premium-glass-card booking-support-card">
+                        <i class="ri-customer-service-2-fill"></i>
+                        <div>
+                            <strong>Prefer to book by phone?</strong>
+                            <a href="tel:+919876543210">+91 98765 43210</a>
+                        </div>
+                    </div>
+                </aside>
             </div>
         </section>
-        <section class="section-shell">
-            <div class="container section-intro">
-                <span class="eyebrow">Overview</span>
-                <h2>A clear booking means fewer delays</h2>
-                <p>The more specific the issue, the easier it is to bring the likely filters, fittings, and tools.</p>
-                <div class="stat-grid">
-                <div class="stat-card"><strong>1</strong><span>request form</span></div>
-                <div class="stat-card"><strong>3</strong><span>service windows</span></div>
-                <div class="stat-card"><strong>24 hr</strong><span>response target</span></div>
-            </div>
-            </div>
-        </section>
-        <section class="section-shell section-surface">
+
+        <!-- Post-booking process -->
+        <section class="section-shell" style="padding-bottom: 90px;">
             <div class="container">
-                <div class="section-heading">
-                    <span class="eyebrow">Highlights</span>
-                    <h2>What this page helps you do</h2>
+                <div style="text-align: center; margin-bottom: 44px;">
+                    <span class="eyebrow">After You Book</span>
+                    <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3.5vw, 2.8rem);">What Happens Next</h2>
                 </div>
-                <div class="card-grid">
-                <article class="content-card reveal"><i class="ri-calendar-event-line"></i><h3>Choose a slot</h3><p>Morning, afternoon, or evening windows for home and business visits.</p></article>
-                <article class="content-card reveal"><i class="ri-tools-fill"></i><h3>Describe the issue</h3><p>Leakage, low flow, taste change, noise, and no-power calls are routed differently.</p></article>
-                <article class="content-card reveal"><i class="ri-checkbox-circle-line"></i><h3>Confirm service</h3><p>You receive a clear estimate after inspection and before part replacement.</p></article>
-            </div>
-            </div>
-        </section>
-        <section class="section-shell split-section">
-            <div class="container split-grid">
-                <div class="split-media reveal">
-                    <img src="https://images.unsplash.com/photo-1667404142540-850e45581cef?auto=format&fit=crop&w=1400&q=80" alt="Modern kitchen with water purifier" loading="lazy">
+                <div class="process-rail">
+                    <div class="process-node premium-glass-card">
+                        <i class="ri-file-list-3-line"></i>
+                        <h3>Request Review</h3>
+                        <p>A coordinator checks service availability in your locality and matches the right specialist.</p>
+                    </div>
+                    <div class="process-node premium-glass-card">
+                        <i class="ri-phone-call-line"></i>
+                        <h3>Confirmation Call</h3>
+                        <p>You receive a call or message confirming the exact arrival window within 24 hours.</p>
+                    </div>
+                    <div class="process-node premium-glass-card">
+                        <i class="ri-user-location-line"></i>
+                        <h3>Technician Dispatch</h3>
+                        <p>Your technician arrives in the chosen window with likely filters, fittings, and tools.</p>
+                    </div>
+                    <div class="process-node premium-glass-card">
+                        <i class="ri-thumb-up-line"></i>
+                        <h3>Approve &amp; Relax</h3>
+                        <p>Work begins only after you approve the on-site quote. Pay when the job is done.</p>
+                    </div>
                 </div>
-                <div class="split-copy">
-                    <span class="eyebrow">Process</span>
-                    <h2>What happens after booking</h2>
-                    <p>The team reviews your issue, confirms service availability, and assigns a technician with the right checklist.</p>
-                    <ol class="step-list">
-                        <li>Submit request details.</li>
-                        <li>Receive confirmation and estimated arrival window.</li>
-                        <li>Approve work after on-site diagnosis.</li>
-                    </ol>
-                </div>
-            </div>
-        </section>
-        <section class="section-shell section-surface">
-            <div class="container">
-                <div class="section-heading">
-                    <span class="eyebrow">Resources</span>
-                    <h2>Bookable services</h2>
-                </div>
-                <div class="resource-grid">
-                <article class="content-card reveal"><h3>Repair visit</h3><p>For leakage, flow, pump, tank, taste, or power issues.</p></article>
-                <article class="content-card reveal"><h3>Installation</h3><p>For new purifier setup or relocation.</p></article>
-                <article class="content-card reveal"><h3>AMC visit</h3><p>For scheduled filter replacement and annual checks.</p></article>
-            </div>
-            </div>
-        </section>
-        <section class="section-shell final-cta">
-            <div class="container cta-grid">
-                <div>
-                    <span class="eyebrow">Next step</span>
-                    <h2>Book your ROCare visit</h2>
-                    <p>Add the purifier model if you know it. A photo can be shared during follow-up.</p>
-                    <a class="btn btn-primary" href="#booking-form">Send Booking</a>
-                </div>
-                <form id="booking-form" class="form-panel">
-                    <label>Name<input type="text" placeholder="Your name" required></label>
-                    <label>Phone<input type="tel" placeholder="+91 98765 43210" required></label>
-                    <label>Service type<select required><option>RO repair</option><option>Installation</option><option>AMC visit</option><option>Product consultation</option></select></label>
-                    <label>Message<textarea placeholder="Purifier brand, issue, locality, and preferred time"></textarea></label>
-                    <button class="btn btn-primary" type="submit">Send Booking</button>
-                </form>
             </div>
         </section>
     </main>
@@ -175,5 +268,108 @@
         </div>
     </footer>
     <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const serviceCards = document.querySelectorAll('#service-pick-grid .service-pick-card');
+            const slotBtns = document.querySelectorAll('#time-slot-grid .time-slot-btn');
+            const dateInput = document.getElementById('booking-date');
+            const nameInput = document.getElementById('form-name');
+            const phoneInput = document.getElementById('form-phone');
+            const addressInput = document.getElementById('form-address');
+            const notesInput = document.getElementById('form-notes');
+
+            const sumService = document.getElementById('sum-service');
+            const sumDate = document.getElementById('sum-date');
+            const sumSlot = document.getElementById('sum-slot');
+            const sumAddress = document.getElementById('sum-address');
+            const sumPrice = document.getElementById('sum-price');
+
+            const bookingForm = document.getElementById('booking-form');
+            const successPanel = document.getElementById('booking-success');
+            const successSummary = document.getElementById('success-summary');
+
+            let selectedService = 'Repair Visit';
+            let selectedSlot = 'Morning';
+            let selectedPrice = 499;
+
+            // Restrict date picker to today onwards (local time)
+            const now = new Date();
+            const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+            dateInput.min = today;
+
+            function formatDate(value) {
+                if (!value) return null;
+                const d = new Date(value + 'T00:00:00');
+                return d.toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+            }
+
+            function updateSummary() {
+                sumService.textContent = selectedService;
+                const dateText = formatDate(dateInput.value);
+                sumDate.textContent = dateText || 'Not selected';
+                sumDate.classList.toggle('placeholder', !dateText);
+                sumSlot.textContent = selectedSlot;
+                const addr = addressInput.value.trim();
+                sumAddress.textContent = addr || 'Not entered';
+                sumAddress.classList.toggle('placeholder', !addr);
+                sumPrice.innerHTML = selectedPrice > 0 ? `&#8377;${selectedPrice}` : 'Free';
+            }
+
+            serviceCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    serviceCards.forEach(c => c.classList.remove('active'));
+                    card.classList.add('active');
+                    selectedService = card.dataset.service;
+                    selectedPrice = parseInt(card.dataset.price, 10);
+                    updateSummary();
+                });
+            });
+
+            slotBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    slotBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    selectedSlot = btn.dataset.slot.split(' ')[0];
+                    updateSummary();
+                });
+            });
+
+            dateInput.addEventListener('change', updateSummary);
+            addressInput.addEventListener('input', updateSummary);
+
+            bookingForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                if (!dateInput.value) {
+                    dateInput.focus();
+                    dateInput.reportValidity();
+                    return;
+                }
+                if (!nameInput.value.trim() || !phoneInput.value.trim() || !addressInput.value.trim()) {
+                    [nameInput, phoneInput, addressInput].forEach(f => f.reportValidity());
+                    return;
+                }
+
+                successSummary.innerHTML = `<strong>${selectedService}</strong> for ${nameInput.value.trim()} on <strong>${formatDate(dateInput.value)}</strong>, ${selectedSlot.toLowerCase()} window. A coordinator will call ${phoneInput.value.trim()} shortly to confirm.`;
+
+                bookingForm.style.display = 'none';
+                successPanel.classList.add('show');
+                successPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+
+            document.getElementById('book-again-btn').addEventListener('click', () => {
+                bookingForm.reset();
+                selectedService = 'Repair Visit';
+                selectedSlot = 'Morning';
+                selectedPrice = 499;
+                serviceCards.forEach((c, i) => c.classList.toggle('active', i === 0));
+                slotBtns.forEach((b, i) => b.classList.toggle('active', i === 0));
+                updateSummary();
+                successPanel.classList.remove('show');
+                bookingForm.style.display = '';
+            });
+
+            updateSummary();
+        });
+    </script>
 </body>
 </html>
