@@ -45,8 +45,8 @@
             <div class="container hero-grid">
                 <div class="hero-copy premium-glass-card reveal active" style="padding: 40px; border-radius: var(--radius-md);">
                     <span class="eyebrow"><i class="ri-sparkling-fill" style="color: var(--color-secondary);"></i> Pure Luxury. Perfect Purity.</span>
-                    <h1 style="font-size: clamp(2.2rem, 4vw, 3.5rem); line-height: 1.15; font-weight: 800;">Premium RO care for healthier everyday water.</h1>
-                    <p style="font-size: 1.05rem; margin-bottom: 30px;">ROCare brings water purifier sales, installation, repair, and AMC support into one clean, reliable service experience for homes and workplaces.</p>
+                    <h1 style="font-size: clamp(2.4rem, 4.5vw, 3.8rem); line-height: 1.15; font-weight: 800;">Water, Reimagined. <br>Purifier Care, <span class="gradient-text">Perfected.</span></h1>
+                    <p style="font-size: 1.08rem; line-height: 1.6; margin-bottom: 30px; color: var(--color-text-muted);">Pure luxury water management for architectural homes and wellness spaces. Experience premium RO installation, testing, and annual care.</p>
                     <div class="hero-actions">
                         <a class="btn btn-primary" href="pages/booking.html">Book Service</a>
                         <a class="btn btn-outline" href="pages/services.html">View Services</a>
@@ -82,18 +82,24 @@
                     <h2>Premium Water Care</h2>
                 </div>
                 <div class="card-grid">
-                    <article class="content-card premium-glass-card reveal active" style="padding: 30px;">
-                        <i class="ri-drop-line" style="font-size: 2rem; color: var(--color-primary); display: inline-block; margin-bottom: 15px;"></i>
+                    <article class="content-card premium-glass-card reveal active" style="padding: 35px; border-radius: var(--radius-md); transition: transform 0.3s ease, border-color 0.3s ease;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-soft); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <i class="ri-drop-line" style="font-size: 1.6rem; color: var(--color-primary);"></i>
+                        </div>
                         <h3>Water testing</h3>
                         <p>TDS, hardness, taste, odor, and flow are checked before we recommend a system or service.</p>
                     </article>
-                    <article class="content-card premium-glass-card reveal active" style="padding: 30px;">
-                        <i class="ri-tools-line" style="font-size: 2rem; color: var(--color-primary); display: inline-block; margin-bottom: 15px;"></i>
+                    <article class="content-card premium-glass-card reveal active" style="padding: 35px; border-radius: var(--radius-md); transition: transform 0.3s ease, border-color 0.3s ease;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-soft); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <i class="ri-tools-line" style="font-size: 1.6rem; color: var(--color-primary);"></i>
+                        </div>
                         <h3>Expert installation</h3>
                         <p>Neat wall mounting, leak-safe fittings, pressure checks, and guided first use.</p>
                     </article>
-                    <article class="content-card premium-glass-card reveal active" style="padding: 30px;">
-                        <i class="ri-refresh-line" style="font-size: 2rem; color: var(--color-primary); display: inline-block; margin-bottom: 15px;"></i>
+                    <article class="content-card premium-glass-card reveal active" style="padding: 35px; border-radius: var(--radius-md); transition: transform 0.3s ease, border-color 0.3s ease;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-soft); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <i class="ri-refresh-line" style="font-size: 1.6rem; color: var(--color-primary);"></i>
+                        </div>
                         <h3>AMC care</h3>
                         <p>Filter changes, membrane checks, sanitization, and reminders are bundled into simple plans.</p>
                     </article>
@@ -103,32 +109,49 @@
 
         <!-- TDS Quick Check Interactive Widget -->
         <section class="section-shell">
-            <div class="container" style="max-width: 800px; text-align: center;">
+            <div class="container" style="max-width: 900px; text-align: center;">
                 <div class="section-heading">
                     <span class="eyebrow">Interactive Estimator</span>
                     <h2>Find Your Perfect Purification Level</h2>
                     <p>Select your water source to instantly view the recommended filtration stages and target TDS.</p>
                 </div>
-                <div class="premium-glass-card" style="padding: 40px; margin-top: 30px; text-align: left; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center;">
+                <div class="premium-glass-card" style="padding: 40px; margin-top: 30px; text-align: left; display: grid; grid-template-columns: 1.2fr 1fr 1.2fr; gap: 30px; align-items: center; border-radius: var(--radius-md);">
                     <div>
-                        <h3 style="margin-bottom: 15px;">Source Water</h3>
-                        <div style="display: flex; flex-direction: column; gap: 12px;">
-                            <label style="display: flex; align-items: center; gap: 10px; font-weight: 600; cursor: pointer;">
-                                <input type="radio" name="home-source" value="municipal" checked style="width: 18px; height: 18px;"> Municipal / Tap
+                        <h3 style="margin-bottom: 20px;">Source Water</h3>
+                        <div style="display: flex; flex-direction: column; gap: 16px;">
+                            <label style="display: flex; align-items: center; gap: 12px; font-weight: 700; cursor: pointer; font-size: 1rem;">
+                                <input type="radio" name="home-source" value="municipal" checked style="width: 20px; height: 20px; accent-color: var(--color-primary);"> Municipal / Tap
                             </label>
-                            <label style="display: flex; align-items: center; gap: 10px; font-weight: 600; cursor: pointer;">
-                                <input type="radio" name="home-source" value="borewell" style="width: 18px; height: 18px;"> Ground / Borewell
+                            <label style="display: flex; align-items: center; gap: 12px; font-weight: 700; cursor: pointer; font-size: 1rem;">
+                                <input type="radio" name="home-source" value="borewell" style="width: 20px; height: 20px; accent-color: var(--color-primary);"> Ground / Borewell
                             </label>
-                            <label style="display: flex; align-items: center; gap: 10px; font-weight: 600; cursor: pointer;">
-                                <input type="radio" name="home-source" value="tanker" style="width: 18px; height: 18px;"> Tanker Water
+                            <label style="display: flex; align-items: center; gap: 12px; font-weight: 700; cursor: pointer; font-size: 1rem;">
+                                <input type="radio" name="home-source" value="tanker" style="width: 20px; height: 20px; accent-color: var(--color-primary);"> Tanker Water
                             </label>
                         </div>
                     </div>
-                    <div id="home-recommendation-panel" style="padding: 24px; background: var(--color-soft); border-radius: var(--radius-sm); border-left: 4px solid var(--color-secondary);">
-                        <h4 style="color: var(--color-primary); margin-bottom: 8px;" id="home-rec-title">RO + UV Active Carbon</h4>
-                        <p style="font-size: 0.9rem; line-height: 1.4; color: var(--color-text-muted);" id="home-rec-desc">Calibrated for chlorine reduction and organic particulate extraction. Ideal for municipal inputs.</p>
+                    
+                    <!-- Gauge Panel -->
+                    <div class="lux-gauge-container">
+                        <div class="lux-gauge">
+                            <div class="lux-gauge-needle" id="home-gauge-needle"></div>
+                            <div class="lux-gauge-mask">
+                                <div class="lux-gauge-center" style="text-align: center;">
+                                    <span id="home-gauge-val">60</span>
+                                    <small>PPM TDS</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recommendation Panel -->
+                    <div id="home-recommendation-panel" style="padding: 24px; background: var(--color-soft); border-radius: var(--radius-sm); border-left: 4px solid var(--color-secondary); min-height: 180px; display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <h4 style="color: var(--color-primary); margin-bottom: 8px; font-size: 1.15rem;" id="home-rec-title">RO + UV Active Carbon</h4>
+                            <p style="font-size: 0.9rem; line-height: 1.45; color: var(--color-text-muted);" id="home-rec-desc">Calibrated for chlorine reduction and organic particulate extraction. Ideal for municipal inputs.</p>
+                        </div>
                         <div style="margin-top: 15px; font-size: 0.85rem; font-weight: 800; color: var(--color-text-main);">
-                            Recommended Plan: <span style="color: var(--color-secondary);" id="home-rec-plan">Standard Care</span>
+                            Recommended Plan: <br><span style="color: var(--color-secondary); font-size: 1rem;" id="home-rec-plan">Standard Care Plan</span>
                         </div>
                     </div>
                 </div>
@@ -248,22 +271,30 @@
             const recTitle = document.getElementById('home-rec-title');
             const recDesc = document.getElementById('home-rec-desc');
             const recPlan = document.getElementById('home-rec-plan');
+            const needle = document.getElementById('home-gauge-needle');
+            const gaugeVal = document.getElementById('home-gauge-val');
             
             const recData = {
                 municipal: {
                     title: 'RO + UV Active Carbon',
                     desc: 'Calibrated for chlorine reduction and organic particulate extraction. Ideal for municipal inputs.',
-                    plan: 'Standard Care Plan'
+                    plan: 'Standard Care Plan',
+                    tds: 60,
+                    deg: -60
                 },
                 borewell: {
                     title: 'Heavy Duty RO Membrane + TDS Controller',
                     desc: 'Calibrated for high TDS reduction, metal extraction, and hard minerals. Essential for groundwater.',
-                    plan: 'Premium Guard Plan'
+                    plan: 'Premium Guard Plan',
+                    tds: 650,
+                    deg: 60
                 },
                 tanker: {
                     title: 'Multi-stage RO + UV + UF Shield',
                     desc: 'Calibrated for highly variable TDS, sediment load, and biological sterilization. Ideal for bulk supplies.',
-                    plan: 'Complete Protection Plan'
+                    plan: 'Complete Protection Plan',
+                    tds: 320,
+                    deg: 0
                 }
             };
             
@@ -274,6 +305,23 @@
                     recTitle.textContent = data.title;
                     recDesc.textContent = data.desc;
                     recPlan.textContent = data.plan;
+                    
+                    // Animate gauge
+                    needle.style.transform = `rotate(${data.deg}deg)`;
+                    
+                    // Count up/down animation for TDS value
+                    let start = parseInt(gaugeVal.textContent);
+                    let end = data.tds;
+                    let steps = 15;
+                    let currentStep = 0;
+                    let interval = setInterval(() => {
+                        currentStep++;
+                        let nextVal = Math.round(start + (end - start) * (currentStep / steps));
+                        gaugeVal.textContent = nextVal;
+                        if (currentStep >= steps) {
+                            clearInterval(interval);
+                        }
+                    }, 30);
                 });
             });
         });
