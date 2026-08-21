@@ -6,7 +6,11 @@
     <title>ROCare | Services</title>
     <link rel="icon" type="image/png" href="../assets/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/redesign.css">
 </head>
 <body>
     <header class="header">
@@ -38,57 +42,192 @@
             </div>
         </div>
     </header>
-    <main>
-        <section class="hero-section section-shell">
-            <div class="container hero-grid">
-                <div class="hero-copy">
-                    <span class="eyebrow">Services</span>
-                    <h1>Installation, repair, AMC, and purifier upgrades in one place.</h1>
-                    <p>Whether your purifier needs a new membrane, a pump check, or a complete replacement, ROCare keeps the process organized and easy to approve.</p>
-                    <div class="hero-actions">
-                        <a class="btn btn-primary" href="booking.html">Book Service</a>
-                        <a class="btn btn-outline" href="services.html">View Services</a>
+    <main class="services-premium">
+        <!-- Luxury Hero -->
+        <section class="hero-section section-shell" style="padding: 160px 0 80px; text-align: center; position: relative;">
+            <div class="lux-orb" style="position: absolute; top: 10%; left: 50%; transform: translate(-50%, -50%); width: 350px; height: 350px; background: radial-gradient(circle, rgba(20,154,154,0.15) 0%, transparent 70%); filter: blur(50px); pointer-events: none;"></div>
+            <div class="container" style="max-width: 800px;">
+                <span class="eyebrow"><i class="ri-sparkling-2-line" style="color: var(--color-secondary);"></i> Bespoke Purification</span>
+                <h1 style="font-family: 'Playfair Display', serif; font-size: clamp(2.6rem, 5vw, 4.2rem); font-weight: 500; line-height: 1.15; margin-bottom: 20px;">The Service Atelier</h1>
+                <p style="font-size: 1.15rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 40px;">Professional water diagnostics, precision installation engineering, and complete annual lifecycle support. Tailored for wellness spaces.</p>
+                <div style="display: flex; gap: 20px; justify-content: center;">
+                    <a class="btn btn-primary" href="booking.html" style="padding: 14px 30px; font-weight: 600;">Book Consultation</a>
+                    <a class="btn btn-outline" href="#blueprints" style="padding: 14px 30px; font-weight: 600;">Explore Blueprints</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Blueprints Deck -->
+        <section class="section-shell" id="blueprints" style="padding-top: 40px;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 50px;">
+                    <span class="eyebrow">Service Deck</span>
+                    <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3.5vw, 2.8rem);">Bespoke Service Blueprints</h2>
+                </div>
+                
+                <div class="lux-blueprint-deck" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+                    <!-- Blueprint Card 1: RO Repair -->
+                    <div class="lux-blueprint-card premium-glass-card" style="padding: 40px; border-radius: var(--radius-md); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(20,154,154,0.1); position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; min-height: 480px;">
+                        <div class="card-glow" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(20,154,154,0.05) 0%, transparent 100%); pointer-events: none; opacity: 0; transition: opacity 0.4s ease;"></div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 30px;">
+                                <div style="width: 54px; height: 54px; border-radius: 50%; background: rgba(20,154,154,0.1); display: flex; align-items: center; justify-content: center; color: var(--color-primary); font-size: 1.8rem;">
+                                    <i class="ri-tools-line"></i>
+                                </div>
+                                <span style="font-size: 0.85rem; font-weight: 800; color: var(--color-secondary); text-transform: uppercase; letter-spacing: 1px;">Blueprint 01</span>
+                            </div>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 500; margin-bottom: 15px; color: var(--color-text-main);">RO Repair & Fix</h3>
+                            <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 30px;">Complete diagnostics loop solving low flow, pump noises, warning signals, and chemical taste shifts with certified replacements.</p>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px;">
+                                <div style="display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--color-text-muted);">
+                                    <i class="ri-checkbox-circle-line" style="color: var(--color-primary);"></i> Pressure & flow rate calibration
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--color-text-muted);">
+                                    <i class="ri-checkbox-circle-line" style="color: var(--color-primary);"></i> Leak-safe brass connector refits
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--color-text-muted);">
+                                    <i class="ri-checkbox-circle-line" style="color: var(--color-primary);"></i> 30-day structural warranty
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 20px; z-index: 2;">
+                            <div>
+                                <span style="display: block; font-size: 0.72rem; text-transform: uppercase; color: var(--color-text-muted);">Starting at</span>
+                                <strong style="font-size: 1.25rem; color: var(--color-secondary);">₹499</strong>
+                            </div>
+                            <a href="booking.html" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.85rem; font-weight: 700;">Select</a>
+                        </div>
+                    </div>
+
+                    <!-- Blueprint Card 2: Precision Install -->
+                    <div class="lux-blueprint-card premium-glass-card" style="padding: 40px; border-radius: var(--radius-md); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(20,154,154,0.1); position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; min-height: 480px;">
+                        <div class="card-glow" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(20,154,154,0.05) 0%, transparent 100%); pointer-events: none; opacity: 0; transition: opacity 0.4s ease;"></div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 30px;">
+                                <div style="width: 54px; height: 54px; border-radius: 50%; background: rgba(20,154,154,0.1); display: flex; align-items: center; justify-content: center; color: var(--color-primary); font-size: 1.8rem;">
+                                    <i class="ri-drop-line"></i>
+                                </div>
+                                <span style="font-size: 0.85rem; font-weight: 800; color: var(--color-secondary); text-transform: uppercase; letter-spacing: 1px;">Blueprint 02</span>
+                            </div>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 500; margin-bottom: 15px; color: var(--color-text-main);">Precision Installation</h3>
+                            <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 30px;">Neat countertop, wall-mount, or custom under-sink installations with surgical tubing routing, pressure limiters, and system calibration.</p>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px;">
+                                <div style="display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--color-text-muted);">
+                                    <i class="ri-checkbox-circle-line" style="color: var(--color-primary);"></i> Hidden structural piping layout
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--color-text-muted);">
+                                    <i class="ri-checkbox-circle-line" style="color: var(--color-primary);"></i> Pressure reducing valve calibration
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--color-text-muted);">
+                                    <i class="ri-checkbox-circle-line" style="color: var(--color-primary);"></i> System sanitization on startup
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 20px; z-index: 2;">
+                            <div>
+                                <span style="display: block; font-size: 0.72rem; text-transform: uppercase; color: var(--color-text-muted);">Starting at</span>
+                                <strong style="font-size: 1.25rem; color: var(--color-secondary);">₹699</strong>
+                            </div>
+                            <a href="booking.html" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.85rem; font-weight: 700;">Select</a>
+                        </div>
+                    </div>
+
+                    <!-- Blueprint Card 3: AMC Care -->
+                    <div class="lux-blueprint-card premium-glass-card" style="padding: 40px; border-radius: var(--radius-md); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(20,154,154,0.1); position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; min-height: 480px;">
+                        <div class="card-glow" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(20,154,154,0.05) 0%, transparent 100%); pointer-events: none; opacity: 0; transition: opacity 0.4s ease;"></div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 30px;">
+                                <div style="width: 54px; height: 54px; border-radius: 50%; background: rgba(20,154,154,0.1); display: flex; align-items: center; justify-content: center; color: var(--color-primary); font-size: 1.8rem;">
+                                    <i class="ri-shield-check-line"></i>
+                                </div>
+                                <span style="font-size: 0.85rem; font-weight: 800; color: var(--color-secondary); text-transform: uppercase; letter-spacing: 1px;">Blueprint 03</span>
+                            </div>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 500; margin-bottom: 15px; color: var(--color-text-main);">AMC Annual Care</h3>
+                            <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 30px;">Complete maintenance lifecycle support with scheduled visits, filter kit replacements, tank sanitization, and priority repair response.</p>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px;">
+                                <div style="display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--color-text-muted);">
+                                    <i class="ri-checkbox-circle-line" style="color: var(--color-primary);"></i> 3 scheduled tuneup visits / year
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--color-text-muted);">
+                                    <i class="ri-checkbox-circle-line" style="color: var(--color-primary);"></i> Free carbon & sediment filters
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--color-text-muted);">
+                                    <i class="ri-checkbox-circle-line" style="color: var(--color-primary);"></i> Zero visitation or service fees
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 20px; z-index: 2;">
+                            <div>
+                                <span style="display: block; font-size: 0.72rem; text-transform: uppercase; color: var(--color-text-muted);">Starting at</span>
+                                <strong style="font-size: 1.25rem; color: var(--color-secondary);">₹2,999/yr</strong>
+                            </div>
+                            <a href="booking.html" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.85rem; font-weight: 700;">Select</a>
+                        </div>
                     </div>
                 </div>
-                <figure class="hero-media reveal">
-                    <img src="https://images.unsplash.com/photo-1662454377919-82ef4c6cd708?auto=format&fit=crop&w=1400&q=80" alt="Under-sink water filtration system" loading="eager">
-                    <figcaption>ROCare water service experience</figcaption>
-                </figure>
             </div>
         </section>
-        <section class="section-shell">
-            <div class="container section-intro">
-                <span class="eyebrow">Overview</span>
-                <h2>Service that starts with diagnosis</h2>
-                <p>We inspect the actual problem before quoting, so you pay for the work your purifier needs.</p>
-                <div class="stat-grid">
-                <div class="stat-card"><strong>RO</strong><span>repair</span></div>
-                <div class="stat-card"><strong>AMC</strong><span>plans</span></div>
-                <div class="stat-card"><strong>UV/UF</strong><span>support</span></div>
-            </div>
-            </div>
-        </section>
+
+        <!-- Dynamic Diagnostics Matrix Widget -->
         <section class="section-shell section-surface">
-            <div class="container">
-                <div class="section-heading">
-                    <span class="eyebrow">Highlights</span>
-                    <h2>What this page helps you do</h2>
+            <div class="container" style="max-width: 950px;">
+                <div style="text-align: center; margin-bottom: 50px;">
+                    <span class="eyebrow">Water Matrix</span>
+                    <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3.5vw, 2.8rem);">Water Target Matrix</h2>
+                    <p>Select a contaminant type to discover which service action and filter technology is calibrated to extract it.</p>
                 </div>
-                <div class="card-grid">
-                <article class="content-card reveal"><i class="ri-water-flash-line"></i><h3>RO repair</h3><p>Pump, membrane, tank, leakage, flow, and taste issues handled with compatible parts.</p></article>
-                <article class="content-card reveal"><i class="ri-install-line"></i><h3>Installation</h3><p>Wall-mounted, countertop, and under-sink setups with clean routing and pressure checks.</p></article>
-                <article class="content-card reveal"><i class="ri-loop-right-line"></i><h3>AMC plans</h3><p>Periodic filter replacement, sanitization, and water quality checks in one calendar.</p></article>
-            </div>
+                
+                <div class="premium-glass-card" style="padding: 40px; border-radius: var(--radius-md); display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: start;">
+                    <!-- Left: Contaminant list -->
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        <button class="lux-matrix-btn active" data-matrix="sediments" style="background: none; border: none; text-align: left; padding: 18px 24px; border-radius: var(--radius-sm); border-left: 3px solid var(--color-primary); cursor: pointer; transition: all 0.3s ease; width: 100%;">
+                            <h3 style="font-size: 1.15rem; color: var(--color-primary);">Clay, Mud & Sediments</h3>
+                            <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px;">Visible turbidity causing filter blockages and low pressure.</p>
+                        </button>
+                        <button class="lux-matrix-btn" data-matrix="chemicals" style="background: none; border: none; text-align: left; padding: 18px 24px; border-radius: var(--radius-sm); border-left: 3px solid transparent; cursor: pointer; transition: all 0.3s ease; width: 100%;">
+                            <h3 style="font-size: 1.15rem; color: var(--color-text-main);">Chlorine, Pesticides & Odors</h3>
+                            <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px;">Chemical smells, bleaching taste, and bad odor.</p>
+                        </button>
+                        <button class="lux-matrix-btn" data-matrix="metals" style="background: none; border: none; text-align: left; padding: 18px 24px; border-radius: var(--radius-sm); border-left: 3px solid transparent; cursor: pointer; transition: all 0.3s ease; width: 100%;">
+                            <h3 style="font-size: 1.15rem; color: var(--color-text-main);">Heavy Metals & Hard Scale</h3>
+                            <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px;">Lead, arsenic, white scale deposits on pots, high TDS.</p>
+                        </button>
+                        <button class="lux-matrix-btn" data-matrix="pathogens" style="background: none; border: none; text-align: left; padding: 18px 24px; border-radius: var(--radius-sm); border-left: 3px solid transparent; cursor: pointer; transition: all 0.3s ease; width: 100%;">
+                            <h3 style="font-size: 1.15rem; color: var(--color-text-main);">Bacteria, Viruses & Pathogens</h3>
+                            <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px;">Biological contaminants causing waterborne infections.</p>
+                        </button>
+                    </div>
+                    
+                    <!-- Right: Diagnostic Output Panel -->
+                    <div id="lux-matrix-panel" style="padding: 35px; background: var(--color-soft); border-radius: var(--radius-sm); border-left: 4px solid var(--color-secondary); min-height: 280px; display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                                <h4 id="matrix-title" style="color: var(--color-primary); font-size: 1.4rem; font-family: 'Playfair Display', serif;">Clay, Mud & Sediments</h4>
+                                <span style="background: rgba(20, 154, 154, 0.1); padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 800; color: var(--color-primary);" id="matrix-tech-tag">Spun Polypropylene</span>
+                            </div>
+                            <p id="matrix-desc" style="font-size: 0.95rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 20px;">Clay and suspended sand block internal solenoid valves and exhaust RO membranes prematurely. We use high-density 5-micron pre-sediment filters to trap particulate loads.</p>
+                        </div>
+                        <div style="border-top: 1px solid rgba(0,0,0,0.08); padding-top: 20px;">
+                            <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-text-main);">Calibration Service: </span>
+                            <span style="color: var(--color-secondary); font-size: 0.95rem; font-weight: 800;" id="matrix-service-link">AMC Preventive Filter Swap</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+        
+        <!-- Elevated Process / Split Section -->
         <section class="section-shell split-section">
             <div class="container split-grid">
-                <div class="split-media reveal">
-                    <img src="https://images.unsplash.com/photo-1667404142540-850e45581cef?auto=format&fit=crop&w=1400&q=80" alt="White purifier in a modern kitchen" loading="lazy">
+                <div class="split-media reveal active">
+                    <img src="https://images.unsplash.com/photo-1667404142540-850e45581cef?auto=format&fit=crop&w=1400&q=80" alt="White purifier in a modern kitchen" loading="lazy" style="border-radius: var(--radius-md); box-shadow: var(--shadow-lg);">
                 </div>
-                <div class="split-copy">
+                <div class="split-copy premium-glass-card reveal active" style="padding: 40px; border-radius: var(--radius-md);">
                     <span class="eyebrow">Process</span>
-                    <h2>A cleaner workflow for every visit</h2>
+                    <h2 style="font-family: 'Playfair Display', serif;">A cleaner workflow for every visit</h2>
                     <p>Technicians inspect, quote, repair, test, and clean the work area before closing the job.</p>
                     <ol class="step-list">
                         <li>Book a slot and describe the symptom.</li>
@@ -98,29 +237,42 @@
                 </div>
             </div>
         </section>
+
+        <!-- Service Menu Detailed Matrix List -->
         <section class="section-shell section-surface">
             <div class="container">
-                <div class="section-heading">
-                    <span class="eyebrow">Resources</span>
-                    <h2>Service menu</h2>
+                <div style="text-align: center; margin-bottom: 50px;">
+                    <span class="eyebrow">Service Catalog</span>
+                    <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3.5vw, 2.8rem);">Standard Service Menu</h2>
                 </div>
                 <div class="resource-grid">
-                <article class="content-card reveal"><h3>Filter replacement</h3><p>Sediment, carbon, UF, post-carbon, and mineral cartridges.</p></article>
-                <article class="content-card reveal"><h3>Membrane care</h3><p>RO membrane health checks and replacement when needed.</p></article>
-                <article class="content-card reveal"><h3>Commercial RO</h3><p>Higher capacity systems for clinics, offices, cafes, and shops.</p></article>
-            </div>
+                    <article class="content-card premium-glass-card reveal active" style="padding: 30px;">
+                        <h3>Filter replacement</h3>
+                        <p>Sediment, carbon, UF, post-carbon, and mineral cartridges.</p>
+                    </article>
+                    <article class="content-card premium-glass-card reveal active" style="padding: 30px;">
+                        <h3>Membrane care</h3>
+                        <p>RO membrane health checks and replacement when needed.</p>
+                    </article>
+                    <article class="content-card premium-glass-card reveal active" style="padding: 30px;">
+                        <h3>Commercial RO</h3>
+                        <p>Higher capacity systems for clinics, offices, cafes, and shops.</p>
+                    </article>
+                </div>
             </div>
         </section>
+
+        <!-- Elevated Final CTA -->
         <section class="section-shell final-cta">
             <div class="container cta-grid">
-                <div>
+                <div class="premium-glass-card reveal active" style="padding: 40px; border-radius: var(--radius-md);">
                     <span class="eyebrow">Next step</span>
-                    <h2>Tell us what your purifier is doing</h2>
+                    <h2 style="font-family: 'Playfair Display', serif;">Tell us what your purifier is doing</h2>
                     <p>Low flow, odd taste, leakage, noise, or warning lights all point to different fixes.</p>
                     <a class="btn btn-primary" href="booking.html">Book Service</a>
                 </div>
-                <div class="cta-panel reveal">
-                    <i class="ri-customer-service-2-line"></i>
+                <div class="cta-panel premium-glass-card reveal active" style="padding: 40px; border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: center;">
+                    <i class="ri-customer-service-2-line" style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 15px;"></i>
                     <strong>ROCare support</strong>
                     <span>Service booking, product help, AMC renewals, and urgent purifier care.</span>
                 </div>
@@ -173,5 +325,63 @@
         </div>
     </footer>
     <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const matrixBtns = document.querySelectorAll('.lux-matrix-btn');
+            const mTitle = document.getElementById('matrix-title');
+            const mTech = document.getElementById('matrix-tech-tag');
+            const mDesc = document.getElementById('matrix-desc');
+            const mService = document.getElementById('matrix-service-link');
+            
+            const matrixData = {
+                sediments: {
+                    title: 'Clay, Mud & Sediments',
+                    tech: 'Spun Polypropylene',
+                    desc: 'Clay and suspended sand block internal solenoid valves and exhaust RO membranes prematurely. We use high-density 5-micron pre-sediment filters to trap particulate loads.',
+                    service: 'AMC Preventive Filter Swap'
+                },
+                chemicals: {
+                    title: 'Chlorine, Pesticides & Odors',
+                    tech: 'Activated Coconut Shell Carbon',
+                    desc: 'Dissolved chemicals deteriorate membrane structures and cause unpleasant water taste. We install premium coconut shell active carbon blocks to adsorb chlorine, VOCs, and chemical scents.',
+                    service: 'Filter Replacement & Flush'
+                },
+                metals: {
+                    title: 'Heavy Metals & Hard Scale',
+                    tech: 'Thin-Film Composite RO Membrane',
+                    desc: 'Arsenic, lead, mercury, and high calcium scale are filtered out by our thin-film composite RO membranes. Water is purified at a molecular level to ensure safety.',
+                    service: 'Membrane Replacement & Check'
+                },
+                pathogens: {
+                    title: 'Bacteria, Viruses & Pathogens',
+                    tech: 'Germicidal UV chamber + UF Shield',
+                    desc: 'Water is sanitised in a stainless steel germicidal UV reactor to disrupt viral DNA, followed by a hollow-fibre UF capillary filter to trap dead bacteria residues.',
+                    service: 'RO Repair & UV Fitting'
+                }
+            };
+            
+            matrixBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    matrixBtns.forEach(b => {
+                        b.classList.remove('active');
+                        b.style.borderLeftColor = 'transparent';
+                        b.querySelector('h3').style.color = 'var(--color-text-main)';
+                    });
+                    
+                    btn.classList.add('active');
+                    btn.style.borderLeftColor = 'var(--color-primary)';
+                    btn.querySelector('h3').style.color = 'var(--color-primary)';
+                    
+                    const key = btn.dataset.matrix;
+                    const data = matrixData[key];
+                    
+                    mTitle.textContent = data.title;
+                    mTech.textContent = data.tech;
+                    mDesc.textContent = data.desc;
+                    mService.textContent = data.service;
+                });
+            });
+        });
+    </script>
 </body>
 </html>
