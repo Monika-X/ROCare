@@ -135,14 +135,54 @@ document.addEventListener('DOMContentLoaded', () => {
     if (userProfileBtn && userDropdown) {
         userProfileBtn.addEventListener('click', (e) => {
             e.stopPropagation();
-            userDropdown.classList.toggle('show');
+            const isOpen = userDropdown.classList.toggle('show');
+            userProfileBtn.setAttribute('aria-expanded', String(isOpen));
         });
 
         // Close dropdown when clicking outside
         document.addEventListener('click', (e) => {
             if (!userProfileBtn.contains(e.target) && !userDropdown.contains(e.target)) {
                 userDropdown.classList.remove('show');
+                userProfileBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Reset UI state so back/forward navigation doesn't restore an open dropdown
+        const resetDropdownState = () => {
+            userDropdown.classList.remove('show');
+            userProfileBtn.setAttribute('aria-expanded', 'false');
+            if (navLinks) {
+                navLinks.classList.remove('show');
+            }
+            if (menuBtn) {
+                menuBtn.setAttribute('aria-expanded', 'false');
+            }
+        };
+
+        window.addEventListener('pagehide', resetDropdownState);
+        window.addEventListener('pageshow', (e) => {
+            if (e.persisted) {
+                resetDropdownState();
             }
         });
     }
+
+    // 7. Password Visibility Toggle
+    const passwordToggles = document.querySelectorAll('.auth-input-icon');
+    passwordToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const input = toggle.previousElementSibling;
+            if (input && input.tagName === 'INPUT') {
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    toggle.classList.remove('ri-eye-off-line');
+                    toggle.classList.add('ri-eye-line');
+                } else {
+                    input.type = 'password';
+                    toggle.classList.remove('ri-eye-line');
+                    toggle.classList.add('ri-eye-off-line');
+                }
+            }
+        });
+    });
 });
