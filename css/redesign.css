@@ -2601,12 +2601,16 @@
   }
 
   /* Reduce absolute section paddings for compact view */
-  .lux-hero,
   .lux-atelier-section,
   .lux-sommelier-section,
   .lux-gallery-section,
   .lux-cta-parallax {
     padding: 60px 0 !important;
+  }
+
+  .lux-hero {
+    padding-top: 130px !important;
+    padding-bottom: 60px !important;
   }
 
   /* Stack Home 2 CTA buttons vertically to prevent overflow */
