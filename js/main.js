@@ -118,14 +118,18 @@ document.addEventListener('DOMContentLoaded', () => {
         menuBtn.addEventListener('click', () => {
             const isOpen = navLinks.classList.toggle('show');
             menuBtn.setAttribute('aria-expanded', String(isOpen));
+            menuBtn.innerHTML = isOpen ? '<i class="ri-close-line"></i>' : '<i class="ri-menu-line"></i>';
             document.body.classList.toggle('menu-open', isOpen);
+            document.documentElement.classList.toggle('menu-open', isOpen);
         });
 
         navLinks.querySelectorAll('a').forEach((link) => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('show');
                 menuBtn.setAttribute('aria-expanded', 'false');
+                menuBtn.innerHTML = '<i class="ri-menu-line"></i>';
                 document.body.classList.remove('menu-open');
+                document.documentElement.classList.remove('menu-open');
             });
         });
 
@@ -165,8 +169,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             if (menuBtn) {
                 menuBtn.setAttribute('aria-expanded', 'false');
+                menuBtn.innerHTML = '<i class="ri-menu-line"></i>';
             }
             document.body.classList.remove('menu-open');
+            document.documentElement.classList.remove('menu-open');
         };
 
         window.addEventListener('pagehide', resetDropdownState);
