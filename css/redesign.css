@@ -2212,3 +2212,8 @@
 [data-theme="dark"] .lux-filter-btn:hover {
   background: rgba(255, 255, 255, 0.05) !important;
 }
+
+/* Blog Card Image Hover Zoom */
+.content-card:hover .blog-card-img {
+  transform: scale(1.04) !important;
+}
