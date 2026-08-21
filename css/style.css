@@ -1237,7 +1237,6 @@ p {
     gap: 6px;
   }
 
-  .nav-actions .icon-btn:not(#theme-toggle),
   .nav-actions .cta-btn {
     display: none !important;
   }

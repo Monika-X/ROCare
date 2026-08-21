@@ -113,69 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinks.appendChild(mobileBookBtn);
         }
 
-        // Dynamically add RTL/LTR toggle and Profile options if not present
-        if (!navLinks.querySelector('.nav-mobile-actions')) {
-            const mobileActions = document.createElement('div');
-            mobileActions.className = 'nav-mobile-actions';
-            mobileActions.style.borderTop = '1px solid var(--color-border)';
-            mobileActions.style.marginTop = '15px';
-            mobileActions.style.paddingTop = '15px';
-            mobileActions.style.display = 'flex';
-            mobileActions.style.flexDirection = 'column';
-            mobileActions.style.gap = '6px';
 
-            // 1. RTL/LTR Toggle
-            const desktopDirBtn = document.getElementById('dir-toggle');
-            if (desktopDirBtn) {
-                const mobileDirBtn = document.createElement('button');
-                mobileDirBtn.className = 'nav-link nav-mobile-dir-btn';
-                mobileDirBtn.style.textAlign = 'left';
-                mobileDirBtn.style.background = 'none';
-                mobileDirBtn.style.border = 'none';
-                mobileDirBtn.style.cursor = 'pointer';
-                mobileDirBtn.style.padding = '12px';
-                mobileDirBtn.style.width = '100%';
-                mobileDirBtn.innerHTML = `<i class="ri-translate-2" style="margin-right: 8px;"></i> Text Direction: <strong style="color: var(--color-primary);">${desktopDirBtn.textContent}</strong>`;
-                
-                mobileDirBtn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    desktopDirBtn.click(); // Trigger the desktop btn action
-                    mobileDirBtn.querySelector('strong').textContent = desktopDirBtn.textContent;
-                });
-                mobileActions.appendChild(mobileDirBtn);
-            }
-
-            // 2. Profile Links
-            const userDropdown = document.getElementById('user-dropdown');
-            if (userDropdown) {
-                const profileTitle = document.createElement('div');
-                profileTitle.style.padding = '12px 12px 4px';
-                profileTitle.style.fontSize = '0.75rem';
-                profileTitle.style.textTransform = 'uppercase';
-                profileTitle.style.letterSpacing = '1px';
-                profileTitle.style.color = 'var(--color-text-muted)';
-                profileTitle.style.fontWeight = '800';
-                profileTitle.textContent = 'Account Concierge';
-                mobileActions.appendChild(profileTitle);
-
-                const links = userDropdown.querySelectorAll('a');
-                links.forEach(link => {
-                    const mobileProfileLink = document.createElement('a');
-                    mobileProfileLink.href = link.getAttribute('href');
-                    mobileProfileLink.className = 'nav-link';
-                    // Add an icon prefix based on text
-                    let icon = 'ri-user-line';
-                    if (link.textContent.includes('Dashboard')) icon = 'ri-dashboard-line';
-                    if (link.textContent.includes('Login')) icon = 'ri-login-box-line';
-                    if (link.textContent.includes('Signup')) icon = 'ri-user-add-line';
-                    
-                    mobileProfileLink.innerHTML = `<i class="${icon}" style="margin-right: 8px;"></i> ${link.textContent}`;
-                    mobileActions.appendChild(mobileProfileLink);
-                });
-            }
-
-            navLinks.appendChild(mobileActions);
-        }
 
         menuBtn.addEventListener('click', () => {
             const isOpen = navLinks.classList.toggle('show');
