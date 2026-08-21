@@ -6,169 +6,496 @@
     <title>ROCare | Customer Dashboard</title>
     <link rel="icon" type="image/png" href="../assets/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/redesign.css">
 </head>
 <body>
-    <div style="position: absolute; top: 20px; right: 20px; display: flex; gap: 10px; z-index: 1000;">
-        <button id="theme-toggle" class="icon-btn" aria-label="Toggle color theme"><i class="ri-moon-line"></i></button>
-        <button id="dir-toggle" class="icon-btn dir-text-btn" aria-label="Toggle text direction">LTR</button>
+    <div class="dash-premium">
+        <aside class="dash-sidebar" id="dash-sidebar" aria-label="Dashboard sidebar">
+            <a href="../index.html" class="dash-sidebar-head" aria-label="ROCare home">
+                <img src="../assets/logo.png" alt="ROCare Logo">
+                <span>
+                    <strong>ROCare</strong>
+                    <small><i class="ri-vip-crown-fill"></i> Customer Portal</small>
+                </span>
+            </a>
+            <nav class="dash-sidebar-nav">
+                <span class="dash-nav-label">Overview</span>
+                <a href="#top" class="dash-nav-link active" data-spy="top"><i class="ri-dashboard-line"></i> Dashboard</a>
+                <a href="#plan" class="dash-nav-link" data-spy="plan"><i class="ri-vip-crown-line"></i> My AMC Plan</a>
+                <span class="dash-nav-label">Service Care</span>
+                <a href="#filters" class="dash-nav-link" data-spy="filters"><i class="ri-filter-3-line"></i> Filter Manager</a>
+                <a href="#upcoming" class="dash-nav-link" data-spy="upcoming"><i class="ri-calendar-event-line"></i> Upcoming Visits</a>
+                <a href="#history" class="dash-nav-link" data-spy="history"><i class="ri-history-line"></i> Service History</a>
+                <span class="dash-nav-label">Quick Links</span>
+                <a href="booking.html" class="dash-nav-link"><i class="ri-calendar-check-line"></i> Book Visit</a>
+                <a href="contact.html" class="dash-nav-link"><i class="ri-customer-service-2-line"></i> Support Desk</a>
+            </nav>
+            <div class="dash-sidebar-foot">
+                <a href="../index.html" class="dash-nav-link"><i class="ri-home-5-line"></i> Back to Website</a>
+                <a href="login.html" class="dash-nav-link"><i class="ri-logout-box-r-line"></i> Logout</a>
+            </div>
+        </aside>
+        <div class="dash-sidebar-backdrop" id="dash-backdrop"></div>
+
+        <div class="dash-main-area">
+            <header class="dash-topbar">
+                <div class="container dash-topbar-inner">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <button id="dash-menu-btn" class="icon-btn dash-menu-btn" aria-label="Toggle sidebar" aria-expanded="false"><i class="ri-menu-line"></i></button>
+                        <span class="dash-topbar-title">Customer Dashboard</span>
+                    </div>
+                    <div class="dash-topbar-actions">
+                        <button id="theme-toggle" class="icon-btn" aria-label="Toggle color theme"><i class="ri-moon-line"></i></button>
+                        <button id="dir-toggle" class="icon-btn dir-text-btn" aria-label="Toggle text direction">LTR</button>
+                        <a href="login.html" class="icon-btn" aria-label="Log out"><i class="ri-logout-box-r-line"></i></a>
+                    </div>
+                </div>
+            </header>
+
+        <main>
+            <!-- Hero -->
+            <section class="dash-hero" id="top">
+                <div class="dash-hero-orb"></div>
+                <div class="container dash-hero-grid">
+                    <div class="dash-hero-copy">
+                        <span class="dash-greet-badge"><i class="ri-drop-line"></i> Aquaguard Aura RO+UV &middot; Running well</span>
+                        <h1>Good afternoon, Riya.</h1>
+                        <p>Your Premium Care Plan keeps every filter, membrane, and lamp on schedule. Track your AMC, book a filter replacement, or revisit your full service history below.</p>
+                        <div class="dash-actions">
+                            <a class="btn btn-primary" href="#filters"><i class="ri-calendar-check-line"></i> Schedule Filter Visit</a>
+                            <a class="btn btn-outline" href="#history"><i class="ri-history-line"></i> View Service History</a>
+                        </div>
+                    </div>
+                    <div class="premium-glass-card dash-focus-card" id="plan">
+                        <div class="dash-focus-head">
+                            <span class="status-pill success">AMC Active</span>
+                            <i class="ri-vip-crown-fill"></i>
+                        </div>
+                        <strong>Premium Care Plan</strong>
+                        <p>Covers all filters, labour, and annual purity testing for your registered purifier.</p>
+                        <div class="amc-ring" role="img" aria-label="28 days remaining in plan year" style="background: radial-gradient(circle at center, var(--color-surface) 62%, transparent 63%), conic-gradient(var(--color-primary) 0 92%, var(--color-border) 92% 100%);">
+                            <div>
+                                <strong>28</strong>
+                                <span>days left</span>
+                            </div>
+                        </div>
+                        <div class="amc-mini-rows">
+                            <div><span>Plan period</span><strong>18 Sep 2025 &ndash; 18 Sep 2026</strong></div>
+                            <div><span>Visits used</span><strong>3 of 4</strong></div>
+                            <div><span>Renewal reminder</span><strong>On <i class="ri-checkbox-circle-fill" style="color: #087857;"></i></strong></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Timely reminders -->
+            <section class="dash-section">
+                <div class="container reminder-strip">
+                    <div class="reminder-chip warning premium-glass-card">
+                        <i class="ri-filter-3-line"></i>
+                        <div>
+                            <strong>Carbon filter due in 21 days</strong>
+                            <span>Reduced flow and taste change are early signs.</span>
+                        </div>
+                        <a class="text-link" href="#filters" style="margin-left: auto; font-size: 0.8rem;">Schedule</a>
+                    </div>
+                    <div class="reminder-chip urgent premium-glass-card">
+                        <i class="ri-timer-flash-line"></i>
+                        <div>
+                            <strong>AMC expires in 28 days</strong>
+                            <span>Renew before 18 Sep to keep uninterrupted coverage.</span>
+                        </div>
+                        <a class="text-link" href="services.html" style="margin-left: auto; font-size: 0.8rem;">Renew</a>
+                    </div>
+                    <div class="reminder-chip premium-glass-card">
+                        <i class="ri-calendar-event-line"></i>
+                        <div>
+                            <strong>Next visit confirmed: 02 Sep</strong>
+                            <span>Vikram arrives between 10 AM and 12 PM.</span>
+                        </div>
+                        <a class="text-link" href="#upcoming" style="margin-left: auto; font-size: 0.8rem;">Details</a>
+                    </div>
+                    <div class="reminder-chip premium-glass-card">
+                        <i class="ri-file-text-line"></i>
+                        <div>
+                            <strong>August purity report is ready</strong>
+                            <span>TDS logged at 62 ppm &mdash; within target range.</span>
+                        </div>
+                        <a class="text-link" href="#history" style="margin-left: auto; font-size: 0.8rem;">View</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Metrics -->
+            <section class="dash-section">
+                <div class="container dash-metrics-grid">
+                    <article class="dash-tile premium-glass-card">
+                        <i class="ri-water-flash-line"></i>
+                        <span>Water Quality</span>
+                        <strong>Good</strong>
+                        <small>Health score 92 &middot; checked 14 Aug</small>
+                    </article>
+                    <article class="dash-tile premium-glass-card">
+                        <i class="ri-pulse-line"></i>
+                        <span>Current TDS</span>
+                        <strong>62 ppm</strong>
+                        <small>Within target range</small>
+                    </article>
+                    <article class="dash-tile premium-glass-card">
+                        <i class="ri-filter-3-line"></i>
+                        <span>Weakest Filter</span>
+                        <strong>22%</strong>
+                        <small>Sediment pre-filter needs attention</small>
+                    </article>
+                    <article class="dash-tile premium-glass-card">
+                        <i class="ri-time-line"></i>
+                        <span>Next Visit</span>
+                        <strong>02 Sep</strong>
+                        <small>10:00 AM &ndash; 12:00 PM window</small>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Filter replacement manager -->
+            <section class="dash-section" id="filters">
+                <div class="container dash-two-col">
+                    <div class="premium-glass-card dash-panel">
+                        <div class="dash-panel-heading">
+                            <div>
+                                <h2>Filter Replacement Manager</h2>
+                                <p>Live filter life based on usage and water input quality.</p>
+                            </div>
+                            <span class="status-pill warning">1 due soon</span>
+                        </div>
+
+                        <div class="filter-item">
+                            <span class="filter-icon"><i class="ri-filter-3-line"></i></span>
+                            <div class="filter-info">
+                                <strong>Sediment Pre-filter</strong>
+                                <small>Last replaced: 12 Feb 2026</small>
+                            </div>
+                            <div class="filter-life">
+                                <div class="filter-life-track"><em style="width: 22%;"></em></div>
+                                <small>22% life remaining</small>
+                            </div>
+                            <button type="button" class="btn-schedule" data-filter="Sediment Pre-filter"><i class="ri-calendar-check-line"></i> Schedule</button>
+                        </div>
+
+                        <div class="filter-item">
+                            <span class="filter-icon"><i class="ri-drop-line"></i></span>
+                            <div class="filter-info">
+                                <strong>Carbon Block</strong>
+                                <small>Last replaced: 05 Nov 2025</small>
+                            </div>
+                            <div class="filter-life">
+                                <div class="filter-life-track"><em style="width: 74%;"></em></div>
+                                <small>74% life remaining</small>
+                            </div>
+                            <button type="button" class="btn-schedule" data-filter="Carbon Block"><i class="ri-calendar-check-line"></i> Schedule</button>
+                        </div>
+
+                        <div class="filter-item">
+                            <span class="filter-icon"><i class="ri-device-line"></i></span>
+                            <div class="filter-info">
+                                <strong>RO Membrane 80 GPD</strong>
+                                <small>Last replaced: 18 Sep 2025</small>
+                            </div>
+                            <div class="filter-life">
+                                <div class="filter-life-track"><em style="width: 88%;"></em></div>
+                                <small>88% life remaining</small>
+                            </div>
+                            <button type="button" class="btn-schedule" data-filter="RO Membrane 80 GPD"><i class="ri-calendar-check-line"></i> Schedule</button>
+                        </div>
+
+                        <div class="filter-item">
+                            <span class="filter-icon"><i class="ri-flashlight-line"></i></span>
+                            <div class="filter-info">
+                                <strong>UV Lamp</strong>
+                                <small>Last replaced: 18 Sep 2025</small>
+                            </div>
+                            <div class="filter-life">
+                                <div class="filter-life-track"><em style="width: 61%;"></em></div>
+                                <small>61% life remaining</small>
+                            </div>
+                            <button type="button" class="btn-schedule" data-filter="UV Lamp"><i class="ri-calendar-check-line"></i> Schedule</button>
+                        </div>
+
+                        <div class="scheduler-box" id="scheduler-box">
+                            <div class="scheduler-selected">
+                                <small>Scheduling</small>
+                                <strong id="sched-filter-name">Select a filter above</strong>
+                            </div>
+                            <label>Preferred date
+                                <input type="date" id="sched-date">
+                            </label>
+                            <label>Time window
+                                <select id="sched-slot">
+                                    <option>Morning (8 AM &ndash; 12 PM)</option>
+                                    <option>Afternoon (12 PM &ndash; 4 PM)</option>
+                                    <option>Evening (4 PM &ndash; 8 PM)</option>
+                                </select>
+                            </label>
+                            <button class="btn btn-primary" type="button" id="sched-confirm" style="min-height: 44px;">Confirm Request</button>
+                            <div class="scheduler-msg" id="sched-msg"><i class="ri-checkbox-circle-fill"></i><span></span></div>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming visits + support -->
+                    <aside style="display: grid; gap: 20px;">
+                        <div class="premium-glass-card dash-panel" id="upcoming">
+                            <div class="dash-panel-heading">
+                                <div>
+                                    <h2>Upcoming Visits</h2>
+                                    <p>Confirmed and requested visits.</p>
+                                </div>
+                            </div>
+                            <div id="upcoming-list">
+                                <div class="visit-row">
+                                    <div class="date-block"><strong>02</strong><span>Sep</span></div>
+                                    <div class="visit-row-body">
+                                        <strong>Routine AMC Service</strong>
+                                        <small>Vikram &middot; 10 AM &ndash; 12 PM &middot; Checklist shared</small>
+                                    </div>
+                                    <span class="status-pill success">Confirmed</span>
+                                </div>
+                            </div>
+                            <p style="font-size: 0.78rem; color: var(--color-text-muted); margin-top: 12px;"><i class="ri-information-line"></i> You will receive a confirmation call before every visit.</p>
+                        </div>
+                        <div class="premium-glass-card dash-panel">
+                            <div class="dash-panel-heading">
+                                <div>
+                                    <h2>Plan Support</h2>
+                                    <p>Questions about coverage or billing?</p>
+                                </div>
+                            </div>
+                            <div class="amc-mini-rows" style="border-top: none; padding-top: 0;">
+                                <div><span><i class="ri-phone-line"></i> Priority helpline</span><strong><a href="tel:+919876543210" class="text-link">+91 98765 43210</a></strong></div>
+                                <div><span><i class="ri-mail-line"></i> Email care desk</span><strong><a href="mailto:support@rocare.example" class="text-link">support@rocare.example</a></strong></div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <!-- Service history -->
+            <section class="dash-section" id="history">
+                <div class="container">
+                    <div class="premium-glass-card dash-panel history-panel">
+                        <div class="dash-panel-heading">
+                            <div>
+                                <h2>Past Service History</h2>
+                                <p>Every visit, test, and invoice since installation.</p>
+                            </div>
+                            <span class="status-pill success">5 records</span>
+                        </div>
+                        <table class="history-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Service</th>
+                                    <th>Technician</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Invoice</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>14 Aug 2026</strong></td>
+                                    <td>Routine AMC service &amp; tank sanitization</td>
+                                    <td><span>Vikram</span></td>
+                                    <td><strong>Covered</strong></td>
+                                    <td><span class="status-pill success">Completed</span></td>
+                                    <td><button class="icon-action-btn" type="button" aria-label="Download invoice"><i class="ri-download-2-line"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>14 Aug 2026</strong></td>
+                                    <td>TDS &amp; purity lab test</td>
+                                    <td><span>Lab team</span></td>
+                                    <td><strong>Free</strong></td>
+                                    <td><span class="status-pill success">Report ready</span></td>
+                                    <td><button class="icon-action-btn" type="button" aria-label="Download report"><i class="ri-download-2-line"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>02 Jul 2026</strong></td>
+                                    <td>Low-flow repair (inlet valve)</td>
+                                    <td><span>Imran</span></td>
+                                    <td><strong>&#8377;850</strong></td>
+                                    <td><span class="status-pill success">Closed</span></td>
+                                    <td><button class="icon-action-btn" type="button" aria-label="Download invoice"><i class="ri-download-2-line"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>18 Jun 2026</strong></td>
+                                    <td>AMC renewal &mdash; Premium Care Plan</td>
+                                    <td><span>&mdash;</span></td>
+                                    <td><strong>&#8377;4,999</strong></td>
+                                    <td><span class="status-pill success">Active</span></td>
+                                    <td><button class="icon-action-btn" type="button" aria-label="Download invoice"><i class="ri-download-2-line"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>02 Jun 2026</strong></td>
+                                    <td>Carbon filter replacement</td>
+                                    <td><span>Sana</span></td>
+                                    <td><strong>&#8377;450</strong></td>
+                                    <td><span class="status-pill success">Completed</span></td>
+                                    <td><button class="icon-action-btn" type="button" aria-label="Download invoice"><i class="ri-download-2-line"></i></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="font-size: 0.78rem; color: var(--color-text-muted); margin-top: 14px;"><i class="ri-information-line"></i> Invoices are emailed automatically after every completed visit.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA band -->
+            <section class="dash-section" style="padding-bottom: 56px;">
+                <div class="container">
+                    <div class="dash-cta-band">
+                        <div>
+                            <h2>Need anything before your next visit?</h2>
+                            <p>Book an urgent repair, ask the care desk a question, or explore plan upgrades for your family size.</p>
+                        </div>
+                        <div class="dash-quick-grid">
+                            <a class="dash-quick-chip" href="booking.html"><i class="ri-tools-line"></i> Book Repair</a>
+                            <a class="dash-quick-chip" href="contact.html"><i class="ri-question-answer-line"></i> Ask Support</a>
+                            <a class="dash-quick-chip" href="services.html"><i class="ri-refresh-line"></i> Upgrade Plan</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        </div>
     </div>
-    <main class="dashboard-main">
-        <section class="dashboard-hero">
-            <div class="container dashboard-hero-grid">
-                <div>
-                    <span class="eyebrow">Customer dashboard</span>
-                    <h1>Good afternoon, Riya.</h1>
-                    <p>Your Aquaguard Aura is running well. The next planned visit is scheduled for filter inspection, tank sanitization, and water-flow testing.</p>
-                    <div class="dashboard-actions">
-                        <a class="btn btn-primary" href="booking.html"><i class="ri-calendar-check-line"></i> Schedule Visit</a>
-                        <a class="btn btn-outline" href="contact.html"><i class="ri-chat-1-line"></i> Raise Support</a>
-                    </div>
-                </div>
-                <div class="dashboard-focus-card">
-                    <span class="status-pill success">AMC Active</span>
-                    <strong>Premium Care Plan</strong>
-                    <p>Valid until 18 Sep 2026 with 2 service visits remaining.</p>
-                    <div class="dashboard-progress" aria-label="Plan usage">
-                        <span style="width: 68%"></span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="dashboard-section">
-            <div class="container dashboard-metrics">
-                <article class="metric-tile">
-                    <i class="ri-water-flash-line"></i>
-                    <span>Water Quality</span>
-                    <strong>Good</strong>
-                    <small>Last checked: 14 Aug</small>
-                </article>
-                <article class="metric-tile">
-                    <i class="ri-drop-line"></i>
-                    <span>Current TDS</span>
-                    <strong>62 ppm</strong>
-                    <small>Within target range</small>
-                </article>
-                <article class="metric-tile">
-                    <i class="ri-filter-line"></i>
-                    <span>Filter Life</span>
-                    <strong>74%</strong>
-                    <small>Carbon filter healthy</small>
-                </article>
-                <article class="metric-tile">
-                    <i class="ri-calendar-event-line"></i>
-                    <span>Next Visit</span>
-                    <strong>18 Sep</strong>
-                    <small>10:00 AM - 12:00 PM</small>
-                </article>
-            </div>
-        </section>
-        <section class="dashboard-section">
-            <div class="container dashboard-grid">
-                <article class="dashboard-panel health-panel">
-                    <div class="panel-heading">
-                        <div>
-                            <span class="eyebrow">Purifier health</span>
-                            <h2>System snapshot</h2>
-                        </div>
-                        <span class="status-pill success">92%</span>
-                    </div>
-                    <div class="health-ring">
-                        <strong>92</strong>
-                        <span>health score</span>
-                    </div>
-                    <ul class="status-list">
-                        <li><span>Flow rate</span><strong>1.8 L/min</strong></li>
-                        <li><span>Tank pressure</span><strong>Stable</strong></li>
-                        <li><span>Last membrane check</span><strong>14 Aug 2026</strong></li>
-                    </ul>
-                </article>
-                <article class="dashboard-panel">
-                    <div class="panel-heading">
-                        <div>
-                            <span class="eyebrow">Upcoming visit</span>
-                            <h2>Technician checklist</h2>
-                        </div>
-                    </div>
-                    <ol class="dashboard-checklist">
-                        <li>Inspect sediment and carbon filters</li>
-                        <li>Sanitize storage tank and faucet outlet</li>
-                        <li>Recheck TDS, taste, and leakage points</li>
-                        <li>Update service notes in your account</li>
-                    </ol>
-                </article>
-            </div>
-        </section>
-        <section class="dashboard-section section-surface">
-            <div class="container dashboard-grid">
-                <article class="dashboard-panel wide-panel">
-                    <div class="panel-heading">
-                        <div>
-                            <span class="eyebrow">Service timeline</span>
-                            <h2>Recent activity</h2>
-                        </div>
-                        <a class="text-link" href="booking.html">Book again</a>
-                    </div>
-                    <div class="timeline-list">
-                        <div><time>14 Aug</time><strong>Routine service completed</strong><span>Sediment filter cleaned, pressure checked, and TDS logged.</span></div>
-                        <div><time>02 Jul</time><strong>Support request closed</strong><span>Low-flow concern resolved after inlet valve adjustment.</span></div>
-                        <div><time>18 Jun</time><strong>AMC renewed</strong><span>Premium Care Plan activated with three scheduled visits.</span></div>
-                    </div>
-                </article>
-                <article class="dashboard-panel">
-                    <div class="panel-heading">
-                        <div>
-                            <span class="eyebrow">Support</span>
-                            <h2>Open requests</h2>
-                        </div>
-                    </div>
-                    <div class="ticket-list">
-                        <div><strong>#RC-1029</strong><span class="status-pill warning">Waiting</span><p>Confirm visit slot for filter inspection.</p></div>
-                        <div><strong>#RC-1018</strong><span class="status-pill success">Closed</span><p>Invoice sent after AMC renewal.</p></div>
-                    </div>
-                </article>
-            </div>
-        </section>
-        <section class="dashboard-section">
-            <div class="container dashboard-grid">
-                <article class="dashboard-panel">
-                    <div class="panel-heading">
-                        <div>
-                            <span class="eyebrow">Registered purifier</span>
-                            <h2>Aquaguard Aura RO+UV</h2>
-                        </div>
-                    </div>
-                    <ul class="detail-list">
-                        <li><span>Installed</span><strong>18 Sep 2024</strong></li>
-                        <li><span>Water source</span><strong>Borewell + municipal mix</strong></li>
-                        <li><span>Location</span><strong>Kitchen wall unit</strong></li>
-                        <li><span>Preferred slot</span><strong>Morning</strong></li>
-                    </ul>
-                </article>
-                <article class="dashboard-panel accent-panel">
-                    <span class="eyebrow">Recommended action</span>
-                    <h2>Replace sediment pre-filter during the next visit.</h2>
-                    <p>This keeps the RO membrane from taking extra load and helps maintain stable taste.</p>
-                    <a class="btn btn-primary" href="booking.html">Confirm Visit</a>
-                </article>
-            </div>
-        </section>
-        <section class="dashboard-section final-dashboard-cta">
-            <div class="container final-dashboard-grid">
-                <div>
-                    <span class="eyebrow">Quick actions</span>
-                    <h2>Need anything before the scheduled visit?</h2>
-                    <p>Book urgent repair, ask a plan question, or request a purifier upgrade recommendation from the ROCare team.</p>
-                </div>
-                <div class="quick-action-grid">
-                    <a href="booking.html"><i class="ri-tools-line"></i><span>Repair</span></a>
-                    <a href="contact.html"><i class="ri-question-answer-line"></i><span>Ask</span></a>
-                    <a href="services.html"><i class="ri-refresh-line"></i><span>Upgrade</span></a>
-                </div>
-            </div>
-        </section>
-    </main>
 
     <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const now = new Date();
+            const todayStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+
+            const schedBox = document.getElementById('scheduler-box');
+            const schedName = document.getElementById('sched-filter-name');
+            const schedDate = document.getElementById('sched-date');
+            const schedSlot = document.getElementById('sched-slot');
+            const schedConfirm = document.getElementById('sched-confirm');
+            const schedMsg = document.getElementById('sched-msg');
+            const upcomingList = document.getElementById('upcoming-list');
+
+            schedDate.min = todayStr;
+            let selectedFilter = '';
+
+            document.querySelectorAll('.btn-schedule').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    selectedFilter = btn.dataset.filter;
+                    schedName.textContent = selectedFilter;
+                    schedBox.classList.add('active');
+                    schedMsg.classList.remove('show');
+                    schedBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    setTimeout(() => schedDate.focus(), 350);
+                });
+            });
+
+            schedConfirm.addEventListener('click', () => {
+                if (!selectedFilter) return;
+                if (!schedDate.value) {
+                    schedDate.reportValidity();
+                    return;
+                }
+
+                const d = new Date(schedDate.value + 'T00:00:00');
+                const dateLabel = d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short' });
+                const monthLabel = d.toLocaleDateString('en-IN', { month: 'short' }).toUpperCase();
+                const slotShort = schedSlot.value.split(' ')[0];
+
+                const row = document.createElement('div');
+                row.className = 'visit-row';
+                row.innerHTML = `<div class="date-block"><strong>${d.getDate()}</strong><span>${monthLabel}</span></div>
+                    <div class="visit-row-body">
+                        <strong>${selectedFilter} replacement</strong>
+                        <small>${slotShort} window &middot; Awaiting coordinator call</small>
+                    </div>
+                    <span class="status-pill warning">Requested</span>`;
+                upcomingList.prepend(row);
+
+                const sourceBtn = document.querySelector(`.btn-schedule[data-filter="${selectedFilter}"]`);
+                if (sourceBtn) {
+                    sourceBtn.classList.add('done');
+                    sourceBtn.innerHTML = '<i class="ri-checkbox-circle-fill"></i> Scheduled';
+                }
+
+                schedMsg.querySelector('span').textContent = `${selectedFilter} replacement requested for ${dateLabel}, ${slotShort.toLowerCase()} window.`;
+                schedMsg.classList.add('show');
+                schedConfirm.textContent = 'Request Sent';
+
+                setTimeout(() => {
+                    schedMsg.classList.remove('show');
+                    schedConfirm.textContent = 'Confirm Request';
+                    schedDate.value = '';
+                }, 4000);
+            });
+
+            // Sidebar toggle (mobile)
+            const sidebar = document.getElementById('dash-sidebar');
+            const backdrop = document.getElementById('dash-backdrop');
+            const menuBtn = document.getElementById('dash-menu-btn');
+
+            function closeSidebar() {
+                sidebar.classList.remove('open');
+                backdrop.classList.remove('show');
+                menuBtn.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('sidebar-lock');
+            }
+
+            menuBtn.addEventListener('click', () => {
+                const open = sidebar.classList.toggle('open');
+                backdrop.classList.toggle('show', open);
+                menuBtn.setAttribute('aria-expanded', String(open));
+                document.body.classList.toggle('sidebar-lock', open);
+            });
+
+            backdrop.addEventListener('click', closeSidebar);
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeSidebar();
+            });
+
+            let spyPausedUntil = 0;
+
+            sidebar.querySelectorAll('a[href^="#"]').forEach(link => {
+                link.addEventListener('click', () => {
+                    spyLinks.forEach(l => l.classList.toggle('active', l === link));
+                    spyPausedUntil = Date.now() + 900;
+                });
+            });
+
+            window.addEventListener('pagehide', closeSidebar);
+            window.addEventListener('pageshow', (e) => {
+                if (e.persisted) closeSidebar();
+            });
+
+            // Scrollspy: highlight sidebar link for visible section
+            const spyLinks = [...sidebar.querySelectorAll('a[data-spy]')];
+            const spySections = spyLinks
+                .map(link => document.getElementById(link.dataset.spy))
+                .filter(Boolean);
+
+            if ('IntersectionObserver' in window && spySections.length) {
+                const spy = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (!entry.isIntersecting) return;
+                        if (Date.now() < spyPausedUntil) return;
+                        spyLinks.forEach(link => {
+                            link.classList.toggle('active', link.dataset.spy === entry.target.id);
+                        });
+                    });
+                }, { rootMargin: '-25% 0px -65% 0px' });
+
+                spySections.forEach(section => spy.observe(section));
+            }
+        });
+    </script>
 </body>
 </html>

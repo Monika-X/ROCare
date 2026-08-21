@@ -6,204 +6,404 @@
     <title>ROCare | Admin Dashboard</title>
     <link rel="icon" type="image/png" href="../assets/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/redesign.css">
 </head>
 <body>
-    <div style="position: absolute; top: 20px; right: 20px; display: flex; gap: 10px; z-index: 1000;">
-        <button id="theme-toggle" class="icon-btn" aria-label="Toggle color theme"><i class="ri-moon-line"></i></button>
-        <button id="dir-toggle" class="icon-btn dir-text-btn" aria-label="Toggle text direction">LTR</button>
+    <div class="dash-premium">
+        <aside class="dash-sidebar" id="dash-sidebar" aria-label="Dashboard sidebar">
+            <a href="../index.html" class="dash-sidebar-head" aria-label="ROCare home">
+                <img src="../assets/logo.png" alt="ROCare Logo">
+                <span>
+                    <strong>ROCare</strong>
+                    <small><i class="ri-shield-user-line"></i> Admin Console</small>
+                </span>
+            </a>
+            <nav class="dash-sidebar-nav">
+                <span class="dash-nav-label">Overview</span>
+                <a href="#top" class="dash-nav-link active" data-spy="top"><i class="ri-dashboard-line"></i> Dashboard</a>
+                <a href="#queue" class="dash-nav-link" data-spy="queue"><i class="ri-truck-line"></i> Dispatch Board</a>
+                <span class="dash-nav-label">Operations</span>
+                <a href="#amc" class="dash-nav-link" data-spy="amc"><i class="ri-vip-crown-line"></i> AMC Renewals</a>
+                <a href="#workload" class="dash-nav-link" data-spy="workload"><i class="ri-team-line"></i> Technicians</a>
+                <a href="#analytics" class="dash-nav-link" data-spy="analytics"><i class="ri-pulse-line"></i> Analytics</a>
+                <a href="#inventory" class="dash-nav-link" data-spy="inventory"><i class="ri-archive-line"></i> Inventory</a>
+                <span class="dash-nav-label">Quick Links</span>
+                <a href="booking.html" class="dash-nav-link"><i class="ri-add-line"></i> Add Job</a>
+                <a href="contact.html" class="dash-nav-link"><i class="ri-phone-line"></i> Follow Up</a>
+            </nav>
+            <div class="dash-sidebar-foot">
+                <a href="../index.html" class="dash-nav-link"><i class="ri-home-5-line"></i> Back to Website</a>
+                <a href="login.html" class="dash-nav-link"><i class="ri-logout-box-r-line"></i> Logout</a>
+            </div>
+        </aside>
+        <div class="dash-sidebar-backdrop" id="dash-backdrop"></div>
+
+        <div class="dash-main-area">
+            <header class="dash-topbar">
+                <div class="container dash-topbar-inner">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <button id="dash-menu-btn" class="icon-btn dash-menu-btn" aria-label="Toggle sidebar" aria-expanded="false"><i class="ri-menu-line"></i></button>
+                        <span class="dash-topbar-title">Admin Console</span>
+                    </div>
+                    <div class="dash-topbar-actions">
+                        <button id="theme-toggle" class="icon-btn" aria-label="Toggle color theme"><i class="ri-moon-line"></i></button>
+                        <button id="dir-toggle" class="icon-btn dir-text-btn" aria-label="Toggle text direction">LTR</button>
+                        <a href="login.html" class="icon-btn" aria-label="Log out"><i class="ri-logout-box-r-line"></i></a>
+                    </div>
+                </div>
+            </header>
+
+        <main>
+            <!-- Hero -->
+            <section class="dash-hero" id="top">
+                <div class="dash-hero-orb"></div>
+                <div class="container dash-hero-grid">
+                    <div class="dash-hero-copy">
+                        <span class="dash-greet-badge"><i class="ri-radar-line"></i> Live operations &middot; 21 Aug 2026</span>
+                        <h1>Service Command Center</h1>
+                        <p>Monitor today's visits, dispatch technicians, chase AMC renewals, and keep filter inventory ahead of the forecast &mdash; all from one board.</p>
+                        <div class="dash-actions">
+                            <a class="btn btn-primary" href="#queue"><i class="ri-truck-line"></i> Open Dispatch Board</a>
+                            <a class="btn btn-outline" href="#amc"><i class="ri-vip-crown-line"></i> Review Renewals</a>
+                        </div>
+                    </div>
+                    <div class="premium-glass-card dash-focus-card admin-focus">
+                        <div class="dash-focus-head">
+                            <span class="status-pill warning">12 active jobs</span>
+                            <i class="ri-route-line"></i>
+                        </div>
+                        <strong>Today's Field Load</strong>
+                        <p>8 scheduled AMC visits, 3 repairs, and 1 commercial installation need dispatch review.</p>
+                        <div class="filter-life">
+                            <div class="filter-life-track"><em style="width: 42%;"></em></div>
+                            <small>42% of today's jobs completed</small>
+                        </div>
+                        <div class="amc-mini-rows">
+                            <div><span>Completed</span><strong>5 jobs</strong></div>
+                            <div><span>In progress</span><strong>4 jobs</strong></div>
+                            <div><span>Awaiting assignment</span><strong>3 jobs</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Metrics -->
+            <section class="dash-section">
+                <div class="container dash-metrics-grid">
+                    <article class="dash-tile premium-glass-card">
+                        <i class="ri-team-line"></i>
+                        <span>Total Customers</span>
+                        <strong>1,234</strong>
+                        <small>+42 new this month</small>
+                    </article>
+                    <article class="dash-tile premium-glass-card">
+                        <i class="ri-shield-check-line"></i>
+                        <span>Active AMC Plans</span>
+                        <strong>842</strong>
+                        <small>68% customer coverage</small>
+                    </article>
+                    <article class="dash-tile premium-glass-card">
+                        <i class="ri-calendar-event-line"></i>
+                        <span>Today's Visits</span>
+                        <strong>12</strong>
+                        <small>5 completed &middot; 4 in progress</small>
+                    </article>
+                    <article class="dash-tile premium-glass-card">
+                        <i class="ri-alert-line"></i>
+                        <span>Urgent Issues</span>
+                        <strong>4</strong>
+                        <small>Leakage and no-flow calls</small>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Dispatch board -->
+            <section class="dash-section" id="queue">
+                <div class="container">
+                    <div class="premium-glass-card dash-panel history-panel">
+                        <div class="dash-panel-heading">
+                            <div>
+                                <h2>Today's Service Queue</h2>
+                                <p>Assign technicians and track every job to closure.</p>
+                            </div>
+                            <div class="dashboard-tabs" aria-label="Queue filters" id="queue-tabs">
+                                <button class="active" type="button" data-filter="all">All</button>
+                                <button type="button" data-filter="urgent">Urgent</button>
+                                <button type="button" data-filter="amc">AMC</button>
+                                <button type="button" data-filter="install">Install</button>
+                            </div>
+                        </div>
+                        <table class="history-table">
+                            <thead>
+                                <tr>
+                                    <th>Job</th>
+                                    <th>Customer</th>
+                                    <th>Service</th>
+                                    <th>Area</th>
+                                    <th>Technician</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="queue-body">
+                                <tr data-type="amc">
+                                    <td><strong>#RC-2042</strong></td>
+                                    <td>Riya Sharma</td>
+                                    <td><span>AMC service</span></td>
+                                    <td><span>Indiranagar</span></td>
+                                    <td><span>Vikram</span></td>
+                                    <td><span class="status-pill success">Assigned</span></td>
+                                </tr>
+                                <tr data-type="urgent">
+                                    <td><strong>#RC-2043</strong></td>
+                                    <td>Arun Mehta</td>
+                                    <td><span>Leakage repair</span></td>
+                                    <td><span>Koramangala</span></td>
+                                    <td><span style="color: var(--color-warm); font-weight: 700;">Unassigned</span></td>
+                                    <td><span class="status-pill danger">Urgent</span></td>
+                                </tr>
+                                <tr data-type="install">
+                                    <td><strong>#RC-2044</strong></td>
+                                    <td>Green Cafe</td>
+                                    <td><span>Commercial RO install</span></td>
+                                    <td><span>MG Road</span></td>
+                                    <td><span>Sana</span></td>
+                                    <td><span class="status-pill warning">Parts check</span></td>
+                                </tr>
+                                <tr data-type="repair">
+                                    <td><strong>#RC-2045</strong></td>
+                                    <td>Dr. Nair Clinic</td>
+                                    <td><span>Low flow fix</span></td>
+                                    <td><span>Whitefield</span></td>
+                                    <td><span>Imran</span></td>
+                                    <td><span class="status-pill success">En route</span></td>
+                                </tr>
+                                <tr data-type="amc">
+                                    <td><strong>#RC-2046</strong></td>
+                                    <td>Meera Iyer</td>
+                                    <td><span>Filter replacement</span></td>
+                                    <td><span>Adyar</span></td>
+                                    <td><span>Vikram</span></td>
+                                    <td><span class="status-pill warning">Scheduled</span></td>
+                                </tr>
+                                <tr data-type="urgent">
+                                    <td><strong>#RC-2047</strong></td>
+                                    <td>Hotel Verde</td>
+                                    <td><span>Membrane change</span></td>
+                                    <td><span>T. Nagar</span></td>
+                                    <td><span style="color: var(--color-warm); font-weight: 700;">Unassigned</span></td>
+                                    <td><span class="status-pill danger">Urgent</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-top: 14px;" id="queue-count">Showing 6 of 6 jobs</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Renewals + workload -->
+            <section class="dash-section" id="amc">
+                <div class="container dash-two-col">
+                    <div class="premium-glass-card dash-panel">
+                        <div class="dash-panel-heading">
+                            <div>
+                                <h2>AMC Renewal Radar</h2>
+                                <p>Plans approaching expiry with renewal risk.</p>
+                            </div>
+                            <span class="status-pill warning">31 due</span>
+                        </div>
+                        <ul class="status-list">
+                            <li><span>Due within 7 days</span><strong>9 plans</strong></li>
+                            <li><span>Due within 30 days</span><strong>22 plans</strong></li>
+                            <li><span>Expired this month</span><strong>6 plans</strong></li>
+                        </ul>
+                        <button class="btn btn-primary" type="button" id="renewal-remind-btn" style="margin-top: 18px;"><i class="ri-notification-3-line"></i> Send Renewal Reminders</button>
+                    </div>
+                    <div class="premium-glass-card dash-panel" id="workload">
+                        <div class="dash-panel-heading">
+                            <div>
+                                <h2>Technician Workload</h2>
+                                <p>Live job distribution across the field team.</p>
+                            </div>
+                        </div>
+                        <div class="workload-list">
+                            <div><span>Vikram</span><strong>4 jobs</strong><em style="width: 78%;"></em></div>
+                            <div><span>Sana</span><strong>3 jobs</strong><em style="width: 62%;"></em></div>
+                            <div><span>Imran</span><strong>3 jobs</strong><em style="width: 58%;"></em></div>
+                            <div><span>Neha</span><strong>2 jobs</strong><em style="width: 38%;"></em></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Analytics + inventory -->
+            <section class="dash-section" id="inventory">
+                <div class="container dash-two-col">
+                    <div class="premium-glass-card dash-panel" id="analytics">
+                        <div class="dash-panel-heading">
+                            <div>
+                                <h2>Monthly Service Analytics</h2>
+                                <p>August performance against targets.</p>
+                            </div>
+                        </div>
+                        <div class="analytics-bars">
+                            <div><span>Completed visits</span><strong>318</strong><em style="width: 86%;"></em></div>
+                            <div><span>First-visit fixes</span><strong>91%</strong><em style="width: 91%;"></em></div>
+                            <div><span>Repeat complaints</span><strong>4%</strong><em style="width: 24%;"></em></div>
+                            <div><span>AMC renewal rate</span><strong>73%</strong><em style="width: 73%;"></em></div>
+                        </div>
+                    </div>
+                    <div class="premium-glass-card dash-panel">
+                        <div class="dash-panel-heading">
+                            <div>
+                                <h2>Filter Inventory Alerts</h2>
+                                <p>Spare parts vs forecast demand.</p>
+                            </div>
+                        </div>
+                        <div class="ticket-list">
+                            <div>
+                                <strong>Sediment 10 inch</strong>
+                                <span class="status-pill danger">Low</span>
+                                <p>12 units left against 18 forecast jobs.</p>
+                                <button class="btn-schedule reorder-btn" type="button"><i class="ri-add-line"></i> Reorder</button>
+                            </div>
+                            <div>
+                                <strong>RO Membrane 80 GPD</strong>
+                                <span class="status-pill warning">Watch</span>
+                                <p>28 units left with 9 forecast jobs.</p>
+                                <button class="btn-schedule reorder-btn" type="button"><i class="ri-add-line"></i> Reorder</button>
+                            </div>
+                            <div>
+                                <strong>UV Lamp 11W</strong>
+                                <span class="status-pill success">Healthy</span>
+                                <p>54 units in stock, steady demand.</p>
+                                <button class="btn-schedule reorder-btn" type="button"><i class="ri-add-line"></i> Reorder</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA band -->
+            <section class="dash-section" style="padding-bottom: 56px;">
+                <div class="container">
+                    <div class="dash-cta-band">
+                        <div>
+                            <h2>Convert fresh requests into confirmed visits.</h2>
+                            <p>Assign urgent jobs, confirm parts availability, and follow up on renewal-risk customers before day end.</p>
+                        </div>
+                        <div class="dash-quick-grid">
+                            <a class="dash-quick-chip" href="booking.html"><i class="ri-add-line"></i> Add Job</a>
+                            <a class="dash-quick-chip" href="#queue"><i class="ri-truck-line"></i> Dispatch</a>
+                            <a class="dash-quick-chip" href="contact.html"><i class="ri-phone-line"></i> Follow Up</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        </div>
     </div>
-    <main class="dashboard-main admin-dashboard">
-        <section class="dashboard-hero">
-            <div class="container dashboard-hero-grid">
-                <div>
-                    <span class="eyebrow">Admin dashboard</span>
-                    <h1>Service command center.</h1>
-                    <p>Monitor today&apos;s visits, dispatch technicians, review AMC renewals, and catch urgent purifier issues before they pile up.</p>
-                    <div class="dashboard-actions">
-                        <a class="btn btn-primary" href="booking.html"><i class="ri-inbox-archive-line"></i> Booking Queue</a>
-                        <a class="btn btn-outline" href="#service-queue"><i class="ri-route-line"></i> Dispatch Board</a>
-                    </div>
-                </div>
-                <div class="dashboard-focus-card admin-focus">
-                    <span class="status-pill warning">12 active jobs</span>
-                    <strong>Today&apos;s field load</strong>
-                    <p>8 scheduled AMC visits, 3 repairs, and 1 installation require dispatch review.</p>
-                    <div class="dashboard-progress" aria-label="Completed jobs">
-                        <span style="width: 42%"></span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="dashboard-section">
-            <div class="container dashboard-metrics">
-                <article class="metric-tile">
-                    <i class="ri-team-line"></i>
-                    <span>Total Customers</span>
-                    <strong>1,234</strong>
-                    <small>+42 this month</small>
-                </article>
-                <article class="metric-tile">
-                    <i class="ri-shield-check-line"></i>
-                    <span>Active AMC</span>
-                    <strong>842</strong>
-                    <small>68% coverage</small>
-                </article>
-                <article class="metric-tile">
-                    <i class="ri-truck-line"></i>
-                    <span>Today Visits</span>
-                    <strong>12</strong>
-                    <small>5 completed</small>
-                </article>
-                <article class="metric-tile">
-                    <i class="ri-alert-line"></i>
-                    <span>Urgent Issues</span>
-                    <strong>4</strong>
-                    <small>Leakage and no-flow</small>
-                </article>
-            </div>
-        </section>
-        <section class="dashboard-section section-surface" id="service-queue">
-            <div class="container">
-                <div class="panel-heading queue-heading">
-                    <div>
-                        <span class="eyebrow">Dispatch board</span>
-                        <h2>Today&apos;s service queue</h2>
-                    </div>
-                    <div class="dashboard-tabs" aria-label="Queue filters">
-                        <button class="active" type="button">All</button>
-                        <button type="button">Urgent</button>
-                        <button type="button">AMC</button>
-                    </div>
-                </div>
-                <div class="table-panel">
-                    <table class="dashboard-table">
-                        <thead>
-                            <tr>
-                                <th>Job</th>
-                                <th>Customer</th>
-                                <th>Issue</th>
-                                <th>Area</th>
-                                <th>Technician</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>#RC-2042</td>
-                                <td>Riya Sharma</td>
-                                <td>AMC service</td>
-                                <td>Indiranagar</td>
-                                <td>Vikram</td>
-                                <td><span class="status-pill success">Assigned</span></td>
-                            </tr>
-                            <tr>
-                                <td>#RC-2043</td>
-                                <td>Arun Mehta</td>
-                                <td>Leakage</td>
-                                <td>Koramangala</td>
-                                <td>Open</td>
-                                <td><span class="status-pill danger">Urgent</span></td>
-                            </tr>
-                            <tr>
-                                <td>#RC-2044</td>
-                                <td>Green Cafe</td>
-                                <td>Commercial RO install</td>
-                                <td>MG Road</td>
-                                <td>Sana</td>
-                                <td><span class="status-pill warning">Parts check</span></td>
-                            </tr>
-                            <tr>
-                                <td>#RC-2045</td>
-                                <td>Dr. Nair Clinic</td>
-                                <td>Low flow</td>
-                                <td>Whitefield</td>
-                                <td>Imran</td>
-                                <td><span class="status-pill success">En route</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-        <section class="dashboard-section">
-            <div class="container dashboard-grid">
-                <article class="dashboard-panel">
-                    <div class="panel-heading">
-                        <div>
-                            <span class="eyebrow">Technicians</span>
-                            <h2>Field workload</h2>
-                        </div>
-                    </div>
-                    <div class="workload-list">
-                        <div><span>Vikram</span><strong>4 jobs</strong><em style="width: 78%"></em></div>
-                        <div><span>Sana</span><strong>3 jobs</strong><em style="width: 62%"></em></div>
-                        <div><span>Imran</span><strong>3 jobs</strong><em style="width: 58%"></em></div>
-                        <div><span>Neha</span><strong>2 jobs</strong><em style="width: 38%"></em></div>
-                    </div>
-                </article>
-                <article class="dashboard-panel">
-                    <div class="panel-heading">
-                        <div>
-                            <span class="eyebrow">AMC renewals</span>
-                            <h2>Renewal risk</h2>
-                        </div>
-                        <span class="status-pill warning">31 due</span>
-                    </div>
-                    <ul class="status-list">
-                        <li><span>Due in 7 days</span><strong>9 plans</strong></li>
-                        <li><span>Due in 30 days</span><strong>22 plans</strong></li>
-                        <li><span>Expired this month</span><strong>6 plans</strong></li>
-                    </ul>
-                </article>
-            </div>
-        </section>
-        <section class="dashboard-section section-surface">
-            <div class="container dashboard-grid">
-                <article class="dashboard-panel wide-panel">
-                    <div class="panel-heading">
-                        <div>
-                            <span class="eyebrow">Performance</span>
-                            <h2>Monthly service analytics</h2>
-                        </div>
-                    </div>
-                    <div class="analytics-bars">
-                        <div><span>Completed visits</span><strong>318</strong><em style="width: 86%"></em></div>
-                        <div><span>First-visit fixes</span><strong>91%</strong><em style="width: 91%"></em></div>
-                        <div><span>Repeat complaints</span><strong>4%</strong><em style="width: 24%"></em></div>
-                        <div><span>AMC renewal rate</span><strong>73%</strong><em style="width: 73%"></em></div>
-                    </div>
-                </article>
-                <article class="dashboard-panel">
-                    <div class="panel-heading">
-                        <div>
-                            <span class="eyebrow">Inventory</span>
-                            <h2>Parts alerts</h2>
-                        </div>
-                    </div>
-                    <div class="ticket-list">
-                        <div><strong>Sediment 10 inch</strong><span class="status-pill danger">Low</span><p>12 units left. Reorder suggested.</p></div>
-                        <div><strong>RO membrane 80 GPD</strong><span class="status-pill warning">Watch</span><p>28 units left with 9 forecast jobs.</p></div>
-                    </div>
-                </article>
-            </div>
-        </section>
-        <section class="dashboard-section final-dashboard-cta">
-            <div class="container final-dashboard-grid">
-                <div>
-                    <span class="eyebrow">Admin actions</span>
-                    <h2>Convert fresh requests into confirmed visits.</h2>
-                    <p>Keep the dispatch queue moving by assigning urgent jobs, confirming parts, and following up on renewal-risk customers.</p>
-                </div>
-                <div class="quick-action-grid">
-                    <a href="booking.html"><i class="ri-user-add-line"></i><span>Add Job</span></a>
-                    <a href="#service-queue"><i class="ri-truck-line"></i><span>Dispatch</span></a>
-                    <a href="contact.html"><i class="ri-phone-line"></i><span>Follow Up</span></a>
-                </div>
-            </div>
-        </section>
-    </main>
 
     <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('#queue-tabs button');
+            const rows = document.querySelectorAll('#queue-body tr');
+            const countEl = document.getElementById('queue-count');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    const filter = tab.dataset.filter;
+                    let visible = 0;
+                    rows.forEach(row => {
+                        const show = filter === 'all' || row.dataset.type === filter;
+                        row.style.display = show ? '' : 'none';
+                        if (show) visible++;
+                    });
+                    countEl.textContent = `Showing ${visible} of ${rows.length} jobs`;
+                });
+            });
+
+            const remindBtn = document.getElementById('renewal-remind-btn');
+            remindBtn.addEventListener('click', () => {
+                remindBtn.innerHTML = '<i class="ri-checkbox-circle-fill"></i> Reminders Queued (37)';
+                remindBtn.style.background = 'var(--color-secondary)';
+                setTimeout(() => {
+                    remindBtn.innerHTML = '<i class="ri-notification-3-line"></i> Send Renewal Reminders';
+                    remindBtn.style.background = '';
+                }, 2500);
+            });
+
+            document.querySelectorAll('.reorder-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    btn.classList.add('done');
+                    btn.innerHTML = '<i class="ri-checkbox-circle-fill"></i> PO Raised';
+                });
+            });
+
+            // Sidebar toggle (mobile)
+            const sidebar = document.getElementById('dash-sidebar');
+            const backdrop = document.getElementById('dash-backdrop');
+            const menuBtn = document.getElementById('dash-menu-btn');
+
+            function closeSidebar() {
+                sidebar.classList.remove('open');
+                backdrop.classList.remove('show');
+                menuBtn.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('sidebar-lock');
+            }
+
+            menuBtn.addEventListener('click', () => {
+                const open = sidebar.classList.toggle('open');
+                backdrop.classList.toggle('show', open);
+                menuBtn.setAttribute('aria-expanded', String(open));
+                document.body.classList.toggle('sidebar-lock', open);
+            });
+
+            backdrop.addEventListener('click', closeSidebar);
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeSidebar();
+            });
+
+            let spyPausedUntil = 0;
+
+            sidebar.querySelectorAll('a[href^="#"]').forEach(link => {
+                link.addEventListener('click', () => {
+                    spyLinks.forEach(l => l.classList.toggle('active', l === link));
+                    spyPausedUntil = Date.now() + 900;
+                });
+            });
+
+            window.addEventListener('pagehide', closeSidebar);
+            window.addEventListener('pageshow', (e) => {
+                if (e.persisted) closeSidebar();
+            });
+
+            // Scrollspy: highlight sidebar link for visible section
+            const spyLinks = [...sidebar.querySelectorAll('a[data-spy]')];
+            const spySections = spyLinks
+                .map(link => document.getElementById(link.dataset.spy))
+                .filter(Boolean);
+
+            if ('IntersectionObserver' in window && spySections.length) {
+                const spy = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (!entry.isIntersecting) return;
+                        if (Date.now() < spyPausedUntil) return;
+                        spyLinks.forEach(link => {
+                            link.classList.toggle('active', link.dataset.spy === entry.target.id);
+                        });
+                    });
+                }, { rootMargin: '-25% 0px -65% 0px' });
+
+                spySections.forEach(section => spy.observe(section));
+            }
+        });
+    </script>
 </body>
 </html>
