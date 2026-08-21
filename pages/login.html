@@ -9,35 +9,10 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container nav-container">
-            <a href="../index.html" class="logo" aria-label="ROCare home">
-                <span class="logo-mark"><img src="../assets/logo.png" alt="ROCare Logo"></span>
-                <span class="logo-copy"><strong>ROCare</strong><small>Pure Luxury. Perfect Purity.</small></span>
-            </a>
-            <button id="menu-toggle" class="icon-btn menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><i class="ri-menu-line"></i></button>
-            <nav class="nav-links" aria-label="Primary navigation">
-                    <a href="../index.html" class="nav-link">Home</a>
-                    <a href="home-2.html" class="nav-link">Home 2</a>
-                    <a href="about.html" class="nav-link">About</a>
-                    <a href="services.html" class="nav-link">Services</a>
-                    <a href="blog.html" class="nav-link">Blog</a>
-                    <a href="contact.html" class="nav-link">Contact</a>
-            </nav>
-            <div class="nav-actions">
-                <button id="user-profile" class="icon-btn" aria-label="User profile"><i class="ri-user-line"></i></button>
-                <button id="theme-toggle" class="icon-btn" aria-label="Toggle color theme"><i class="ri-moon-line"></i></button>
-                <button id="dir-toggle" class="icon-btn dir-text-btn" aria-label="Toggle text direction">LTR</button>
-                <a href="booking.html" class="cta-btn">Book Now</a>
-            </div>
-            <div id="user-dropdown" class="user-dropdown">
-                <a href="customer-dashboard.html">Customer Dashboard</a>
-                <a href="admin-dashboard.html">Admin Dashboard</a>
-                <a href="login.html">Login</a>
-                <a href="signup.html">Signup</a>
-            </div>
-        </div>
-    </header>
+    <div style="position: absolute; top: 20px; right: 20px; display: flex; gap: 10px; z-index: 1000;">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle color theme"><i class="ri-moon-line"></i></button>
+        <button id="dir-toggle" class="icon-btn dir-text-btn" aria-label="Toggle text direction">LTR</button>
+    </div>
     <main>
         <section class="hero-section section-shell">
             <div class="container hero-grid">
@@ -128,49 +103,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div>
-                <a href="../index.html" class="footer-logo">
-                    <img src="../assets/logo.png" alt="ROCare Logo">
-                    <span>ROCare</span>
-                </a>
-                <p>Premium water purifier sales, repair, installation, and AMC care for homes and workplaces.</p>
-                <div class="footer-social">
-                    <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
-                </div>
-            </div>
-            <div>
-                <h2>Services</h2>
-                <a href="services.html">RO Repair</a>
-                <a href="services.html">Installation</a>
-                <a href="services.html">AMC Plans</a>
-                <a href="booking.html">Book Visit</a>
-            </div>
-            <div>
-                <h2>Company</h2>
-                <a href="about.html">About</a>
-                <a href="blog.html">Blog</a>
-                <a href="contact.html">Contact</a>
-                <a href="sitemap.html">Sitemap</a>
-            </div>
-            <div>
-                <h2>Stay Updated</h2>
-                <p>Get filter care reminders, service offers, and purifier buying tips.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Email address" aria-label="Email address" required>
-                    <button class="btn btn-primary" type="submit">Join</button>
-                </form>
-            </div>
-        </div>
-        <div class="container footer-bottom">
-            <span>&copy; 2026 ROCare. All rights reserved.</span>
-            <span><a href="privacy-policy.html">Privacy</a> <a href="terms-conditions.html">Terms</a></span>
-        </div>
-    </footer>
+
     <script src="../js/main.js"></script>
 </body>
 </html>
