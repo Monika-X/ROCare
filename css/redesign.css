@@ -2630,5 +2630,50 @@
     width: 100% !important;
     text-align: center !important;
   }
+
+  /* Scale down selector buttons inside the Water Atelier */
+  .lux-selector-btn {
+    padding: 12px !important;
+    gap: 10px !important;
+  }
+
+  .lux-selector-num {
+    font-size: 1.2rem !important;
+  }
+
+  .lux-selector-info h3 {
+    font-size: 0.95rem !important;
+    margin-bottom: 2px !important;
+  }
+
+  .lux-selector-info p {
+    font-size: 0.72rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .lux-selector-btn i {
+    font-size: 1.2rem !important;
+  }
+
+  /* Scale down pipeline visualization inside Water Atelier */
+  .lux-pipeline-visual {
+    height: 60px !important;
+    margin-bottom: 30px !important;
+  }
+
+  .lux-pipe-stage {
+    width: 36px !important;
+    height: 36px !important;
+    border-width: 1px !important;
+  }
+
+  .lux-pipe-stage i {
+    font-size: 0.95rem !important;
+  }
+
+  .lux-pipe-stage span {
+    bottom: -24px !important;
+    font-size: 0.52rem !important;
+  }
 }
 
