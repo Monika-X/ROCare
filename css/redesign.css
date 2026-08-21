@@ -168,6 +168,7 @@
   font-weight: 800;
   background: linear-gradient(135deg, var(--color-primary), var(--color-warm));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 10px;
   letter-spacing: -2px;
@@ -1020,6 +1021,7 @@
   color: #d4af37;
   background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1717,6 +1719,7 @@
 .lux-tuner-control input[type="range"] {
   width: 100%;
   -webkit-appearance: none;
+  appearance: none;
   background: rgba(255, 255, 255, 0.08);
   height: 6px;
   border-radius: 3px;
@@ -1725,6 +1728,7 @@
 
 .lux-tuner-control input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
+  appearance: none;
   background-color: #d4af37;
   width: 16px;
   height: 16px;
@@ -1901,6 +1905,7 @@
 .home-premium .gradient-text {
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 800;
 }
