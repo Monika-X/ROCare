@@ -118,12 +118,14 @@ document.addEventListener('DOMContentLoaded', () => {
         menuBtn.addEventListener('click', () => {
             const isOpen = navLinks.classList.toggle('show');
             menuBtn.setAttribute('aria-expanded', String(isOpen));
+            document.body.style.overflow = isOpen ? 'hidden' : '';
         });
 
         navLinks.querySelectorAll('a').forEach((link) => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('show');
                 menuBtn.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
             });
         });
     }
@@ -157,6 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (menuBtn) {
                 menuBtn.setAttribute('aria-expanded', 'false');
             }
+            document.body.style.overflow = '';
         };
 
         window.addEventListener('pagehide', resetDropdownState);
