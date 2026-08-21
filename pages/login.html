@@ -6,102 +6,70 @@
     <title>ROCare | Login</title>
     <link rel="icon" type="image/png" href="../assets/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/redesign.css">
 </head>
 <body>
     <div style="position: absolute; top: 20px; right: 20px; display: flex; gap: 10px; z-index: 1000;">
         <button id="theme-toggle" class="icon-btn" aria-label="Toggle color theme"><i class="ri-moon-line"></i></button>
         <button id="dir-toggle" class="icon-btn dir-text-btn" aria-label="Toggle text direction">LTR</button>
     </div>
-    <main>
-        <section class="hero-section section-shell">
-            <div class="container hero-grid">
-                <div class="hero-copy">
-                    <span class="eyebrow">Customer access</span>
-                    <h1>Sign in to view service history and AMC details.</h1>
-                    <p>A clean customer portal helps track visits, filters, invoices, and upcoming maintenance reminders.</p>
-                    <div class="hero-actions">
-                        <a class="btn btn-primary" href="#login-form">Login</a>
-                        <a class="btn btn-outline" href="services.html">View Services</a>
+
+    <main class="auth-arena">
+        <div class="auth-card">
+            <div class="auth-header">
+                <a href="../index.html" class="auth-logo">
+                    <img src="../assets/logo.png" alt="ROCare Logo">
+                    <span>ROCare</span>
+                </a>
+                <h1>Welcome Back</h1>
+                <p>Sign in to your customer dashboard</p>
+            </div>
+
+            <form action="customer-dashboard.html" method="GET">
+                <div class="auth-form-group">
+                    <label>Email Address</label>
+                    <div class="auth-input-wrapper">
+                        <input type="email" class="auth-input" placeholder="user@example.com" required>
                     </div>
                 </div>
-                <figure class="hero-media reveal">
-                    <img src="https://images.unsplash.com/photo-1643114451704-8f44b1d1a681?auto=format&fit=crop&w=1400&q=80" alt="Glass of water on a white background" loading="eager">
-                    <figcaption>ROCare water service experience</figcaption>
-                </figure>
-            </div>
-        </section>
-        <section class="section-shell">
-            <div class="container section-intro">
-                <span class="eyebrow">Overview</span>
-                <h2>Your purifier records in one place</h2>
-                <p>Customers can check last service dates, recommended next visits, and active plans without searching old messages.</p>
-                <div class="stat-grid">
-                <div class="stat-card"><strong>History</strong><span>visit records</span></div>
-                <div class="stat-card"><strong>AMC</strong><span>plan status</span></div>
-                <div class="stat-card"><strong>Support</strong><span>quick requests</span></div>
-            </div>
-            </div>
-        </section>
-        <section class="section-shell section-surface">
-            <div class="container">
-                <div class="section-heading">
-                    <span class="eyebrow">Highlights</span>
-                    <h2>What this page helps you do</h2>
+
+                <div class="auth-form-group">
+                    <label>Password</label>
+                    <div class="auth-input-wrapper">
+                        <input type="password" class="auth-input" placeholder="Enter your password" required>
+                        <i class="ri-eye-off-line auth-input-icon"></i>
+                    </div>
                 </div>
-                <div class="card-grid">
-                <article class="content-card reveal"><i class="ri-history-line"></i><h3>Visit timeline</h3><p>See recent inspections, parts replaced, and technician notes.</p></article>
-                <article class="content-card reveal"><i class="ri-bank-card-line"></i><h3>Plan visibility</h3><p>Check AMC type, renewal window, and included visits.</p></article>
-                <article class="content-card reveal"><i class="ri-customer-service-2-line"></i><h3>Support requests</h3><p>Raise a fresh ticket with context from past service records.</p></article>
-            </div>
-            </div>
-        </section>
-        <section class="section-shell split-section">
-            <div class="container split-grid">
-                <div class="split-media reveal">
-                    <img src="https://images.unsplash.com/photo-1669211659110-3f3db4119b65?auto=format&fit=crop&w=1400&q=80" alt="Water purifier on a kitchen counter" loading="lazy">
+
+                <div class="auth-options">
+                    <label class="auth-checkbox">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" class="auth-link">Forgot password?</a>
                 </div>
-                <div class="split-copy">
-                    <span class="eyebrow">Process</span>
-                    <h2>A simpler after-service experience</h2>
-                    <p>The portal is designed so the next service decision is based on actual history, not guesswork.</p>
-                    <ol class="step-list">
-                        <li>Log in with your registered email.</li>
-                        <li>Review purifier and service details.</li>
-                        <li>Book a new visit when needed.</li>
-                    </ol>
-                </div>
+
+                <button type="submit" class="auth-btn">Sign In</button>
+            </form>
+
+            <div class="auth-divider">or continue with</div>
+
+            <div class="social-login-grid">
+                <button type="button" class="social-btn">
+                    <i class="ri-google-fill" style="color: #DB4437; font-size: 1.2rem;"></i> Google
+                </button>
+                <button type="button" class="social-btn">
+                    <i class="ri-facebook-circle-fill" style="color: #4267B2; font-size: 1.2rem;"></i> Facebook
+                </button>
             </div>
-        </section>
-        <section class="section-shell section-surface">
-            <div class="container">
-                <div class="section-heading">
-                    <span class="eyebrow">Resources</span>
-                    <h2>Portal highlights</h2>
-                </div>
-                <div class="resource-grid">
-                <article class="content-card reveal"><h3>Service notes</h3><p>Know exactly what was checked or replaced.</p></article>
-                <article class="content-card reveal"><h3>Renewals</h3><p>Avoid missing AMC windows.</p></article>
-                <article class="content-card reveal"><h3>Requests</h3><p>Start support with fewer repeated details.</p></article>
+
+            <div class="auth-footer">
+                Don't have an account? <a href="signup.html" class="auth-link">Sign Up</a>
             </div>
-            </div>
-        </section>
-        <section class="section-shell final-cta">
-            <div class="container cta-grid">
-                <div>
-                    <span class="eyebrow">Next step</span>
-                    <h2>Login to ROCare</h2>
-                    <p>Use your registered email and password to continue.</p>
-                    <a class="btn btn-primary" href="#login-form">Login</a>
-                </div>
-                <form id="login-form" class="form-panel">
-                    <label>Email<input type="email" placeholder="you@example.com" required></label>
-                    <label>Password<input type="password" placeholder="Password" required></label>
-                    <button class="btn btn-primary" type="submit">Login</button>
-                    <p class="form-note">New to ROCare? <a href="signup.html">Create an account</a>.</p>
-                </form>
-            </div>
-        </section>
+        </div>
     </main>
 
     <script src="../js/main.js"></script>
