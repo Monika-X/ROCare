@@ -1231,8 +1231,12 @@ p {
     order: 1;
   }
 
-  .nav-actions {
+  .nav-links {
     order: 2;
+  }
+
+  .nav-actions {
+    order: 3;
     justify-self: end;
     gap: 6px;
   }
@@ -1242,7 +1246,7 @@ p {
   }
 
   .menu-toggle {
-    order: 3;
+    order: 4;
     display: inline-grid;
     justify-self: end;
   }
