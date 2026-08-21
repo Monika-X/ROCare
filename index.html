@@ -4,31 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROCare | Home</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="header">
         <div class="container nav-container">
-            <a href="index.html" class="logo"><i class="ri-drop-fill"></i> ROCare</a>
-            <nav class="nav-links">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="pages/about.html" class="nav-link">About</a>
-                <a href="pages/services.html" class="nav-link">Services</a>
-                <a href="pages/dashboard.html" class="nav-link">Dashboard</a>
+            <a href="index.html" class="logo" aria-label="ROCare home">
+                <span class="logo-mark"><img src="assets/logo.png" alt="ROCare Logo"></span>
+                <span class="logo-copy"><strong>ROCare</strong><small>Pure Luxury. Perfect Purity.</small></span>
+            </a>
+            <button id="menu-toggle" class="icon-btn menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><i class="ri-menu-line"></i></button>
+            <nav class="nav-links" aria-label="Primary navigation">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="pages/home-2.html" class="nav-link">Home 2</a>
+                    <a href="pages/about.html" class="nav-link">About</a>
+                    <a href="pages/services.html" class="nav-link">Services</a>
+                    <a href="pages/blog.html" class="nav-link">Blog</a>
+                    <a href="pages/contact.html" class="nav-link">Contact</a>
             </nav>
             <div class="nav-actions">
-                <button id="theme-toggle" class="icon-btn"><i class="ri-moon-line"></i></button>
+                <button id="user-profile" class="icon-btn" aria-label="User profile"><i class="ri-user-line"></i></button>
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle color theme"><i class="ri-moon-line"></i></button>
+                <button id="dir-toggle" class="icon-btn dir-text-btn" aria-label="Toggle text direction">LTR</button>
+                <a href="pages/booking.html" class="cta-btn">Book Now</a>
+            </div>
+            <div id="user-dropdown" class="user-dropdown">
+                <a href="pages/customer-dashboard.html">Customer Dashboard</a>
+                <a href="pages/admin-dashboard.html">Admin Dashboard</a>
+                <a href="pages/login.html">Login</a>
+                <a href="pages/signup.html">Signup</a>
             </div>
         </div>
     </header>
     <main>
-        <section class="section section-light" style="padding-top: 150px; min-height: 80vh;">
+        <section class="hero-section section-shell">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <span class="eyebrow">Pure Luxury. Perfect Purity.</span>
+                    <h1>Premium RO care for healthier everyday water.</h1>
+                    <p>ROCare brings water purifier sales, installation, repair, and AMC support into one clean, reliable service experience for homes and workplaces.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="pages/booking.html">Book Service</a>
+                        <a class="btn btn-outline" href="pages/services.html">View Services</a>
+                    </div>
+                </div>
+                <figure class="hero-media reveal">
+                    <img src="https://images.unsplash.com/photo-1756312177990-d771bfeaa030?auto=format&fit=crop&w=1400&q=80" alt="Person filling a glass from a kitchen faucet" loading="eager">
+                    <figcaption>ROCare water service experience</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="section-shell">
+            <div class="container section-intro">
+                <span class="eyebrow">Overview</span>
+                <h2>Designed around the way families actually use water</h2>
+                <p>From morning bottles to late-night cooking, every system we recommend is selected for stable flow, safer taste, and easy upkeep.</p>
+                <div class="stat-grid">
+                <div class="stat-card"><strong>24 hr</strong><span>service response</span></div>
+                <div class="stat-card"><strong>6 step</strong><span>water check</span></div>
+                <div class="stat-card"><strong>3,500+</strong><span>homes supported</span></div>
+            </div>
+            </div>
+        </section>
+        <section class="section-shell section-surface">
             <div class="container">
-                <h1>Welcome to ROCare</h1>
+                <div class="section-heading">
+                    <span class="eyebrow">Highlights</span>
+                    <h2>What this page helps you do</h2>
+                </div>
+                <div class="card-grid">
+                <article class="content-card reveal"><i class="ri-drop-line"></i><h3>Water testing</h3><p>TDS, hardness, taste, odor, and flow are checked before we recommend a system or service.</p></article>
+                <article class="content-card reveal"><i class="ri-tools-line"></i><h3>Expert installation</h3><p>Neat wall mounting, leak-safe fittings, pressure checks, and guided first use.</p></article>
+                <article class="content-card reveal"><i class="ri-refresh-line"></i><h3>AMC care</h3><p>Filter changes, membrane checks, sanitization, and reminders are bundled into simple plans.</p></article>
+            </div>
+            </div>
+        </section>
+        <section class="section-shell split-section">
+            <div class="container split-grid">
+                <div class="split-media reveal">
+                    <img src="https://images.unsplash.com/photo-1669211659110-3f3db4119b65?auto=format&fit=crop&w=1400&q=80" alt="Modern water purifier on a kitchen counter" loading="lazy">
+                </div>
+                <div class="split-copy">
+                    <span class="eyebrow">Process</span>
+                    <h2>A service visit that feels precise, tidy, and transparent</h2>
+                    <p>Technicians arrive with the likely parts, record the issue clearly, and explain what changed before they leave.</p>
+                    <ol class="step-list">
+                        <li>Inspect inlet water, tank pressure, flow rate, and visible fittings.</li>
+                        <li>Replace exhausted filters with compatible cartridges and sanitize wet parts.</li>
+                        <li>Recheck taste, clarity, TDS trend, and leakage before handover.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        <section class="section-shell section-surface">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Resources</span>
+                    <h2>Popular ROCare solutions</h2>
+                </div>
+                <div class="resource-grid">
+                <article class="content-card reveal"><h3>RO repair</h3><p>Low flow, noisy pump, leakage, taste change, or rejected water concerns.</p></article>
+                <article class="content-card reveal"><h3>New purifier</h3><p>RO, UV, UF, alkaline, and commercial options matched to local water quality.</p></article>
+                <article class="content-card reveal"><h3>Annual care</h3><p>Scheduled maintenance with visit history, reminders, and transparent parts.</p></article>
+            </div>
+            </div>
+        </section>
+        <section class="section-shell final-cta">
+            <div class="container cta-grid">
+                <div>
+                    <span class="eyebrow">Next step</span>
+                    <h2>Ready for cleaner water at home?</h2>
+                    <p>Book a visit, request a product recommendation, or ask for AMC renewal help.</p>
+                    <a class="btn btn-primary" href="pages/booking.html">Book Service</a>
+                </div>
+                <div class="cta-panel reveal">
+                    <i class="ri-customer-service-2-line"></i>
+                    <strong>ROCare support</strong>
+                    <span>Service booking, product help, AMC renewals, and urgent purifier care.</span>
+                </div>
             </div>
         </section>
     </main>
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <a href="index.html" class="footer-logo">
+                    <img src="assets/logo.png" alt="ROCare Logo">
+                    <span>ROCare</span>
+                </a>
+                <p>Premium water purifier sales, repair, installation, and AMC care for homes and workplaces.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+                </div>
+            </div>
+            <div>
+                <h2>Services</h2>
+                <a href="pages/services.html">RO Repair</a>
+                <a href="pages/services.html">Installation</a>
+                <a href="pages/services.html">AMC Plans</a>
+                <a href="pages/booking.html">Book Visit</a>
+            </div>
+            <div>
+                <h2>Company</h2>
+                <a href="pages/about.html">About</a>
+                <a href="pages/blog.html">Blog</a>
+                <a href="pages/contact.html">Contact</a>
+                <a href="pages/sitemap.html">Sitemap</a>
+            </div>
+            <div>
+                <h2>Stay Updated</h2>
+                <p>Get filter care reminders, service offers, and purifier buying tips.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email address" aria-label="Email address" required>
+                    <button class="btn btn-primary" type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>&copy; 2026 ROCare. All rights reserved.</span>
+            <span><a href="pages/privacy-policy.html">Privacy</a> <a href="pages/terms-conditions.html">Terms</a></span>
+        </div>
+    </footer>
     <script src="js/main.js"></script>
 </body>
 </html>

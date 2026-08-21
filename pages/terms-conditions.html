@@ -4,28 +4,327 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROCare | Terms & Conditions</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/redesign.css">
 </head>
 <body>
+    <!-- Top Reading Progress Indicator -->
+    <div class="reading-progress-container">
+        <div class="reading-progress-bar" id="readingProgress"></div>
+    </div>
+
     <header class="header">
         <div class="container nav-container">
-            <a href="../index.html" class="logo"><i class="ri-drop-fill"></i> ROCare</a>
-            <nav class="nav-links">
-                <a href="../index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="dashboard.html" class="nav-link">Dashboard</a>
+            <a href="../index.html" class="logo" aria-label="ROCare home">
+                <span class="logo-mark"><img src="../assets/logo.png" alt="ROCare Logo"></span>
+                <span class="logo-copy"><strong>ROCare</strong><small>Pure Luxury. Perfect Purity.</small></span>
+            </a>
+            <button id="menu-toggle" class="icon-btn menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><i class="ri-menu-line"></i></button>
+            <nav class="nav-links" aria-label="Primary navigation">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="home-2.html" class="nav-link">Home 2</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
             </nav>
+            <div class="nav-actions">
+                <button id="user-profile" class="icon-btn" aria-label="User profile"><i class="ri-user-line"></i></button>
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle color theme"><i class="ri-moon-line"></i></button>
+                <button id="dir-toggle" class="icon-btn dir-text-btn" aria-label="Toggle text direction">LTR</button>
+                <a href="booking.html" class="cta-btn">Book Now</a>
+            </div>
+            <div id="user-dropdown" class="user-dropdown">
+                <a href="customer-dashboard.html">Customer Dashboard</a>
+                <a href="admin-dashboard.html">Admin Dashboard</a>
+                <a href="login.html">Login</a>
+                <a href="signup.html">Signup</a>
+            </div>
         </div>
     </header>
+
     <main>
-        <section class="section section-light" style="padding-top: 150px; min-height: 80vh;">
-            <div class="container">
-                <h1>Terms & Conditions</h1>
+        <section class="hero-section section-shell" style="min-height: auto; padding-bottom: 20px;">
+            <div class="container" style="text-align: center;">
+                <span class="eyebrow">Legal Framework</span>
+                <h1 class="reveal active" style="margin: 0 auto 16px;">Terms & Conditions</h1>
+                <p style="margin: 0 auto; max-width: 650px;">Please read our service policy document carefully before registering, purchasing plans, or booking technician visits.</p>
+            </div>
+        </section>
+
+        <section class="section-shell" style="padding-top: 30px;">
+            <div class="container terms-wrapper">
+                <!-- Left Sticky Sidebar Index -->
+                <aside class="premium-glass-card terms-navigation-sidebar reveal active">
+                    <h3>Document Index</h3>
+                    <ul class="terms-index-list">
+                        <li><a href="#sec-intro" class="terms-index-link active">1. Introduction</a></li>
+                        <li><a href="#sec-accounts" class="terms-index-link">2. Account & Security</a></li>
+                        <li><a href="#sec-booking" class="terms-index-link">3. Service Bookings</a></li>
+                        <li><a href="#sec-amc" class="terms-index-link">4. AMC Plan Rules</a></li>
+                        <li><a href="#sec-warranty" class="terms-index-link">5. Warranty & Liability</a></li>
+                    </ul>
+                </aside>
+
+                <!-- Right Terms Panel -->
+                <div class="terms-content-panel">
+                    <!-- Section 1 -->
+                    <div id="sec-intro" class="premium-glass-card terms-section-card reveal active">
+                        <h2>1. Introduction</h2>
+                        <p>Welcome to ROCare. These terms and conditions govern your use of the website, account creation portals, diagnostic booking services, and annual maintenance contracts (AMC) provided by ROCare. By scheduling a service or booking a technician, you agree to comply with and be bound by these policies.</p>
+                        <p>We reserve the right to revise or modify these terms at any time. Changes will be updated on this page with a revised timestamp, and major revisions will trigger notifications on user dashboards.</p>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div id="sec-accounts" class="premium-glass-card terms-section-card reveal active">
+                        <h2>2. Account & Credentials Security</h2>
+                        <p>To use portal tracking tools, register warranties, or check AMC coverage levels, you must create a profile. You represent that all profile information you share (address, contact, purifier filter types) is complete and accurate.</p>
+                        
+                        <div class="redesign-accordion">
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <span>Profile Confidentiality</span>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>You are solely responsible for protecting your portal login password. ROCare is not liable for unauthorized dashboard changes, booking cancellations, or plan updates resulting from shared credentials.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <span>Dashboard Usage Rights</span>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>Access to customer and admin dashboard features is strictly limited to authorized users. Any attempt to scrape technician workloads, bypass diagnostic submission APIs, or inject SQL queries will lead to immediate profile deletion.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3 -->
+                    <div id="sec-booking" class="premium-glass-card terms-section-card reveal active">
+                        <h2>3. Service Bookings & Technician Visits</h2>
+                        <p>Diagnostic visits, repairs, and installations are scheduled using our online booking wizard or support agents. Standard diagnostic fees are quoted prior to dispatch and cover the visit, physical inspection, and digital water analysis.</p>
+                        
+                        <div class="redesign-accordion">
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <span>Premises Access Requirements</span>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>The customer must provide safe, clean, and unobstructed access to the water purifier system. Our technicians reserve the right to refuse service if conditions present an electrical hazard or unsafe environment.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <span>Cancellations & Fee Adjustments</span>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>Cancellations or slot reschedules must be completed at least 4 hours before the booked visit window. Late cancellations or technician lock-outs may result in a standard travel fee charge on your next invoice.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 4 -->
+                    <div id="sec-amc" class="premium-glass-card terms-section-card reveal active">
+                        <h2>4. Annual Maintenance Contracts (AMC)</h2>
+                        <p>AMC plans are tailored to guarantee clean water output and cover scheduled maintenance intervals. The details of parts included (sediment filters, carbon pre-filters, RO membranes) vary depending on the chosen tier (Standard, Premium, or Platinum).</p>
+                        
+                        <div class="redesign-accordion">
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <span>Filter Replacement Schedules</span>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>Sediment and carbon pre-filters are replaced on a fixed 6-month or 12-month schedule. Additional requests for early replacements due to high incoming TDS (Total Dissolved Solids) levels may incur parts charges if exceeding the plan's allocation.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <span>RO Membrane & Pump Exclusions</span>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>RO Membrane and booster pump replacement is only covered under Premium and Platinum tiers. Standard AMC plans cover labor and routine filtration kits only. Diagnostic readings are recorded inside the customer dashboard.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 5 -->
+                    <div id="sec-warranty" class="premium-glass-card terms-section-card reveal active">
+                        <h2>5. Parts Warranty & Liability</h2>
+                        <p>Replacement spare parts (valves, pumps, power supplies, filter nodes) carry a limited ROCare warranty. The warranty applies solely to factory defects and does not cover damage caused by power fluctuations, municipal water supply outages, or customer modifications.</p>
+                        <p>ROCare's total liability for service issues, technician delays, or filtration performance concerns is capped at the invoice amount paid by the customer for that specific visit or active AMC year.</p>
+                        
+                        <!-- Client Consent / Interactive Portal -->
+                        <div class="acceptance-box">
+                            <label class="acceptance-checkbox-label">
+                                <input type="checkbox" id="acceptTermsCheck">
+                                <span>I agree to ROCare service rules & conditions.</span>
+                            </label>
+                            <div style="display: flex; gap: 10px;">
+                                <button class="btn btn-outline" id="printDocBtn"><i class="ri-printer-line" style="margin-right:0;"></i></button>
+                                <button class="btn btn-primary" id="submitAcceptBtn">Accept Terms</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <a href="../index.html" class="footer-logo">
+                    <img src="../assets/logo.png" alt="ROCare Logo">
+                    <span>ROCare</span>
+                </a>
+                <p>Premium water purifier sales, repair, installation, and AMC care for homes and workplaces.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+                </div>
+            </div>
+            <div>
+                <h2>Services</h2>
+                <a href="services.html">RO Repair</a>
+                <a href="services.html">Installation</a>
+                <a href="services.html">AMC Plans</a>
+                <a href="booking.html">Book Visit</a>
+            </div>
+            <div>
+                <h2>Company</h2>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="sitemap.html">Sitemap</a>
+            </div>
+            <div>
+                <h2>Stay Updated</h2>
+                <p>Get filter care reminders, service offers, and purifier buying tips.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email address" aria-label="Email address" required>
+                    <button class="btn btn-primary" type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>&copy; 2026 ROCare. All rights reserved.</span>
+            <span><a href="privacy-policy.html">Privacy</a> <a href="terms-conditions.html">Terms</a></span>
+        </div>
+    </footer>
+
     <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Reading Progress Bar
+            const progressBar = document.getElementById('readingProgress');
+            window.addEventListener('scroll', () => {
+                const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+                if (totalHeight > 0) {
+                    const percentage = (window.scrollY / totalHeight) * 100;
+                    progressBar.style.width = percentage + '%';
+                }
+            });
+
+            // 2. Scroll Spy & Left Sidebar Highlighting
+            const sections = document.querySelectorAll('.terms-section-card');
+            const navLinks = document.querySelectorAll('.terms-index-link');
+
+            window.addEventListener('scroll', () => {
+                let currentActiveSectionId = '';
+                
+                // Determine current section scrolled past
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 140; // offset for sticky navs
+                    if (window.scrollY >= sectionTop) {
+                        currentActiveSectionId = section.getAttribute('id');
+                    }
+                });
+
+                if (currentActiveSectionId) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + currentActiveSectionId) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+
+            // 3. Smooth Scroll to Sections
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 110,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // 4. Accordion Logic
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const parentItem = header.parentElement;
+                    const content = parentItem.querySelector('.accordion-content');
+                    
+                    // Toggle Active state on click
+                    if (parentItem.classList.contains('active')) {
+                        parentItem.classList.remove('active');
+                        content.style.maxHeight = null;
+                    } else {
+                        // Collapse other items in the same accordion container
+                        const siblingItems = parentItem.parentElement.querySelectorAll('.accordion-item');
+                        siblingItems.forEach(item => {
+                            item.classList.remove('active');
+                            item.querySelector('.accordion-content').style.maxHeight = null;
+                        });
+
+                        parentItem.classList.add('active');
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    }
+                });
+            });
+
+            // 5. Acceptance portal interactions
+            const check = document.getElementById('acceptTermsCheck');
+            const submitBtn = document.getElementById('submitAcceptBtn');
+            const printBtn = document.getElementById('printDocBtn');
+
+            if (submitBtn && check) {
+                submitBtn.addEventListener('click', () => {
+                    if (check.checked) {
+                        alert('Thank you! You have accepted the ROCare Service Terms & Conditions.');
+                    } else {
+                        alert('Please check the confirmation box to agree to the Terms & Conditions.');
+                    }
+                });
+            }
+
+            if (printBtn) {
+                printBtn.addEventListener('click', () => {
+                    window.print();
+                });
+            }
+        });
+    </script>
 </body>
 </html>

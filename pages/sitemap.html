@@ -4,28 +4,324 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROCare | Sitemap</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/redesign.css">
 </head>
 <body>
     <header class="header">
         <div class="container nav-container">
-            <a href="../index.html" class="logo"><i class="ri-drop-fill"></i> ROCare</a>
-            <nav class="nav-links">
-                <a href="../index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="dashboard.html" class="nav-link">Dashboard</a>
+            <a href="../index.html" class="logo" aria-label="ROCare home">
+                <span class="logo-mark"><img src="../assets/logo.png" alt="ROCare Logo"></span>
+                <span class="logo-copy"><strong>ROCare</strong><small>Pure Luxury. Perfect Purity.</small></span>
+            </a>
+            <button id="menu-toggle" class="icon-btn menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><i class="ri-menu-line"></i></button>
+            <nav class="nav-links" aria-label="Primary navigation">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="home-2.html" class="nav-link">Home 2</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
             </nav>
+            <div class="nav-actions">
+                <button id="user-profile" class="icon-btn" aria-label="User profile"><i class="ri-user-line"></i></button>
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle color theme"><i class="ri-moon-line"></i></button>
+                <button id="dir-toggle" class="icon-btn dir-text-btn" aria-label="Toggle text direction">LTR</button>
+                <a href="booking.html" class="cta-btn">Book Now</a>
+            </div>
+            <div id="user-dropdown" class="user-dropdown">
+                <a href="customer-dashboard.html">Customer Dashboard</a>
+                <a href="admin-dashboard.html">Admin Dashboard</a>
+                <a href="login.html">Login</a>
+                <a href="signup.html">Signup</a>
+            </div>
         </div>
     </header>
     <main>
-        <section class="section section-light" style="padding-top: 150px; min-height: 80vh;">
+        <section class="hero-section section-shell" style="min-height: auto; padding-bottom: 20px;">
+            <div class="container" style="text-align: center;">
+                <span class="eyebrow">Directory</span>
+                <h1 class="reveal active" style="margin: 0 auto 16px;">Sitemap & Navigation Index</h1>
+                <p style="margin: 0 auto 30px; max-width: 600px;">Quickly find and access every page across the ROCare platform. Use the filter below to locate specific pages instantly.</p>
+                
+                <div class="sitemap-header-controls reveal active">
+                    <div class="search-box-wrapper">
+                        <i class="ri-search-line"></i>
+                        <input type="text" id="sitemapSearchInput" class="sitemap-search" placeholder="Search pages (e.g. Services, Dashboard, Terms)...">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-shell" style="padding-top: 40px;">
             <div class="container">
-                <h1>Sitemap</h1>
+                <!-- Category 1: Public Pages -->
+                <div class="sitemap-category-section reveal active">
+                    <div class="sitemap-category-title">
+                        <i class="ri-global-line"></i>
+                        <h2>Main Navigation (Public)</h2>
+                    </div>
+                    <div class="sitemap-cards">
+                        <a href="../index.html" class="premium-glass-card sitemap-node-card">
+                            <div class="sitemap-node-meta">
+                                <i class="ri-home-line"></i>
+                                <span class="sitemap-badge">Public</span>
+                            </div>
+                            <div class="sitemap-node-content">
+                                <h3>Home (Primary)</h3>
+                                <p>Welcome landing portal highlighting purifier details, reviews, and highlights.</p>
+                            </div>
+                        </a>
+                        <a href="home-2.html" class="premium-glass-card sitemap-node-card">
+                            <div class="sitemap-node-meta">
+                                <i class="ri-home-gear-line"></i>
+                                <span class="sitemap-badge">Public</span>
+                            </div>
+                            <div class="sitemap-node-content">
+                                <h3>Home 2</h3>
+                                <p>Alternate sales focus layouts for corporate purifiers and quick quotes.</p>
+                            </div>
+                        </a>
+                        <a href="about.html" class="premium-glass-card sitemap-node-card">
+                            <div class="sitemap-node-meta">
+                                <i class="ri-group-line"></i>
+                                <span class="sitemap-badge">Public</span>
+                            </div>
+                            <div class="sitemap-node-content">
+                                <h3>About ROCare</h3>
+                                <p>Discover our core purification values, tech standards, and history.</p>
+                            </div>
+                        </a>
+                        <a href="services.html" class="premium-glass-card sitemap-node-card">
+                            <div class="sitemap-node-meta">
+                                <i class="ri-water-flash-line"></i>
+                                <span class="sitemap-badge">Public</span>
+                            </div>
+                            <div class="sitemap-node-content">
+                                <h3>Our Services</h3>
+                                <p>Detailed pricing, plan checklists, and technician repair guides.</p>
+                            </div>
+                        </a>
+                        <a href="blog.html" class="premium-glass-card sitemap-node-card">
+                            <div class="sitemap-node-meta">
+                                <i class="ri-article-line"></i>
+                                <span class="sitemap-badge">Public</span>
+                            </div>
+                            <div class="sitemap-node-content">
+                                <h3>Water Care Blog</h3>
+                                <p>Helpful articles, filter replacement timing advice, and maintenance tips.</p>
+                            </div>
+                        </a>
+                        <a href="contact.html" class="premium-glass-card sitemap-node-card">
+                            <div class="sitemap-node-meta">
+                                <i class="ri-mail-line"></i>
+                                <span class="sitemap-badge">Public</span>
+                            </div>
+                            <div class="sitemap-node-content">
+                                <h3>Contact Us</h3>
+                                <p>Get in touch with support, request custom AMC plans, or find branch details.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Category 2: Portals -->
+                <div class="sitemap-category-section reveal active">
+                    <div class="sitemap-category-title">
+                        <i class="ri-shield-user-line"></i>
+                        <h2>Portals & Account Access</h2>
+                    </div>
+                    <div class="sitemap-cards">
+                        <a href="login.html" class="premium-glass-card sitemap-node-card">
+                            <div class="sitemap-node-meta">
+                                <i class="ri-login-box-line"></i>
+                                <span class="sitemap-badge secure">Secure</span>
+                            </div>
+                            <div class="sitemap-node-content">
+                                <h3>Account Login</h3>
+                                <p>Sign in to your client space to check service schedules and AMC validity.</p>
+                            </div>
+                        </a>
+                        <a href="signup.html" class="premium-glass-card sitemap-node-card">
+                            <div class="sitemap-node-meta">
+                                <i class="ri-user-add-line"></i>
+                                <span class="sitemap-badge secure">Secure</span>
+                            </div>
+                            <div class="sitemap-node-content">
+                                <h3>Account Registration</h3>
+                                <p>Sign up to register your water filter, address, and unlock AMC logs.</p>
+                            </div>
+                        </a>
+                        <a href="customer-dashboard.html" class="premium-glass-card sitemap-node-card">
+                            <div class="sitemap-node-meta">
+                                <i class="ri-dashboard-3-line"></i>
+                                <span class="sitemap-badge secure">Secure</span>
+                            </div>
+                            <div class="sitemap-node-content">
+                                <h3>Customer Dashboard</h3>
+                                <p>Active client portal. Tracks repair history, bookings, and active filter life indicators.</p>
+                            </div>
+                        </a>
+                        <a href="admin-dashboard.html" class="premium-glass-card sitemap-node-card">
+                            <div class="sitemap-node-meta">
+                                <i class="ri-admin-line"></i>
+                                <span class="sitemap-badge secure">Secure</span>
+                            </div>
+                            <div class="sitemap-node-content">
+                                <h3>Admin Dashboard</h3>
+                                <p>Platform control center. Manage customer complaints, assign technicians, and monitor statistics.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Category 3: System & Safety -->
+                <div class="sitemap-category-section reveal active">
+                    <div class="sitemap-category-title">
+                        <i class="ri-file-shield-2-line"></i>
+                        <h2>Utility & Safety Pages</h2>
+                    </div>
+                    <div class="sitemap-cards">
+                        <a href="booking.html" class="premium-glass-card sitemap-node-card">
+                            <div class="sitemap-node-meta">
+                                <i class="ri-calendar-check-line"></i>
+                                <span class="sitemap-badge legal">Utility</span>
+                            </div>
+                            <div class="sitemap-node-content">
+                                <h3>Service Booking</h3>
+                                <p>Fill diagnostic details and book purifier installation or maintenance visits.</p>
+                            </div>
+                        </a>
+                        <a href="terms-conditions.html" class="premium-glass-card sitemap-node-card">
+                            <div class="sitemap-node-meta">
+                                <i class="ri-file-list-3-line"></i>
+                                <span class="sitemap-badge legal">Legal</span>
+                            </div>
+                            <div class="sitemap-node-content">
+                                <h3>Terms & Conditions</h3>
+                                <p>Governing rules for purifier parts coverage, refunds, and annual plans.</p>
+                            </div>
+                        </a>
+                        <a href="privacy-policy.html" class="premium-glass-card sitemap-node-card">
+                            <div class="sitemap-node-meta">
+                                <i class="ri-shield-check-line"></i>
+                                <span class="sitemap-badge legal">Legal</span>
+                            </div>
+                            <div class="sitemap-node-content">
+                                <h3>Privacy Policy</h3>
+                                <p>Guidelines detailing how customer location and login tokens are encrypted.</p>
+                            </div>
+                        </a>
+                        <a href="maintenance.html" class="premium-glass-card sitemap-node-card">
+                            <div class="sitemap-node-meta">
+                                <i class="ri-shut-down-line"></i>
+                                <span class="sitemap-badge">System</span>
+                            </div>
+                            <div class="sitemap-node-content">
+                                <h3>Maintenance Screen</h3>
+                                <p>System upgrade notice containing contact phone, WhatsApp, and operations status.</p>
+                            </div>
+                        </a>
+                        <a href="404.html" class="premium-glass-card sitemap-node-card">
+                            <div class="sitemap-node-meta">
+                                <i class="ri-error-warning-line"></i>
+                                <span class="sitemap-badge">System</span>
+                            </div>
+                            <div class="sitemap-node-content">
+                                <h3>404 Page</h3>
+                                <p>Fluid design layout triggered for broken links and invalid resources.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <a href="../index.html" class="footer-logo">
+                    <img src="../assets/logo.png" alt="ROCare Logo">
+                    <span>ROCare</span>
+                </a>
+                <p>Premium water purifier sales, repair, installation, and AMC care for homes and workplaces.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+                </div>
+            </div>
+            <div>
+                <h2>Services</h2>
+                <a href="services.html">RO Repair</a>
+                <a href="services.html">Installation</a>
+                <a href="services.html">AMC Plans</a>
+                <a href="booking.html">Book Visit</a>
+            </div>
+            <div>
+                <h2>Company</h2>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="sitemap.html">Sitemap</a>
+            </div>
+            <div>
+                <h2>Stay Updated</h2>
+                <p>Get filter care reminders, service offers, and purifier buying tips.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email address" aria-label="Email address" required>
+                    <button class="btn btn-primary" type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>&copy; 2026 ROCare. All rights reserved.</span>
+            <span><a href="privacy-policy.html">Privacy</a> <a href="terms-conditions.html">Terms</a></span>
+        </div>
+    </footer>
     <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('sitemapSearchInput');
+            const sitemapCards = document.querySelectorAll('.sitemap-node-card');
+            const sitemapSections = document.querySelectorAll('.sitemap-category-section');
+
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    const term = e.target.value.toLowerCase().trim();
+
+                    sitemapSections.forEach(section => {
+                        let visibleInSection = 0;
+                        const cards = section.querySelectorAll('.sitemap-node-card');
+
+                        cards.forEach(card => {
+                            const title = card.querySelector('h3').textContent.toLowerCase();
+                            const desc = card.querySelector('p').textContent.toLowerCase();
+
+                            if (title.includes(term) || desc.includes(term)) {
+                                card.style.display = 'flex';
+                                visibleInSection++;
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        });
+
+                        // Show/Hide category wrapper based on matches
+                        if (visibleInSection > 0) {
+                            section.style.display = 'block';
+                            // Re-trigger layout alignment
+                            section.style.opacity = '1';
+                            section.style.transform = 'translateY(0)';
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>

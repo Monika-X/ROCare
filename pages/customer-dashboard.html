@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCare | Customer Dashboard</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo" aria-label="ROCare home">
+                <span class="logo-mark"><img src="../assets/logo.png" alt="ROCare Logo"></span>
+                <span class="logo-copy"><strong>ROCare</strong><small>Pure Luxury. Perfect Purity.</small></span>
+            </a>
+            <button id="menu-toggle" class="icon-btn menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><i class="ri-menu-line"></i></button>
+            <nav class="nav-links" aria-label="Primary navigation">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="home-2.html" class="nav-link">Home 2</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button id="user-profile" class="icon-btn" aria-label="User profile"><i class="ri-user-line"></i></button>
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle color theme"><i class="ri-moon-line"></i></button>
+                <button id="dir-toggle" class="icon-btn dir-text-btn" aria-label="Toggle text direction">LTR</button>
+                <a href="booking.html" class="cta-btn">Book Now</a>
+            </div>
+            <div id="user-dropdown" class="user-dropdown">
+                <a href="customer-dashboard.html">Customer Dashboard</a>
+                <a href="admin-dashboard.html">Admin Dashboard</a>
+                <a href="login.html">Login</a>
+                <a href="signup.html">Signup</a>
+            </div>
+        </div>
+    </header>
+    <main class="dashboard-main">
+        <section class="dashboard-hero">
+            <div class="container dashboard-hero-grid">
+                <div>
+                    <span class="eyebrow">Customer dashboard</span>
+                    <h1>Good afternoon, Riya.</h1>
+                    <p>Your Aquaguard Aura is running well. The next planned visit is scheduled for filter inspection, tank sanitization, and water-flow testing.</p>
+                    <div class="dashboard-actions">
+                        <a class="btn btn-primary" href="booking.html"><i class="ri-calendar-check-line"></i> Schedule Visit</a>
+                        <a class="btn btn-outline" href="contact.html"><i class="ri-chat-1-line"></i> Raise Support</a>
+                    </div>
+                </div>
+                <div class="dashboard-focus-card">
+                    <span class="status-pill success">AMC Active</span>
+                    <strong>Premium Care Plan</strong>
+                    <p>Valid until 18 Sep 2026 with 2 service visits remaining.</p>
+                    <div class="dashboard-progress" aria-label="Plan usage">
+                        <span style="width: 68%"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="dashboard-section">
+            <div class="container dashboard-metrics">
+                <article class="metric-tile">
+                    <i class="ri-water-flash-line"></i>
+                    <span>Water Quality</span>
+                    <strong>Good</strong>
+                    <small>Last checked: 14 Aug</small>
+                </article>
+                <article class="metric-tile">
+                    <i class="ri-drop-line"></i>
+                    <span>Current TDS</span>
+                    <strong>62 ppm</strong>
+                    <small>Within target range</small>
+                </article>
+                <article class="metric-tile">
+                    <i class="ri-filter-line"></i>
+                    <span>Filter Life</span>
+                    <strong>74%</strong>
+                    <small>Carbon filter healthy</small>
+                </article>
+                <article class="metric-tile">
+                    <i class="ri-calendar-event-line"></i>
+                    <span>Next Visit</span>
+                    <strong>18 Sep</strong>
+                    <small>10:00 AM - 12:00 PM</small>
+                </article>
+            </div>
+        </section>
+        <section class="dashboard-section">
+            <div class="container dashboard-grid">
+                <article class="dashboard-panel health-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="eyebrow">Purifier health</span>
+                            <h2>System snapshot</h2>
+                        </div>
+                        <span class="status-pill success">92%</span>
+                    </div>
+                    <div class="health-ring">
+                        <strong>92</strong>
+                        <span>health score</span>
+                    </div>
+                    <ul class="status-list">
+                        <li><span>Flow rate</span><strong>1.8 L/min</strong></li>
+                        <li><span>Tank pressure</span><strong>Stable</strong></li>
+                        <li><span>Last membrane check</span><strong>14 Aug 2026</strong></li>
+                    </ul>
+                </article>
+                <article class="dashboard-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="eyebrow">Upcoming visit</span>
+                            <h2>Technician checklist</h2>
+                        </div>
+                    </div>
+                    <ol class="dashboard-checklist">
+                        <li>Inspect sediment and carbon filters</li>
+                        <li>Sanitize storage tank and faucet outlet</li>
+                        <li>Recheck TDS, taste, and leakage points</li>
+                        <li>Update service notes in your account</li>
+                    </ol>
+                </article>
+            </div>
+        </section>
+        <section class="dashboard-section section-surface">
+            <div class="container dashboard-grid">
+                <article class="dashboard-panel wide-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="eyebrow">Service timeline</span>
+                            <h2>Recent activity</h2>
+                        </div>
+                        <a class="text-link" href="booking.html">Book again</a>
+                    </div>
+                    <div class="timeline-list">
+                        <div><time>14 Aug</time><strong>Routine service completed</strong><span>Sediment filter cleaned, pressure checked, and TDS logged.</span></div>
+                        <div><time>02 Jul</time><strong>Support request closed</strong><span>Low-flow concern resolved after inlet valve adjustment.</span></div>
+                        <div><time>18 Jun</time><strong>AMC renewed</strong><span>Premium Care Plan activated with three scheduled visits.</span></div>
+                    </div>
+                </article>
+                <article class="dashboard-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="eyebrow">Support</span>
+                            <h2>Open requests</h2>
+                        </div>
+                    </div>
+                    <div class="ticket-list">
+                        <div><strong>#RC-1029</strong><span class="status-pill warning">Waiting</span><p>Confirm visit slot for filter inspection.</p></div>
+                        <div><strong>#RC-1018</strong><span class="status-pill success">Closed</span><p>Invoice sent after AMC renewal.</p></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="dashboard-section">
+            <div class="container dashboard-grid">
+                <article class="dashboard-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="eyebrow">Registered purifier</span>
+                            <h2>Aquaguard Aura RO+UV</h2>
+                        </div>
+                    </div>
+                    <ul class="detail-list">
+                        <li><span>Installed</span><strong>18 Sep 2024</strong></li>
+                        <li><span>Water source</span><strong>Borewell + municipal mix</strong></li>
+                        <li><span>Location</span><strong>Kitchen wall unit</strong></li>
+                        <li><span>Preferred slot</span><strong>Morning</strong></li>
+                    </ul>
+                </article>
+                <article class="dashboard-panel accent-panel">
+                    <span class="eyebrow">Recommended action</span>
+                    <h2>Replace sediment pre-filter during the next visit.</h2>
+                    <p>This keeps the RO membrane from taking extra load and helps maintain stable taste.</p>
+                    <a class="btn btn-primary" href="booking.html">Confirm Visit</a>
+                </article>
+            </div>
+        </section>
+        <section class="dashboard-section final-dashboard-cta">
+            <div class="container final-dashboard-grid">
+                <div>
+                    <span class="eyebrow">Quick actions</span>
+                    <h2>Need anything before the scheduled visit?</h2>
+                    <p>Book urgent repair, ask a plan question, or request a purifier upgrade recommendation from the ROCare team.</p>
+                </div>
+                <div class="quick-action-grid">
+                    <a href="booking.html"><i class="ri-tools-line"></i><span>Repair</span></a>
+                    <a href="contact.html"><i class="ri-question-answer-line"></i><span>Ask</span></a>
+                    <a href="services.html"><i class="ri-refresh-line"></i><span>Upgrade</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <a href="../index.html" class="footer-logo">
+                    <img src="../assets/logo.png" alt="ROCare Logo">
+                    <span>ROCare</span>
+                </a>
+                <p>Premium water purifier sales, repair, installation, and AMC care for homes and workplaces.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+                </div>
+            </div>
+            <div>
+                <h2>Services</h2>
+                <a href="services.html">RO Repair</a>
+                <a href="services.html">Installation</a>
+                <a href="services.html">AMC Plans</a>
+                <a href="booking.html">Book Visit</a>
+            </div>
+            <div>
+                <h2>Company</h2>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="sitemap.html">Sitemap</a>
+            </div>
+            <div>
+                <h2>Stay Updated</h2>
+                <p>Get filter care reminders, service offers, and purifier buying tips.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email address" aria-label="Email address" required>
+                    <button class="btn btn-primary" type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>&copy; 2026 ROCare. All rights reserved.</span>
+            <span><a href="privacy-policy.html">Privacy</a> <a href="terms-conditions.html">Terms</a></span>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>

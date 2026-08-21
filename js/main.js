@@ -40,6 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedDir = localStorage.getItem('dir');
     if (savedDir) {
         root.setAttribute('dir', savedDir);
+        updateDirIcon(savedDir);
+    } else {
+        updateDirIcon('ltr');
     }
 
     if (dirToggleBtn) {
@@ -48,18 +51,30 @@ document.addEventListener('DOMContentLoaded', () => {
             const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
             root.setAttribute('dir', newDir);
             localStorage.setItem('dir', newDir);
+            updateDirIcon(newDir);
         });
+    }
+
+    function updateDirIcon(dir) {
+        if (!dirToggleBtn) return;
+        if (dir === 'rtl') {
+            dirToggleBtn.textContent = 'RTL';
+        } else {
+            dirToggleBtn.textContent = 'LTR';
+        }
     }
 
     // 3. Sticky Navbar
     const header = document.querySelector('.header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    }
 
     // 4. Scroll Reveal Animation
     const revealElements = document.querySelectorAll('.reveal');
@@ -89,7 +104,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (menuBtn && navLinks) {
         menuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
+            const isOpen = navLinks.classList.toggle('show');
+            menuBtn.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        navLinks.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('show');
+                menuBtn.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
+
+    // 6. User Profile Dropdown
+    const userProfileBtn = document.getElementById('user-profile');
+    const userDropdown = document.getElementById('user-dropdown');
+
+    if (userProfileBtn && userDropdown) {
+        userProfileBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            userDropdown.classList.toggle('show');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!userProfileBtn.contains(e.target) && !userDropdown.contains(e.target)) {
+                userDropdown.classList.remove('show');
+            }
         });
     }
 });

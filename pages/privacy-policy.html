@@ -4,28 +4,401 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROCare | Privacy Policy</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/redesign.css">
 </head>
 <body>
+    <!-- Top Reading Progress Indicator -->
+    <div class="reading-progress-container">
+        <div class="reading-progress-bar" id="readingProgress"></div>
+    </div>
+
     <header class="header">
         <div class="container nav-container">
-            <a href="../index.html" class="logo"><i class="ri-drop-fill"></i> ROCare</a>
-            <nav class="nav-links">
-                <a href="../index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="dashboard.html" class="nav-link">Dashboard</a>
+            <a href="../index.html" class="logo" aria-label="ROCare home">
+                <span class="logo-mark"><img src="../assets/logo.png" alt="ROCare Logo"></span>
+                <span class="logo-copy"><strong>ROCare</strong><small>Pure Luxury. Perfect Purity.</small></span>
+            </a>
+            <button id="menu-toggle" class="icon-btn menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><i class="ri-menu-line"></i></button>
+            <nav class="nav-links" aria-label="Primary navigation">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="home-2.html" class="nav-link">Home 2</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
             </nav>
+            <div class="nav-actions">
+                <button id="user-profile" class="icon-btn" aria-label="User profile"><i class="ri-user-line"></i></button>
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle color theme"><i class="ri-moon-line"></i></button>
+                <button id="dir-toggle" class="icon-btn dir-text-btn" aria-label="Toggle text direction">LTR</button>
+                <a href="booking.html" class="cta-btn">Book Now</a>
+            </div>
+            <div id="user-dropdown" class="user-dropdown">
+                <a href="customer-dashboard.html">Customer Dashboard</a>
+                <a href="admin-dashboard.html">Admin Dashboard</a>
+                <a href="login.html">Login</a>
+                <a href="signup.html">Signup</a>
+            </div>
         </div>
     </header>
+
     <main>
-        <section class="section section-light" style="padding-top: 150px; min-height: 80vh;">
-            <div class="container">
-                <h1>Privacy Policy</h1>
+        <section class="hero-section section-shell" style="min-height: auto; padding-bottom: 20px;">
+            <div class="container" style="text-align: center;">
+                <span class="eyebrow">Data Governance</span>
+                <h1 class="reveal active" style="margin: 0 auto 16px;">Privacy Policy</h1>
+                <p style="margin: 0 auto; max-width: 650px;">This policy explains how ROCare protects, structures, and manages customer and purifier details to deliver safe water solutions.</p>
+            </div>
+        </section>
+
+        <section class="section-shell" style="padding-top: 30px;">
+            <div class="container terms-wrapper">
+                <!-- Left Sticky Sidebar Index -->
+                <aside class="premium-glass-card terms-navigation-sidebar reveal active">
+                    <h3>Policy Sections</h3>
+                    <ul class="terms-index-list">
+                        <li><a href="#sec-collection" class="terms-index-link active">1. Data Collection</a></li>
+                        <li><a href="#sec-usage" class="terms-index-link">2. Data Usage</a></li>
+                        <li><a href="#sec-sharing" class="terms-index-link">3. Information Sharing</a></li>
+                        <li><a href="#sec-security" class="terms-index-link">4. Security Measures</a></li>
+                        <li><a href="#sec-rights" class="terms-index-link">5. Customer Rights</a></li>
+                    </ul>
+                </aside>
+
+                <!-- Right Content Panels -->
+                <div class="terms-content-panel">
+                    <!-- Section 1 -->
+                    <div id="sec-collection" class="premium-glass-card terms-section-card reveal active">
+                        <h2>1. What Data We Collect</h2>
+                        <p>To schedule technician dispatches, track active warranties, and provide annual maintenance contract support, ROCare must collect specific items of customer information.</p>
+                        
+                        <div class="redesign-accordion">
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <span>Personal & Location Info</span>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>We collect your name, phone number, email address, and physical service location. This details are strictly used to coordinate appointments, send reminders, and complete on-site services.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <span>Purifier Diagnostic Details</span>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>Our database logs purifier model types, installation timestamps, diagnostic readings (incoming/outgoing TDS levels), and filter change logs. This helps our team bring matching replacement kits to visits.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div id="sec-usage" class="premium-glass-card terms-section-card reveal active">
+                        <h2>2. How We Use Collected Data</h2>
+                        <p>We process information to ensure your drinking water stays pure and that customer service queries are completed promptly.</p>
+                        
+                        <div class="redesign-accordion">
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <span>Service Bookings & Operations</span>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>We process location and contact details to manage technician dispatches, calculate travel parameters, and verify plan coverage eligibility under active AMC contracts.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <span>Filter Life Diagnostics Alerts</span>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>Diagnostic history (filter install dates, water usage, diagnostic notes) is processed to calculate when filters are approaching exhaustion. This updates your customer dashboard reminder cards automatically.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3 -->
+                    <div id="sec-sharing" class="premium-glass-card terms-section-card reveal active">
+                        <h2>3. Information Disclosures & Sharing</h2>
+                        <p>ROCare does not sell or share customer contact databases with third-party marketing companies. Sharing is restricted to core service providers.</p>
+                        
+                        <div class="redesign-accordion">
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <span>Disclosures to Technicians</span>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>Dispatched on-site technicians are given access to the client name, phone number, address, and purifier symptoms checklist only for the duration of the scheduled visit.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <span>Authorized Partners</span>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>When third-party components or specialized pumps are replaced, part serial numbers and basic purifier models may be synchronized with manufacturers for warranty registration.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 4 -->
+                    <div id="sec-security" class="premium-glass-card terms-section-card reveal active">
+                        <h2>4. Data Encryption & Security Measures</h2>
+                        <p>We implement technical security policies to shield your address registry, payment transaction logs, and credentials from breaches.</p>
+                        
+                        <div class="redesign-accordion">
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <span>Storage & Database Guardrails</span>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>Account credentials and diagnostic data are encrypted during transit (HTTPS) and stored on secure cloud database instances. Access credentials are limited strictly to administrative roles.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <span>Cookie Policy & Tracking</span>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>Cookies are used to manage session logins, remember UI theme parameters (light/dark preference), and store direction toggles (LTR/RTL). We do not run persistent cross-site tracking pixels.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 5 -->
+                    <div id="sec-rights" class="premium-glass-card terms-section-card reveal active">
+                        <h2>5. Customer Rights & Preferences</h2>
+                        <p>You maintain rights over your information, including accessing details, correcting address data, or opting out of diagnostics logs.</p>
+                        
+                        <div class="redesign-accordion" style="margin-bottom: 24px;">
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <span>Record Corrections & Access</span>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>You can request a report of all purifier replacements, AMC invoice logs, and address histories recorded. Profile corrections can be updated instantly from customer dashboards.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <span>Profile Deletion</span>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>Upon cancellation of AMC plans, you can ask for complete profile deletion. Our systems will wipe contact profiles and diagnostic logs within 30 days, retaining only legally mandatory tax/invoice records.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Consent Preferences Panel -->
+                        <div class="acceptance-box" style="display:block; width:100%; border-style:solid;">
+                            <h3 style="font-size:1.15rem; margin-bottom:14px; color:var(--color-primary);">Consent Settings Portal</h3>
+                            <p style="font-size:0.88rem; margin-bottom:20px; line-height:1.4;">Manage how ROCare tracks and uses your diagnostics and communication profile details:</p>
+                            
+                            <div class="switch-wrapper">
+                                <div class="switch-label">
+                                    <strong>Purifier Diagnostic Logging</strong>
+                                    <span>Send automated filter life tracking logs to the client portal.</span>
+                                </div>
+                                <label class="switch-control">
+                                    <input type="checkbox" id="toggleDiagnostics" checked>
+                                    <span class="switch-slider"></span>
+                                </label>
+                            </div>
+                            
+                            <div class="switch-wrapper">
+                                <div class="switch-label">
+                                    <strong>SMS & WhatsApp Notifications</strong>
+                                    <span>Receive text alerts for confirmed technician visits.</span>
+                                </div>
+                                <label class="switch-control">
+                                    <input type="checkbox" id="toggleNotifications" checked>
+                                    <span class="switch-slider"></span>
+                                </label>
+                            </div>
+                            
+                            <div class="switch-wrapper">
+                                <div class="switch-label">
+                                    <strong>Analytical Cookies</strong>
+                                    <span>Allow cookies to help optimize portal and booking wizard loading speed.</span>
+                                </div>
+                                <label class="switch-control">
+                                    <input type="checkbox" id="toggleAnalytics">
+                                    <span class="switch-slider"></span>
+                                </label>
+                            </div>
+                            
+                            <div style="margin-top:20px; display:flex; justify-content:flex-end;">
+                                <button class="btn btn-primary" id="saveConsentBtn">Save Settings</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <a href="../index.html" class="footer-logo">
+                    <img src="../assets/logo.png" alt="ROCare Logo">
+                    <span>ROCare</span>
+                </a>
+                <p>Premium water purifier sales, repair, installation, and AMC care for homes and workplaces.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+                </div>
+            </div>
+            <div>
+                <h2>Services</h2>
+                <a href="services.html">RO Repair</a>
+                <a href="services.html">Installation</a>
+                <a href="services.html">AMC Plans</a>
+                <a href="booking.html">Book Visit</a>
+            </div>
+            <div>
+                <h2>Company</h2>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="sitemap.html">Sitemap</a>
+            </div>
+            <div>
+                <h2>Stay Updated</h2>
+                <p>Get filter care reminders, service offers, and purifier buying tips.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email address" aria-label="Email address" required>
+                    <button class="btn btn-primary" type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>&copy; 2026 ROCare. All rights reserved.</span>
+            <span><a href="privacy-policy.html">Privacy</a> <a href="terms-conditions.html">Terms</a></span>
+        </div>
+    </footer>
+
     <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Reading Progress Bar
+            const progressBar = document.getElementById('readingProgress');
+            window.addEventListener('scroll', () => {
+                const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+                if (totalHeight > 0) {
+                    const percentage = (window.scrollY / totalHeight) * 100;
+                    progressBar.style.width = percentage + '%';
+                }
+            });
+
+            // 2. Scroll Spy & Left Sidebar Highlighting
+            const sections = document.querySelectorAll('.terms-section-card');
+            const navLinks = document.querySelectorAll('.terms-index-link');
+
+            window.addEventListener('scroll', () => {
+                let currentActiveSectionId = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 140; // offset for sticky navs
+                    if (window.scrollY >= sectionTop) {
+                        currentActiveSectionId = section.getAttribute('id');
+                    }
+                });
+
+                if (currentActiveSectionId) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + currentActiveSectionId) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+
+            // 3. Smooth Scroll to Sections
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 110,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // 4. Accordion Logic
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const parentItem = header.parentElement;
+                    const content = parentItem.querySelector('.accordion-content');
+                    
+                    if (parentItem.classList.contains('active')) {
+                        parentItem.classList.remove('active');
+                        content.style.maxHeight = null;
+                    } else {
+                        const siblingItems = parentItem.parentElement.querySelectorAll('.accordion-item');
+                        siblingItems.forEach(item => {
+                            item.classList.remove('active');
+                            item.querySelector('.accordion-content').style.maxHeight = null;
+                        });
+
+                        parentItem.classList.add('active');
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    }
+                });
+            });
+
+            // 5. Consent Settings Persistence
+            const toggleDiag = document.getElementById('toggleDiagnostics');
+            const toggleNotif = document.getElementById('toggleNotifications');
+            const toggleAnal = document.getElementById('toggleAnalytics');
+            const saveBtn = document.getElementById('saveConsentBtn');
+
+            // Load saved settings
+            if (localStorage.getItem('privacy_diagnostics') !== null) {
+                toggleDiag.checked = localStorage.getItem('privacy_diagnostics') === 'true';
+            }
+            if (localStorage.getItem('privacy_notifications') !== null) {
+                toggleNotif.checked = localStorage.getItem('privacy_notifications') === 'true';
+            }
+            if (localStorage.getItem('privacy_analytics') !== null) {
+                toggleAnal.checked = localStorage.getItem('privacy_analytics') === 'true';
+            }
+
+            // Save settings on button click
+            if (saveBtn) {
+                saveBtn.addEventListener('click', () => {
+                    localStorage.setItem('privacy_diagnostics', toggleDiag.checked);
+                    localStorage.setItem('privacy_notifications', toggleNotif.checked);
+                    localStorage.setItem('privacy_analytics', toggleAnal.checked);
+                    alert('Consent Preferences updated successfully!');
+                });
+            }
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCare | Admin Dashboard</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo" aria-label="ROCare home">
+                <span class="logo-mark"><img src="../assets/logo.png" alt="ROCare Logo"></span>
+                <span class="logo-copy"><strong>ROCare</strong><small>Pure Luxury. Perfect Purity.</small></span>
+            </a>
+            <button id="menu-toggle" class="icon-btn menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><i class="ri-menu-line"></i></button>
+            <nav class="nav-links" aria-label="Primary navigation">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="home-2.html" class="nav-link">Home 2</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button id="user-profile" class="icon-btn" aria-label="User profile"><i class="ri-user-line"></i></button>
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle color theme"><i class="ri-moon-line"></i></button>
+                <button id="dir-toggle" class="icon-btn dir-text-btn" aria-label="Toggle text direction">LTR</button>
+                <a href="booking.html" class="cta-btn">Book Now</a>
+            </div>
+            <div id="user-dropdown" class="user-dropdown">
+                <a href="customer-dashboard.html">Customer Dashboard</a>
+                <a href="admin-dashboard.html">Admin Dashboard</a>
+                <a href="login.html">Login</a>
+                <a href="signup.html">Signup</a>
+            </div>
+        </div>
+    </header>
+    <main class="dashboard-main admin-dashboard">
+        <section class="dashboard-hero">
+            <div class="container dashboard-hero-grid">
+                <div>
+                    <span class="eyebrow">Admin dashboard</span>
+                    <h1>Service command center.</h1>
+                    <p>Monitor today&apos;s visits, dispatch technicians, review AMC renewals, and catch urgent purifier issues before they pile up.</p>
+                    <div class="dashboard-actions">
+                        <a class="btn btn-primary" href="booking.html"><i class="ri-inbox-archive-line"></i> Booking Queue</a>
+                        <a class="btn btn-outline" href="#service-queue"><i class="ri-route-line"></i> Dispatch Board</a>
+                    </div>
+                </div>
+                <div class="dashboard-focus-card admin-focus">
+                    <span class="status-pill warning">12 active jobs</span>
+                    <strong>Today&apos;s field load</strong>
+                    <p>8 scheduled AMC visits, 3 repairs, and 1 installation require dispatch review.</p>
+                    <div class="dashboard-progress" aria-label="Completed jobs">
+                        <span style="width: 42%"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="dashboard-section">
+            <div class="container dashboard-metrics">
+                <article class="metric-tile">
+                    <i class="ri-team-line"></i>
+                    <span>Total Customers</span>
+                    <strong>1,234</strong>
+                    <small>+42 this month</small>
+                </article>
+                <article class="metric-tile">
+                    <i class="ri-shield-check-line"></i>
+                    <span>Active AMC</span>
+                    <strong>842</strong>
+                    <small>68% coverage</small>
+                </article>
+                <article class="metric-tile">
+                    <i class="ri-truck-line"></i>
+                    <span>Today Visits</span>
+                    <strong>12</strong>
+                    <small>5 completed</small>
+                </article>
+                <article class="metric-tile">
+                    <i class="ri-alert-line"></i>
+                    <span>Urgent Issues</span>
+                    <strong>4</strong>
+                    <small>Leakage and no-flow</small>
+                </article>
+            </div>
+        </section>
+        <section class="dashboard-section section-surface" id="service-queue">
+            <div class="container">
+                <div class="panel-heading queue-heading">
+                    <div>
+                        <span class="eyebrow">Dispatch board</span>
+                        <h2>Today&apos;s service queue</h2>
+                    </div>
+                    <div class="dashboard-tabs" aria-label="Queue filters">
+                        <button class="active" type="button">All</button>
+                        <button type="button">Urgent</button>
+                        <button type="button">AMC</button>
+                    </div>
+                </div>
+                <div class="table-panel">
+                    <table class="dashboard-table">
+                        <thead>
+                            <tr>
+                                <th>Job</th>
+                                <th>Customer</th>
+                                <th>Issue</th>
+                                <th>Area</th>
+                                <th>Technician</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#RC-2042</td>
+                                <td>Riya Sharma</td>
+                                <td>AMC service</td>
+                                <td>Indiranagar</td>
+                                <td>Vikram</td>
+                                <td><span class="status-pill success">Assigned</span></td>
+                            </tr>
+                            <tr>
+                                <td>#RC-2043</td>
+                                <td>Arun Mehta</td>
+                                <td>Leakage</td>
+                                <td>Koramangala</td>
+                                <td>Open</td>
+                                <td><span class="status-pill danger">Urgent</span></td>
+                            </tr>
+                            <tr>
+                                <td>#RC-2044</td>
+                                <td>Green Cafe</td>
+                                <td>Commercial RO install</td>
+                                <td>MG Road</td>
+                                <td>Sana</td>
+                                <td><span class="status-pill warning">Parts check</span></td>
+                            </tr>
+                            <tr>
+                                <td>#RC-2045</td>
+                                <td>Dr. Nair Clinic</td>
+                                <td>Low flow</td>
+                                <td>Whitefield</td>
+                                <td>Imran</td>
+                                <td><span class="status-pill success">En route</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section class="dashboard-section">
+            <div class="container dashboard-grid">
+                <article class="dashboard-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="eyebrow">Technicians</span>
+                            <h2>Field workload</h2>
+                        </div>
+                    </div>
+                    <div class="workload-list">
+                        <div><span>Vikram</span><strong>4 jobs</strong><em style="width: 78%"></em></div>
+                        <div><span>Sana</span><strong>3 jobs</strong><em style="width: 62%"></em></div>
+                        <div><span>Imran</span><strong>3 jobs</strong><em style="width: 58%"></em></div>
+                        <div><span>Neha</span><strong>2 jobs</strong><em style="width: 38%"></em></div>
+                    </div>
+                </article>
+                <article class="dashboard-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="eyebrow">AMC renewals</span>
+                            <h2>Renewal risk</h2>
+                        </div>
+                        <span class="status-pill warning">31 due</span>
+                    </div>
+                    <ul class="status-list">
+                        <li><span>Due in 7 days</span><strong>9 plans</strong></li>
+                        <li><span>Due in 30 days</span><strong>22 plans</strong></li>
+                        <li><span>Expired this month</span><strong>6 plans</strong></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+        <section class="dashboard-section section-surface">
+            <div class="container dashboard-grid">
+                <article class="dashboard-panel wide-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="eyebrow">Performance</span>
+                            <h2>Monthly service analytics</h2>
+                        </div>
+                    </div>
+                    <div class="analytics-bars">
+                        <div><span>Completed visits</span><strong>318</strong><em style="width: 86%"></em></div>
+                        <div><span>First-visit fixes</span><strong>91%</strong><em style="width: 91%"></em></div>
+                        <div><span>Repeat complaints</span><strong>4%</strong><em style="width: 24%"></em></div>
+                        <div><span>AMC renewal rate</span><strong>73%</strong><em style="width: 73%"></em></div>
+                    </div>
+                </article>
+                <article class="dashboard-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="eyebrow">Inventory</span>
+                            <h2>Parts alerts</h2>
+                        </div>
+                    </div>
+                    <div class="ticket-list">
+                        <div><strong>Sediment 10 inch</strong><span class="status-pill danger">Low</span><p>12 units left. Reorder suggested.</p></div>
+                        <div><strong>RO membrane 80 GPD</strong><span class="status-pill warning">Watch</span><p>28 units left with 9 forecast jobs.</p></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="dashboard-section final-dashboard-cta">
+            <div class="container final-dashboard-grid">
+                <div>
+                    <span class="eyebrow">Admin actions</span>
+                    <h2>Convert fresh requests into confirmed visits.</h2>
+                    <p>Keep the dispatch queue moving by assigning urgent jobs, confirming parts, and following up on renewal-risk customers.</p>
+                </div>
+                <div class="quick-action-grid">
+                    <a href="booking.html"><i class="ri-user-add-line"></i><span>Add Job</span></a>
+                    <a href="#service-queue"><i class="ri-truck-line"></i><span>Dispatch</span></a>
+                    <a href="contact.html"><i class="ri-phone-line"></i><span>Follow Up</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <a href="../index.html" class="footer-logo">
+                    <img src="../assets/logo.png" alt="ROCare Logo">
+                    <span>ROCare</span>
+                </a>
+                <p>Premium water purifier sales, repair, installation, and AMC care for homes and workplaces.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+                </div>
+            </div>
+            <div>
+                <h2>Services</h2>
+                <a href="services.html">RO Repair</a>
+                <a href="services.html">Installation</a>
+                <a href="services.html">AMC Plans</a>
+                <a href="booking.html">Book Visit</a>
+            </div>
+            <div>
+                <h2>Company</h2>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="sitemap.html">Sitemap</a>
+            </div>
+            <div>
+                <h2>Stay Updated</h2>
+                <p>Get filter care reminders, service offers, and purifier buying tips.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email address" aria-label="Email address" required>
+                    <button class="btn btn-primary" type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>&copy; 2026 ROCare. All rights reserved.</span>
+            <span><a href="privacy-policy.html">Privacy</a> <a href="terms-conditions.html">Terms</a></span>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>
