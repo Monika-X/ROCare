@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="../assets/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/redesign.css">
 </head>
 <body>
     <header class="header">
@@ -164,32 +165,25 @@
                     </form>
                 </div>
                 
-                <!-- Radar Map Tracker -->
-                <div class="radar-map-card premium-glass-card">
-                    <div>
-                        <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-primary); font-weight: 800; letter-spacing: 1px; display: block; margin-bottom: 6px;">Dispatcher Center</span>
-                        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 500;">Live Dispatcher Radar</h3>
-                        <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-top: 4px;">Pulsing indicators show active ROCare service technicians currently commuting in your core city sector.</p>
+                <!-- Map Embed Card -->
+                <div class="radar-map-card premium-glass-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; min-height: 480px;">
+                    <div style="padding: 30px 30px 20px;">
+                        <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-primary); font-weight: 800; letter-spacing: 1px; display: block; margin-bottom: 6px;">Location Map</span>
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 500;">ROCare Experience Center</h3>
+                        <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-top: 4px;">Visit our head office or schedule a system diagnostics walk-in.</p>
                     </div>
                     
-                    <!-- Interactive Visual Radar -->
-                    <div class="radar-display">
-                        <div class="radar-sweep"></div>
-                        <!-- Radar pings with randomized absolute placement -->
-                        <div class="radar-ping" style="top: 25%; left: 40%;"></div>
-                        <div class="radar-ping" style="top: 60%; left: 75%;"></div>
-                        <div class="radar-ping" style="top: 75%; left: 20%;"></div>
-                    </div>
-                    
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 20px;">
-                        <div>
-                            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-text-muted); display: block; letter-spacing: 0.5px;">Avg Response Time</span>
-                            <strong style="font-size: 1.15rem; color: var(--color-text);">32 Minutes</strong>
-                        </div>
-                        <div>
-                            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-text-muted); display: block; letter-spacing: 0.5px;">Dispatch Sector</span>
-                            <strong style="font-size: 1.15rem; color: var(--color-primary);">Zone 2 Active</strong>
-                        </div>
+                    <!-- Embedded Google Map -->
+                    <div style="flex-grow: 1; width: 100%; min-height: 320px;">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.8931295244517!2d80.20790837589578!3d12.978663414115162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d8f615309db%3A0xc3f9822a10619a9!2sVelachery%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1713580456789!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; display: block; filter: grayscale(0.2) contrast(1.02);" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
                 </div>
             </div>
