@@ -1227,34 +1227,37 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 8px;
   }
 
   .logo {
     order: 1;
+    gap: 6px;
   }
 
   .logo-mark {
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
     border-radius: var(--radius-sm);
   }
 
   .logo-mark img {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
   }
 
   .logo-copy strong {
-    font-size: 1.35rem;
+    font-size: 1.3rem;
   }
 
   .icon-btn {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
   }
 
   .dir-text-btn {
-    font-size: 0.72rem;
+    font-size: 0.68rem;
+    padding: 0 !important;
   }
 
   .nav-links {
@@ -1265,7 +1268,7 @@ p {
     order: 3;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
   }
 
   .nav-actions .cta-btn {
@@ -1275,8 +1278,8 @@ p {
   .menu-toggle {
     order: 4;
     display: inline-grid;
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
   }
 
   .nav-links {
@@ -1385,12 +1388,12 @@ p {
 
 @media (max-width: 720px) {
   .container {
-    width: min(100% - 28px, 1180px);
+    width: min(100% - 24px, 1180px);
   }
 
   .nav-container {
     min-height: 74px;
-    gap: 10px;
+    gap: 8px;
   }
 
   .logo-copy small {
@@ -1470,5 +1473,11 @@ p {
   .health-ring {
     width: 160px;
     height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: min(100% - 16px, 1180px);
   }
 }
