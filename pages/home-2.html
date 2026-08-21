@@ -1,175 +1,479 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROCare | Home 2</title>
+    <title>ROCare | The Bespoke Water Atelier</title>
     <link rel="icon" type="image/png" href="../assets/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Google Fonts: Luxury Serif & Geometric Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/redesign.css">
 </head>
-<body>
-    <header class="header">
-        <div class="container nav-container">
-            <a href="../index.html" class="logo" aria-label="ROCare home">
-                <span class="logo-mark"><img src="../assets/logo.png" alt="ROCare Logo"></span>
-                <span class="logo-copy"><strong>ROCare</strong><small>Pure Luxury. Perfect Purity.</small></span>
+<body class="luxury-home-body">
+    <!-- Floating Minimalist Header -->
+    <header class="lux-header">
+        <div class="lux-container lux-nav-container">
+            <a href="../index.html" class="lux-logo" aria-label="ROCare Home">
+                <span class="lux-logo-mark"><img src="../assets/logo.png" alt="ROCare Logo"></span>
+                <span class="lux-logo-copy"><strong>ROCare</strong><small>Bespoke Purification</small></span>
             </a>
-            <button id="menu-toggle" class="icon-btn menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><i class="ri-menu-line"></i></button>
-            <nav class="nav-links" aria-label="Primary navigation">
-                    <a href="../index.html" class="nav-link">Home</a>
-                    <a href="home-2.html" class="nav-link active">Home 2</a>
-                    <a href="about.html" class="nav-link">About</a>
-                    <a href="services.html" class="nav-link">Services</a>
-                    <a href="blog.html" class="nav-link">Blog</a>
-                    <a href="contact.html" class="nav-link">Contact</a>
+            <nav class="lux-nav-links">
+                <a href="../index.html" class="lux-nav-link">Home</a>
+                <a href="home-2.html" class="lux-nav-link active">Atelier</a>
+                <a href="about.html" class="lux-nav-link">Philosophy</a>
+                <a href="services.html" class="lux-nav-link">Systems</a>
+                <a href="contact.html" class="lux-nav-link">Inquire</a>
             </nav>
-            <div class="nav-actions">
-                <button id="user-profile" class="icon-btn" aria-label="User profile"><i class="ri-user-line"></i></button>
-                <button id="theme-toggle" class="icon-btn" aria-label="Toggle color theme"><i class="ri-moon-line"></i></button>
-                <button id="dir-toggle" class="icon-btn dir-text-btn" aria-label="Toggle text direction">LTR</button>
-                <a href="booking.html" class="cta-btn">Book Now</a>
-            </div>
-            <div id="user-dropdown" class="user-dropdown">
-                <a href="customer-dashboard.html">Customer Dashboard</a>
-                <a href="admin-dashboard.html">Admin Dashboard</a>
-                <a href="login.html">Login</a>
-                <a href="signup.html">Signup</a>
+            <div class="lux-nav-actions">
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme"><i class="ri-moon-line"></i></button>
+                <button id="dir-toggle" class="icon-btn dir-text-btn" aria-label="Toggle direction">LTR</button>
+                <a href="booking.html" class="lux-cta-btn">Reserve Consultation</a>
             </div>
         </div>
     </header>
-    <main>
-        <section class="hero-section section-shell">
-            <div class="container hero-grid">
-                <div class="hero-copy">
-                    <span class="eyebrow">Modern purification studio</span>
-                    <h1>A calmer way to choose and maintain your purifier.</h1>
-                    <p>This alternate home page highlights a quieter, product-forward ROCare experience with guided choices and polished service touchpoints.</p>
-                    <div class="hero-actions">
-                        <a class="btn btn-primary" href="services.html">Compare Options</a>
-                        <a class="btn btn-outline" href="services.html">View Services</a>
+
+    <main class="lux-main">
+        <!-- Hero Section: Cinematic & Pure -->
+        <section class="lux-hero">
+            <div class="lux-hero-bg">
+                <div class="lux-orb lux-orb-1"></div>
+                <div class="lux-orb lux-orb-2"></div>
+                <div class="lux-grid-overlay"></div>
+            </div>
+            
+            <div class="lux-container lux-hero-content">
+                <div class="lux-hero-text">
+                    <span class="lux-eyebrow">A New Paradigm of Purity</span>
+                    <h1 class="lux-title">The Architecture <br>of Pure <span class="lux-gold-text">Hydration.</span></h1>
+                    <p class="lux-lead">Water, curated to its molecular essence. We craft bespoke filtration systems that harmonize pristine quality with architectural elegance.</p>
+                    <div class="lux-hero-actions">
+                        <a href="#atelier" class="lux-btn lux-btn-primary">Enter the Atelier</a>
+                        <a href="services.html" class="lux-btn lux-btn-secondary">The Collection</a>
                     </div>
                 </div>
-                <figure class="hero-media reveal">
-                    <img src="https://images.unsplash.com/photo-1667404142540-850e45581cef?auto=format&fit=crop&w=1400&q=80" alt="White purifier in a modern kitchen" loading="eager">
-                    <figcaption>ROCare water service experience</figcaption>
-                </figure>
-            </div>
-        </section>
-        <section class="section-shell">
-            <div class="container section-intro">
-                <span class="eyebrow">Overview</span>
-                <h2>Premium does not need to be confusing</h2>
-                <p>We make water quality, purifier capacity, and maintenance cost easy to compare before you buy.</p>
-                <div class="stat-grid">
-                <div class="stat-card"><strong>30 min</strong><span>guided consult</span></div>
-                <div class="stat-card"><strong>4 types</strong><span>RO, UV, UF, alkaline</span></div>
-                <div class="stat-card"><strong>1 plan</strong><span>for every kitchen</span></div>
-            </div>
-            </div>
-        </section>
-        <section class="section-shell section-surface">
-            <div class="container">
-                <div class="section-heading">
-                    <span class="eyebrow">Highlights</span>
-                    <h2>What this page helps you do</h2>
-                </div>
-                <div class="card-grid">
-                <article class="content-card reveal"><i class="ri-search-eye-line"></i><h3>Water-first selection</h3><p>We start with source quality, pressure, family size, and kitchen space.</p></article>
-                <article class="content-card reveal"><i class="ri-shield-check-line"></i><h3>Original parts</h3><p>Compatible cartridges, membrane checks, and workmanship-backed fitting.</p></article>
-                <article class="content-card reveal"><i class="ri-calendar-check-line"></i><h3>Planned upkeep</h3><p>Service cycles are scheduled around your usage rather than guesswork.</p></article>
-            </div>
-            </div>
-        </section>
-        <section class="section-shell split-section">
-            <div class="container split-grid">
-                <div class="split-media reveal">
-                    <img src="https://images.unsplash.com/photo-1662454377919-82ef4c6cd708?auto=format&fit=crop&w=1400&q=80" alt="Under-sink water purifier installation" loading="lazy">
-                </div>
-                <div class="split-copy">
-                    <span class="eyebrow">Process</span>
-                    <h2>Clean design, strong performance</h2>
-                    <p>Choose compact countertop, wall-mounted, or under-sink systems without turning the kitchen into a service project.</p>
-                    <ol class="step-list">
-                        <li>Compare water report and family usage.</li>
-                        <li>Select purifier class and installation position.</li>
-                        <li>Schedule maintenance reminders after setup.</li>
-                    </ol>
+                
+                <div class="lux-hero-visual">
+                    <div class="lux-droplet-sculpture">
+                        <div class="lux-glass-sphere">
+                            <div class="lux-water-wave"></div>
+                            <div class="lux-core-glow"></div>
+                        </div>
+                        <div class="lux-gold-ring lux-ring-1"></div>
+                        <div class="lux-gold-ring lux-ring-2"></div>
+                        <div class="lux-gold-ring lux-ring-3"></div>
+                    </div>
                 </div>
             </div>
-        </section>
-        <section class="section-shell section-surface">
-            <div class="container">
-                <div class="section-heading">
-                    <span class="eyebrow">Resources</span>
-                    <h2>Curated purifier categories</h2>
-                </div>
-                <div class="resource-grid">
-                <article class="content-card reveal"><h3>Compact kitchens</h3><p>Slim systems for apartments and smaller counters.</p></article>
-                <article class="content-card reveal"><h3>Large families</h3><p>Higher storage and fast recovery flow.</p></article>
-                <article class="content-card reveal"><h3>Commercial spaces</h3><p>Durable capacity for clinics, cafes, and offices.</p></article>
-            </div>
+            
+            <div class="lux-scroll-indicator">
+                <span>Discover More</span>
+                <i class="ri-arrow-down-line"></i>
             </div>
         </section>
-        <section class="section-shell final-cta">
-            <div class="container cta-grid">
-                <div>
-                    <span class="eyebrow">Next step</span>
-                    <h2>Need help choosing the right purifier?</h2>
-                    <p>Share your water source and kitchen setup, and ROCare will shortlist practical options.</p>
-                    <a class="btn btn-primary" href="services.html">Compare Options</a>
+
+        <!-- Interactive Section: The Water Atelier -->
+        <section id="atelier" class="lux-atelier-section">
+            <div class="lux-container">
+                <div class="lux-section-header">
+                    <span class="lux-eyebrow">Interactive Diagnostics</span>
+                    <h2 class="lux-section-title">The Water Atelier</h2>
+                    <p class="lux-section-subtitle">Select your water source to calibrate your bespoke purification pipeline.</p>
                 </div>
-                <div class="cta-panel reveal">
-                    <i class="ri-customer-service-2-line"></i>
-                    <strong>ROCare support</strong>
-                    <span>Service booking, product help, AMC renewals, and urgent purifier care.</span>
+                
+                <div class="lux-atelier-grid">
+                    <div class="lux-atelier-selector">
+                        <button class="lux-selector-btn active" data-source="municipal">
+                            <span class="lux-selector-num">01</span>
+                            <div class="lux-selector-info">
+                                <h3>Municipal Supply</h3>
+                                <p>TDS 100-250 ppm • High Chlorine & Chemical Byproducts</p>
+                            </div>
+                            <i class="ri-water-flash-line"></i>
+                        </button>
+                        
+                        <button class="lux-selector-btn" data-source="borewell">
+                            <span class="lux-selector-num">02</span>
+                            <div class="lux-selector-info">
+                                <h3>Groundwater / Borewell</h3>
+                                <p>TDS 500-1500+ ppm • Heavy Metals & Hard Minerals</p>
+                            </div>
+                            <i class="ri-shield-flash-line"></i>
+                        </button>
+                        
+                        <button class="lux-selector-btn" data-source="mixed">
+                            <span class="lux-selector-num">03</span>
+                            <div class="lux-selector-info">
+                                <h3>Tanker & Combined</h3>
+                                <p>Highly Variable TDS • Pathogens & Organic Suspensions</p>
+                            </div>
+                            <i class="ri-bubble-chart-line"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="lux-atelier-display premium-glass-card">
+                        <div class="lux-display-header">
+                            <h3>Bespoke Configuration</h3>
+                            <span id="lux-pipeline-tds" class="lux-badge">TDS Target: <span id="tds-val">60</span> ppm</span>
+                        </div>
+                        
+                        <div class="lux-pipeline-visual">
+                            <div class="lux-pipe-stage active" id="stage-sediment">
+                                <i class="ri-filter-2-line"></i>
+                                <span>Sediment</span>
+                            </div>
+                            <div class="lux-pipe-flow active"></div>
+                            <div class="lux-pipe-stage active" id="stage-carbon">
+                                <i class="ri-bubble-chart-line"></i>
+                                <span>Carbon</span>
+                            </div>
+                            <div class="lux-pipe-flow active"></div>
+                            <div class="lux-pipe-stage active" id="stage-ro">
+                                <i class="ri-drop-line"></i>
+                                <span>Membrane</span>
+                            </div>
+                            <div class="lux-pipe-flow active" id="flow-post-ro"></div>
+                            <div class="lux-pipe-stage active" id="stage-uv">
+                                <i class="ri-flashlight-line"></i>
+                                <span>UV Sterilizer</span>
+                            </div>
+                            <div class="lux-pipe-flow active" id="flow-post-uv"></div>
+                            <div class="lux-pipe-stage active" id="stage-alkaline">
+                                <i class="ri-magic-line"></i>
+                                <span>Remineralizer</span>
+                            </div>
+                        </div>
+                        
+                        <div class="lux-display-description">
+                            <h4 id="lux-pipeline-name">Municipal Precision Loop</h4>
+                            <p id="lux-pipeline-desc">Calibrated for municipal source. Optimizes carbon filtration to trap chemicals, followed by hyper-filtration and final UV sterilization for microbiological absolute safety.</p>
+                        </div>
+                        
+                        <div class="lux-display-cta">
+                            <a href="booking.html" class="lux-btn lux-btn-gold">Configure This System</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Collection Section: Exquisite Visual Cards -->
+        <section class="lux-collection-section">
+            <div class="lux-container">
+                <div class="lux-section-header">
+                    <span class="lux-eyebrow">The Collection</span>
+                    <h2 class="lux-section-title">Designed for Distinction</h2>
+                    <p class="lux-section-subtitle">Exquisite designs that integrate seamlessly with high-end architecture.</p>
+                </div>
+                
+                <div class="lux-collection-grid">
+                    <div class="lux-product-card premium-glass-card">
+                        <div class="lux-product-media">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Minimalist Purifier Unit">
+                        </div>
+                        <div class="lux-product-details">
+                            <span class="lux-product-type">Under-Counter / Bespoke</span>
+                            <h3>The ROCare Aura</h3>
+                            <p>Hidden filtration with a luxury solid-brass designer faucet.</p>
+                            <div class="lux-product-meta">
+                                <span>From $1,250</span>
+                                <a href="services.html" class="lux-arrow-link"><i class="ri-arrow-right-line"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lux-product-card premium-glass-card">
+                        <div class="lux-product-media">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Luxury Purifier Model">
+                        </div>
+                        <div class="lux-product-details">
+                            <span class="lux-product-type">Wall Mount / Glass Front</span>
+                            <h3>The ROCare Horizon</h3>
+                            <p>Handcrafted obsidian glass interface with brushed steel casing.</p>
+                            <div class="lux-product-meta">
+                                <span>From $1,490</span>
+                                <a href="services.html" class="lux-arrow-link"><i class="ri-arrow-right-line"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lux-product-card premium-glass-card">
+                        <div class="lux-product-media">
+                            <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80" alt="Premium Water Bottle and Glass">
+                        </div>
+                        <div class="lux-product-details">
+                            <span class="lux-product-type">Smart Countertop</span>
+                            <h3>The ROCare Hydro-Atelier</h3>
+                            <p>Precision temperature, remineralization dials, and voice controls.</p>
+                            <div class="lux-product-meta">
+                                <span>From $1,800</span>
+                                <a href="services.html" class="lux-arrow-link"><i class="ri-arrow-right-line"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Taste Profiling: The Sommelier's Calibration -->
+        <section class="lux-sommelier-section">
+            <div class="lux-container">
+                <div class="lux-section-header">
+                    <span class="lux-eyebrow">Water Gastronomy</span>
+                    <h2 class="lux-section-title">The Sommelier's Calibration</h2>
+                    <p class="lux-section-subtitle">Adjust the mineral profile to find the perfect pairing for your culinary rituals.</p>
+                </div>
+                
+                <div class="lux-sommelier-grid premium-glass-card">
+                    <div class="lux-tuner-panel">
+                        <h3>Taste Profile Tuner</h3>
+                        
+                        <div class="lux-tuner-control">
+                            <label>Mineral Density (TDS) <span id="tds-tuner-val">60</span> ppm</label>
+                            <input type="range" id="tds-slider" min="30" max="300" value="60">
+                        </div>
+                        
+                        <div class="lux-tuner-control">
+                            <label>Alkalinity Balance (pH) <span id="ph-tuner-val">7.4</span></label>
+                            <input type="range" id="ph-slider" min="6.5" max="9.5" step="0.1" value="7.4">
+                        </div>
+                        
+                        <div class="lux-tuner-control">
+                            <label>Optimal Temperature <span id="temp-tuner-val">14</span>°C</label>
+                            <input type="range" id="temp-slider" min="4" max="25" value="14">
+                        </div>
+                    </div>
+                    
+                    <div class="lux-pairing-panel">
+                        <div class="lux-pairing-icon">
+                            <i id="pairing-icon" class="ri-leaf-line"></i>
+                        </div>
+                        <h4 id="pairing-title">Crisp / Alpine (Ideal for Delicate Teas)</h4>
+                        <p id="pairing-desc">A low TDS and slightly alkaline profile. Enhances the subtle aromatic compounds of white and green teas without altering their natural botanical color.</p>
+                        
+                        <div class="lux-pairing-stats">
+                            <div class="lux-stat">
+                                <strong>Match Score</strong>
+                                <span id="pairing-score">98%</span>
+                            </div>
+                            <div class="lux-stat">
+                                <strong>Pairing</strong>
+                                <span id="pairing-target">Green & White Tea</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architectural Integrations: The Gallery of Patrons -->
+        <section class="lux-gallery-section">
+            <div class="lux-container">
+                <div class="lux-section-header">
+                    <span class="lux-eyebrow">Exquisite Spaces</span>
+                    <h2 class="lux-section-title">Architectural Integrations</h2>
+                    <p class="lux-section-subtitle">How ROCare elevates the most prestigious residential and wellness spaces globally.</p>
+                </div>
+                
+                <div class="lux-gallery-grid">
+                    <div class="lux-gallery-item">
+                        <div class="lux-gallery-image">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Minimalist Kitchen Villa">
+                            <div class="lux-gallery-caption">
+                                <h4>Villa Amber, Maldives</h4>
+                                <p>Integrated under-counter filtration preserving the custom Calacatta marble counter silhouette.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lux-gallery-item">
+                        <div class="lux-gallery-image">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Penthouse Kitchen">
+                            <div class="lux-gallery-caption">
+                                <h4>The Obsidian Penthouse, NY</h4>
+                                <p>A double Horizon system supplying alkaline hydration for high-capacity entertainment zones.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section: Luxurious and Immersive -->
+        <section class="lux-cta-section">
+            <div class="lux-cta-overlay"></div>
+            <div class="lux-container lux-cta-content">
+                <span class="lux-eyebrow">Private Consultations</span>
+                <h2>Begin Your Journey <br>to Perfect Water.</h2>
+                <p>Speak with an expert water designer to tailor a system for your home or project.</p>
+                <div class="lux-cta-buttons">
+                    <a href="booking.html" class="lux-btn lux-btn-gold">Book Water Consultation</a>
+                    <a href="contact.html" class="lux-btn lux-btn-glass">Inquire Electronically</a>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div>
-                <a href="../index.html" class="footer-logo">
+
+    <!-- Luxury Dark Footer -->
+    <footer class="lux-footer">
+        <div class="lux-container lux-footer-grid">
+            <div class="lux-footer-brand">
+                <a href="../index.html" class="lux-footer-logo">
                     <img src="../assets/logo.png" alt="ROCare Logo">
                     <span>ROCare</span>
                 </a>
-                <p>Premium water purifier sales, repair, installation, and AMC care for homes and workplaces.</p>
-                <div class="footer-social">
-                    <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
-                </div>
+                <p>Pure luxury water design, engineered to match the highest architectural requirements.</p>
             </div>
-            <div>
-                <h2>Services</h2>
-                <a href="services.html">RO Repair</a>
-                <a href="services.html">Installation</a>
-                <a href="services.html">AMC Plans</a>
-                <a href="booking.html">Book Visit</a>
-            </div>
-            <div>
-                <h2>Company</h2>
-                <a href="about.html">About</a>
-                <a href="blog.html">Blog</a>
-                <a href="contact.html">Contact</a>
+            
+            <div class="lux-footer-links">
+                <h3>The Studio</h3>
+                <a href="about.html">Philosophy</a>
+                <a href="services.html">The Collection</a>
+                <a href="booking.html">Consultations</a>
                 <a href="sitemap.html">Sitemap</a>
             </div>
-            <div>
-                <h2>Stay Updated</h2>
-                <p>Get filter care reminders, service offers, and purifier buying tips.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Email address" aria-label="Email address" required>
-                    <button class="btn btn-primary" type="submit">Join</button>
-                </form>
+            
+            <div class="lux-footer-links">
+                <h3>Contact</h3>
+                <span>T: +1 (800) 555-PURE</span>
+                <span>E: atelier@rocare.com</span>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-conditions.html">Terms & Conditions</a>
             </div>
         </div>
-        <div class="container footer-bottom">
+        <div class="lux-container lux-footer-bottom">
             <span>&copy; 2026 ROCare. All rights reserved.</span>
-            <span><a href="privacy-policy.html">Privacy</a> <a href="terms-conditions.html">Terms</a></span>
+            <span>Crafted for Perfect Purity.</span>
         </div>
     </footer>
+
+    <!-- Interactive script for the Water Atelier diagnostic selector -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const selectorBtns = document.querySelectorAll('.lux-selector-btn');
+            const tdsVal = document.getElementById('tds-val');
+            const pipelineName = document.getElementById('lux-pipeline-name');
+            const pipelineDesc = document.getElementById('lux-pipeline-desc');
+            
+            // Flow & stage elements
+            const stageRo = document.getElementById('stage-ro');
+            const stageUv = document.getElementById('stage-uv');
+            const stageAlkaline = document.getElementById('stage-alkaline');
+            const flowPostRo = document.getElementById('flow-post-ro');
+            const flowPostUv = document.getElementById('flow-post-uv');
+            
+            const pipelineData = {
+                municipal: {
+                    tds: '60',
+                    name: 'Municipal Precision Loop',
+                    desc: 'Calibrated for municipal sources. Optimizes activated carbon filtration to trap chemicals like chlorine, followed by hyper-filtration and final UV sterilization for absolute safety.',
+                    setup: () => {
+                        stageRo.classList.add('active');
+                        stageUv.classList.add('active');
+                        stageAlkaline.classList.add('active');
+                        flowPostRo.classList.add('active');
+                        flowPostUv.classList.add('active');
+                    }
+                },
+                borewell: {
+                    tds: '120',
+                    name: 'Mineral Balance Groundwater Membrane',
+                    desc: 'Engineered for high TDS borewell water. Heavy-duty sediment extraction and reverse osmosis membrane filtration to remove minerals, with a specialized post-RO remineralizer to restore natural taste.',
+                    setup: () => {
+                        stageRo.classList.add('active');
+                        stageUv.classList.remove('active'); // Direct to Alkaline
+                        stageAlkaline.classList.add('active');
+                        flowPostRo.classList.add('active');
+                        flowPostUv.classList.remove('active');
+                    }
+                },
+                mixed: {
+                    tds: '80',
+                    name: 'Pathogen Barrier Loop',
+                    desc: 'Perfect for tanker or unpredictable sources. Integrates carbon pre-treatment, heavy membrane filtration, double ultraviolet sterilizing tubes, and active alkalinity enhancement to counter contamination.',
+                    setup: () => {
+                        stageRo.classList.add('active');
+                        stageUv.classList.add('active');
+                        stageAlkaline.classList.add('active');
+                        flowPostRo.classList.add('active');
+                        flowPostUv.classList.add('active');
+                    }
+                }
+            };
+            
+            selectorBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active button
+                    selectorBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    // Update content
+                    const source = btn.dataset.source;
+                    const data = pipelineData[source];
+                    
+                    tdsVal.textContent = data.tds;
+                    pipelineName.textContent = data.name;
+                    pipelineDesc.textContent = data.desc;
+                    
+                    // Apply visual pipeline updates
+                    data.setup();
+                });
+            });
+
+            // Taste Tuner interactive logic
+            const tdsSlider = document.getElementById('tds-slider');
+            const phSlider = document.getElementById('ph-slider');
+            const tempSlider = document.getElementById('temp-slider');
+            
+            const tdsTunerVal = document.getElementById('tds-tuner-val');
+            const phTunerVal = document.getElementById('ph-tuner-val');
+            const tempTunerVal = document.getElementById('temp-tuner-val');
+            
+            const pairingIcon = document.getElementById('pairing-icon');
+            const pairingTitle = document.getElementById('pairing-title');
+            const pairingDesc = document.getElementById('pairing-desc');
+            const pairingScore = document.getElementById('pairing-score');
+            const pairingTarget = document.getElementById('pairing-target');
+            
+            function updatePairing() {
+                const tds = parseInt(tdsSlider.value);
+                const ph = parseFloat(phSlider.value);
+                const temp = parseInt(tempSlider.value);
+                
+                tdsTunerVal.textContent = tds;
+                phTunerVal.textContent = ph;
+                tempTunerVal.textContent = temp;
+                
+                let score = 90 + Math.floor(Math.random() * 9);
+                pairingScore.textContent = score + '%';
+                
+                if (tds < 100) {
+                    pairingIcon.className = 'ri-leaf-line';
+                    pairingTitle.textContent = 'Crisp / Alpine (Ideal for Delicate Teas)';
+                    pairingDesc.textContent = 'A low TDS and slightly alkaline profile. Enhances the subtle aromatic compounds of white and green teas without altering their natural botanical color.';
+                    pairingTarget.textContent = 'Green & White Tea';
+                } else if (tds >= 100 && tds < 200) {
+                    pairingIcon.className = 'ri-cup-line';
+                    pairingTitle.textContent = 'Balanced / Silky (Ideal for Specialty Coffee)';
+                    pairingDesc.textContent = 'Medium mineral presence extraction sweet spots. Provides enough calcium to bind coffee oils and highlight acidity, avoiding bitterness.';
+                    pairingTarget.textContent = 'Espresso & Pour-Over';
+                } else {
+                    pairingIcon.className = 'ri-restaurant-line';
+                    pairingTitle.textContent = 'Full-Bodied / Velvety (Ideal for Fine Dining Gastronomy)';
+                    pairingDesc.textContent = 'High mineral structure which pairs exceptionally well with rich courses, helping cleanse the palate between heavy seasonings and fine wines.';
+                    pairingTarget.textContent = 'Multi-Course Gastronomy';
+                }
+            }
+            
+            tdsSlider.addEventListener('input', updatePairing);
+            phSlider.addEventListener('input', updatePairing);
+            tempSlider.addEventListener('input', updatePairing);
+            updatePairing();
+        });
+    </script>
     <script src="../js/main.js"></script>
 </body>
 </html>
