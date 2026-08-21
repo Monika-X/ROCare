@@ -1493,3 +1493,8 @@ p {
     width: min(100% - 16px, 1180px);
   }
 }
+
+body.menu-open {
+  overflow: hidden;
+  touch-action: none;
+}

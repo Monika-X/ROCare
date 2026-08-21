@@ -118,16 +118,23 @@ document.addEventListener('DOMContentLoaded', () => {
         menuBtn.addEventListener('click', () => {
             const isOpen = navLinks.classList.toggle('show');
             menuBtn.setAttribute('aria-expanded', String(isOpen));
-            document.body.style.overflow = isOpen ? 'hidden' : '';
+            document.body.classList.toggle('menu-open', isOpen);
         });
 
         navLinks.querySelectorAll('a').forEach((link) => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('show');
                 menuBtn.setAttribute('aria-expanded', 'false');
-                document.body.style.overflow = '';
+                document.body.classList.remove('menu-open');
             });
         });
+
+        // Bulletproof scroll locking for mobile Safari
+        document.addEventListener('touchmove', (e) => {
+            if (document.body.classList.contains('menu-open') && !navLinks.contains(e.target)) {
+                e.preventDefault();
+            }
+        }, { passive: false });
     }
 
     // 6. User Profile Dropdown
@@ -159,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (menuBtn) {
                 menuBtn.setAttribute('aria-expanded', 'false');
             }
-            document.body.style.overflow = '';
+            document.body.classList.remove('menu-open');
         };
 
         window.addEventListener('pagehide', resetDropdownState);
