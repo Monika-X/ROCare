@@ -481,6 +481,17 @@ p {
   font-size: 1.45rem;
 }
 
+/* Reset icon styles for inline links inside content cards */
+.content-card a i {
+  display: inline;
+  width: auto;
+  height: auto;
+  background: transparent;
+  color: inherit;
+  font-size: inherit;
+  margin-bottom: 0;
+}
+
 .content-card p {
   font-size: 0.96rem;
 }
