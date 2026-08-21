@@ -5044,3 +5044,12 @@ a.dash-sidebar-head:hover strong {
 body.sidebar-lock {
   overflow: hidden;
 }
+
+/* Root-level scroll lock: html has overflow-x hidden, which blocks the
+   body-to-viewport overflow propagation, so the lock must target html too */
+html.menu-open,
+html.menu-open body,
+html.sidebar-lock,
+html.sidebar-lock body {
+  overflow: hidden;
+}
