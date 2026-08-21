@@ -1233,6 +1233,30 @@ p {
     order: 1;
   }
 
+  .logo-mark {
+    width: 34px;
+    height: 34px;
+    border-radius: var(--radius-sm);
+  }
+
+  .logo-mark img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .logo-copy strong {
+    font-size: 1.35rem;
+  }
+
+  .icon-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .dir-text-btn {
+    font-size: 0.72rem;
+  }
+
   .nav-links {
     order: 2;
   }
@@ -1251,6 +1275,8 @@ p {
   .menu-toggle {
     order: 4;
     display: inline-grid;
+    width: 36px;
+    height: 36px;
   }
 
   .nav-links {
