@@ -2491,3 +2491,75 @@
   border-color: rgba(255, 255, 255, 0.05);
 }
 
+/* ==========================================================================
+   Responsive Adaptations for 320px & Mobile Viewports
+   ========================================================================== */
+@media (max-width: 920px) {
+  /* Reset all custom grids to single column flow */
+  .actions-card-grid,
+  .blueprint-step-grid,
+  .water-science-grid,
+  .lux-features-grid,
+  .process-matrix-grid,
+  .atelier-showcase-grid,
+  .atelier-location-grid,
+  .story-split,
+  .values-grid,
+  .milestone-grid,
+  .blog-post-grid,
+  .related-posts-grid,
+  .lux-blueprint-deck,
+  .estimator-grid,
+  .contact-main-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* Make premium glass card grids responsive (inline grids on services, about, index pages) */
+  .premium-glass-card {
+    grid-template-columns: 1fr !important;
+    padding: 20px !important;
+    gap: 20px !important;
+  }
+
+  /* 404 Arena scale downs */
+  .droplet-container {
+    width: 120px !important;
+    height: 120px !important;
+  }
+
+  .water-droplet {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .water-surface {
+    width: 90px !important;
+  }
+
+  .ripple {
+    width: 40px !important;
+    height: 14px !important;
+  }
+
+  .giant-404 {
+    font-size: 5rem !important;
+  }
+
+  /* Reduce spacing on mobile elements */
+  .estimator-widget,
+  .radar-map-card,
+  .cta-panel,
+  .actions-card-grid {
+    padding: 20px !important;
+    margin: 30px 0 !important;
+  }
+
+  /* Responsive layout for process panel stage details */
+  #lux-stage-panel,
+  #lux-matrix-panel {
+    padding: 20px !important;
+    min-height: auto !important;
+  }
+}
+
