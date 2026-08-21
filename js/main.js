@@ -103,6 +103,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
 
     if (menuBtn && navLinks) {
+        // Dynamically add Book Now link to mobile menu if not present
+        const desktopBookBtn = document.querySelector('.nav-actions .cta-btn');
+        if (desktopBookBtn && !navLinks.querySelector('.nav-book-btn')) {
+            const mobileBookBtn = document.createElement('a');
+            mobileBookBtn.href = desktopBookBtn.getAttribute('href');
+            mobileBookBtn.className = 'nav-link nav-book-btn';
+            mobileBookBtn.textContent = desktopBookBtn.textContent || 'Book Now';
+            navLinks.appendChild(mobileBookBtn);
+        }
+
         menuBtn.addEventListener('click', () => {
             const isOpen = navLinks.classList.toggle('show');
             menuBtn.setAttribute('aria-expanded', String(isOpen));

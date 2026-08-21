@@ -214,6 +214,10 @@ textarea {
   display: none;
 }
 
+.nav-book-btn {
+  display: none !important;
+}
+
 .cta-btn,
 .btn {
   display: inline-flex;
@@ -1275,6 +1279,23 @@ p {
 
   .nav-link::after {
     display: none;
+  }
+
+  .nav-book-btn {
+    display: block !important;
+    background-color: var(--color-primary) !important;
+    color: #fff !important;
+    text-align: center;
+    margin-top: 12px;
+    font-weight: 800;
+    padding: 10px 18px !important;
+    border-radius: var(--radius-md);
+    transition: transform var(--transition), background var(--transition);
+  }
+
+  .nav-book-btn:hover {
+    background-color: var(--color-secondary) !important;
+    transform: translateY(-1px);
   }
 }
 
