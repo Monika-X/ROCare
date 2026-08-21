@@ -2217,3 +2217,269 @@
 .content-card:hover .blog-card-img {
   transform: scale(1.04) !important;
 }
+
+/* Redesigned Contact Page Styling */
+.contact-hero-section {
+  padding: 80px 0 40px;
+  text-align: center;
+}
+
+.contact-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.contact-info-card {
+  padding: 32px;
+  border-radius: var(--radius-md);
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.contact-info-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-primary) !important;
+}
+
+.contact-info-card i {
+  font-size: 2.2rem;
+  color: var(--color-primary);
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+/* Service Blueprint Estimator Widget */
+.estimator-widget {
+  padding: 40px;
+  border-radius: var(--radius-md);
+  margin: 60px 0;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.estimator-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  margin-top: 24px;
+}
+
+@media (max-width: 990px) {
+  .estimator-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.estimator-step {
+  margin-bottom: 24px;
+}
+
+.estimator-step h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: var(--color-text);
+}
+
+.estimator-btn-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.estimator-btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.25s ease;
+}
+
+.estimator-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.estimator-btn.active {
+  background: rgba(20, 154, 154, 0.1);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.estimator-result-card {
+  padding: 30px;
+  border-radius: var(--radius-md);
+  background: rgba(20, 154, 154, 0.04);
+  border: 1px solid rgba(20, 154, 154, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.estimator-price {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  font-family: 'Playfair Display', serif;
+  margin: 15px 0;
+}
+
+/* Contact Main Section */
+.contact-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: stretch;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 990px) {
+  .contact-main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Premium Floating Input Fields */
+.input-group {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: transparent;
+  outline: none;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.input-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(20, 154, 154, 0.08);
+}
+
+/* Radar Tech Dispatcher Map Card */
+.radar-map-card {
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  min-height: 450px;
+}
+
+.radar-display {
+  width: 100%;
+  height: 250px;
+  background: radial-gradient(circle, rgba(20, 154, 154, 0.08) 0%, rgba(20, 154, 154, 0.02) 70%);
+  border-radius: var(--radius-sm);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(20, 154, 154, 0.1);
+  margin: 20px 0;
+}
+
+.radar-sweep {
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  background: conic-gradient(from 0deg, transparent 60%, rgba(20, 154, 154, 0.15) 100%);
+  border-radius: 50%;
+  animation: radar-rotate 8s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes radar-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.radar-ping {
+  width: 12px;
+  height: 12px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+.radar-ping::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--color-primary);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  animation: radar-pulse 2s infinite ease-out;
+  opacity: 0;
+}
+
+@keyframes radar-pulse {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(3.5); opacity: 0; }
+}
+
+/* Dark Theme Adaptations */
+[data-theme="dark"] .contact-info-card {
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .estimator-widget {
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .estimator-btn {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .estimator-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+[data-theme="dark"] .estimator-btn.active {
+  background: rgba(20, 154, 154, 0.2);
+}
+
+[data-theme="dark"] .estimator-result-card {
+  background: rgba(20, 154, 154, 0.06);
+  border-color: rgba(20, 154, 154, 0.25);
+}
+
+[data-theme="dark"] .input-group input,
+[data-theme="dark"] .input-group select,
+[data-theme="dark"] .input-group textarea {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .radar-map-card {
+  border-color: rgba(255, 255, 255, 0.05);
+}
+

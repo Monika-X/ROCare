@@ -38,94 +38,160 @@
             </div>
         </div>
     </header>
-    <main>
-        <section class="hero-section section-shell">
-            <div class="container hero-grid">
-                <div class="hero-copy">
-                    <span class="eyebrow">Contact</span>
-                    <h1>Talk to ROCare about service, sales, or AMC support.</h1>
-                    <p>Send your purifier model, water issue, and preferred visit time. The team will help you choose the next best step.</p>
-                    <div class="hero-actions">
-                        <a class="btn btn-primary" href="#contact-form">Submit Request</a>
-                        <a class="btn btn-outline" href="services.html">View Services</a>
+    <main class="blog-premium">
+        <!-- Redesigned Contact Hero -->
+        <section class="contact-hero-section container">
+            <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-primary); font-weight: 800; letter-spacing: 1.5px; display: block; margin-bottom: 12px;">Get In Touch</span>
+            <h1 style="font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 3.8rem); font-weight: 500; line-height: 1.15; max-width: 800px; margin: 0 auto 20px;">ROCare Support Desk</h1>
+            <p style="font-size: 1.1rem; color: var(--color-text-muted); max-width: 600px; margin: 0 auto 30px; line-height: 1.6;">Direct support channels, real-time technician dispatcher coordinates, and custom AMC consultation.</p>
+            
+            <div class="contact-card-grid">
+                <div class="contact-info-card premium-glass-card">
+                    <i class="ri-phone-fill"></i>
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 500; margin-bottom: 8px;">Direct Hotlines</h3>
+                    <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 12px;">Call us for urgent purifier issues.</p>
+                    <a href="tel:+919876543210" style="font-weight: 700; color: var(--color-primary); font-size: 1.1rem;">+91 98765 43210</a>
+                </div>
+                <div class="contact-info-card premium-glass-card">
+                    <i class="ri-mail-fill"></i>
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 500; margin-bottom: 8px;">Email Concierge</h3>
+                    <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 12px;">For renewals, paperwork, and AMC quotes.</p>
+                    <a href="mailto:support@rocare.example" style="font-weight: 700; color: var(--color-primary); font-size: 1.1rem;">support@rocare.example</a>
+                </div>
+                <div class="contact-info-card premium-glass-card">
+                    <i class="ri-time-fill"></i>
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 500; margin-bottom: 8px;">Desk Hours</h3>
+                    <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 12px;">All-days phone support availability.</p>
+                    <span style="font-weight: 700; color: var(--color-text); font-size: 1.1rem;">9:00 AM &mdash; 8:00 PM</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Estimator Widget Section -->
+        <section class="container">
+            <div class="estimator-widget premium-glass-card">
+                <div style="max-width: 600px;">
+                    <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-primary); font-weight: 800; letter-spacing: 1px; display: block; margin-bottom: 8px;">Dynamic Planner</span>
+                    <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 500; margin-bottom: 12px;">Service Blueprint Cost Estimator</h2>
+                    <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.5;">Select your setup details below to preview standard spare parts pricing and check average travel distances for active technicians in your zone.</p>
+                </div>
+                
+                <div class="estimator-grid">
+                    <div class="estimator-controls">
+                        <!-- Step 1: System Type -->
+                        <div class="estimator-step">
+                            <h4>1. Select Water Purifier Type</h4>
+                            <div class="estimator-btn-group" id="group-purifier-type">
+                                <button class="estimator-btn active" data-value="domestic" data-factor="1.0">Domestic RO System</button>
+                                <button class="estimator-btn" data-value="uvuf" data-factor="0.7">UV/UF Purifier</button>
+                                <button class="estimator-btn" data-value="alkaline" data-factor="1.3">Premium Alkaline RO</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 2: Issue Severity -->
+                        <div class="estimator-step">
+                            <h4>2. Primary Purifier Issue</h4>
+                            <div class="estimator-btn-group" id="group-issue-type">
+                                <button class="estimator-btn active" data-base="499" data-name="General Cleaning">General Maintenance</button>
+                                <button class="estimator-btn" data-base="1600" data-name="Membrane / Carbon Replacement">Slow Flow / Choked Filters</button>
+                                <button class="estimator-btn" data-base="2200" data-name="Booster Pump repair">No Power / Leaking Water</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Zone Area -->
+                        <div class="estimator-step">
+                            <h4>3. Your Location Area</h4>
+                            <div class="estimator-btn-group" id="group-location-type">
+                                <button class="estimator-btn active" data-charge="0" data-zone="Downtown">Core City Area</button>
+                                <button class="estimator-btn" data-charge="150" data-zone="Suburban">Suburbs (Outskirts)</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Estimation Panel Output -->
+                    <div class="estimator-result-card premium-glass-card">
+                        <div>
+                            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-text-muted); font-weight: 700; letter-spacing: 1px;">Approximate Cost</span>
+                            <div class="estimator-price" id="calc-price">&#8377;499</div>
+                            <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 20px; line-height: 1.4;" id="calc-summary">Domestic RO General Maintenance visit estimate.</p>
+                        </div>
+                        <div>
+                            <div style="border-top: 1px solid rgba(0,0,0,0.06); padding-top: 15px; margin-bottom: 20px; text-align: left;">
+                                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 6px;">
+                                    <span style="color: var(--color-text-muted);">Active techs in zone:</span>
+                                    <strong style="color: var(--color-primary);" id="calc-techs">4 Available</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+                                    <span style="color: var(--color-text-muted);">Match probability:</span>
+                                    <strong style="color: var(--color-secondary);">98% Optimal</strong>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" id="btn-apply-estimate" style="width: 100%; padding: 12px; font-size: 0.9rem;">Pre-fill Request Form</button>
+                        </div>
                     </div>
                 </div>
-                <figure class="hero-media reveal">
-                    <img src="https://images.unsplash.com/photo-1643114451704-8f44b1d1a681?auto=format&fit=crop&w=1400&q=80" alt="Glass of clean water on a bright surface" loading="eager">
-                    <figcaption>ROCare water service experience</figcaption>
-                </figure>
             </div>
         </section>
-        <section class="section-shell">
-            <div class="container section-intro">
-                <span class="eyebrow">Overview</span>
-                <h2>Fast details make faster service</h2>
-                <p>A photo of the purifier, the issue symptom, and your locality help us bring the right filters and tools.</p>
-                <div class="stat-grid">
-                <div class="stat-card"><strong>Call</strong><span>+91 98765 43210</span></div>
-                <div class="stat-card"><strong>Email</strong><span>support@rocare.example</span></div>
-                <div class="stat-card"><strong>Hours</strong><span>9 AM - 8 PM</span></div>
-            </div>
-            </div>
-        </section>
-        <section class="section-shell section-surface">
-            <div class="container">
-                <div class="section-heading">
-                    <span class="eyebrow">Highlights</span>
-                    <h2>What this page helps you do</h2>
+
+        <!-- Form and Radar Dispatcher Section -->
+        <section class="container" style="margin-top: 60px;">
+            <div class="contact-main-grid">
+                <!-- Form Box -->
+                <div class="premium-glass-card" style="padding: 40px; border-radius: var(--radius-md);" id="request-section">
+                    <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-primary); font-weight: 800; letter-spacing: 1px; display: block; margin-bottom: 8px;">Online Booking</span>
+                    <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 500; margin-bottom: 24px;">Send Care Request</h2>
+                    
+                    <form id="contact-form" style="display: flex; flex-direction: column;">
+                        <div class="input-group">
+                            <input type="text" id="form-name" placeholder="Your Full Name" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="tel" id="form-phone" placeholder="Phone Number (+91 ...)" required>
+                        </div>
+                        <div class="input-group">
+                            <select id="form-service" required>
+                                <option value="" disabled selected>Select Service Category</option>
+                                <option value="repair">RO repair & Diagnostics</option>
+                                <option value="installation">Purifier Installation / Relocation</option>
+                                <option value="amc">AMC Maintenance Contract Package</option>
+                                <option value="consult">Product Purchase Consultation</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="form-message" placeholder="Purifier brand, problem symptoms, locality, and preferred visit slot..." required></textarea>
+                        </div>
+                        <button class="btn btn-primary" type="submit" style="padding: 14px; font-weight: 700; width: 100%; border-radius: var(--radius-sm);">Book Service Slot</button>
+                    </form>
                 </div>
-                <div class="card-grid">
-                <article class="content-card reveal"><i class="ri-phone-line"></i><h3>Phone support</h3><p>Speak with the team for urgent leakage, pump, or no-water issues.</p></article>
-                <article class="content-card reveal"><i class="ri-mail-send-line"></i><h3>Email requests</h3><p>Send product queries, AMC renewals, and service documents.</p></article>
-                <article class="content-card reveal"><i class="ri-map-pin-line"></i><h3>Local visits</h3><p>Choose a practical visit slot for your home, clinic, shop, or office.</p></article>
-            </div>
-            </div>
-        </section>
-        <section class="section-shell split-section">
-            <div class="container split-grid">
-                <div class="split-media reveal">
-                    <img src="https://images.unsplash.com/photo-1756312177990-d771bfeaa030?auto=format&fit=crop&w=1400&q=80" alt="Person getting drinking water from a kitchen faucet" loading="lazy">
+                
+                <!-- Radar Map Tracker -->
+                <div class="radar-map-card premium-glass-card">
+                    <div>
+                        <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-primary); font-weight: 800; letter-spacing: 1px; display: block; margin-bottom: 6px;">Dispatcher Center</span>
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 500;">Live Dispatcher Radar</h3>
+                        <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-top: 4px;">Pulsing indicators show active ROCare service technicians currently commuting in your core city sector.</p>
+                    </div>
+                    
+                    <!-- Interactive Visual Radar -->
+                    <div class="radar-display">
+                        <div class="radar-sweep"></div>
+                        <!-- Radar pings with randomized absolute placement -->
+                        <div class="radar-ping" style="top: 25%; left: 40%;"></div>
+                        <div class="radar-ping" style="top: 60%; left: 75%;"></div>
+                        <div class="radar-ping" style="top: 75%; left: 20%;"></div>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 20px;">
+                        <div>
+                            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-text-muted); display: block; letter-spacing: 0.5px;">Avg Response Time</span>
+                            <strong style="font-size: 1.15rem; color: var(--color-text);">32 Minutes</strong>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-text-muted); display: block; letter-spacing: 0.5px;">Dispatch Sector</span>
+                            <strong style="font-size: 1.15rem; color: var(--color-primary);">Zone 2 Active</strong>
+                        </div>
+                    </div>
                 </div>
-                <div class="split-copy">
-                    <span class="eyebrow">Process</span>
-                    <h2>What to share before a visit</h2>
-                    <p>Mention brand, approximate age, last service date, water source, and the issue you are noticing.</p>
-                    <ol class="step-list">
-                        <li>Share your contact and locality.</li>
-                        <li>Describe the purifier issue or product need.</li>
-                        <li>Confirm a visit slot with the ROCare team.</li>
-                    </ol>
-                </div>
-            </div>
-        </section>
-        <section class="section-shell section-surface">
-            <div class="container">
-                <div class="section-heading">
-                    <span class="eyebrow">Resources</span>
-                    <h2>Common reasons to contact us</h2>
-                </div>
-                <div class="resource-grid">
-                <article class="content-card reveal"><h3>Urgent repair</h3><p>Leakage, no water, noisy pump, or power issue.</p></article>
-                <article class="content-card reveal"><h3>Product selection</h3><p>Need help comparing purifier types and capacity.</p></article>
-                <article class="content-card reveal"><h3>Plan support</h3><p>AMC renewal, visit reschedule, or parts clarification.</p></article>
-            </div>
-            </div>
-        </section>
-        <section class="section-shell final-cta">
-            <div class="container cta-grid">
-                <div>
-                    <span class="eyebrow">Next step</span>
-                    <h2>Send a quick request</h2>
-                    <p>Use the form and ROCare will follow up with the next available slot.</p>
-                    <a class="btn btn-primary" href="#contact-form">Submit Request</a>
-                </div>
-                <form id="contact-form" class="form-panel">
-                    <label>Name<input type="text" placeholder="Your name" required></label>
-                    <label>Phone<input type="tel" placeholder="+91 98765 43210" required></label>
-                    <label>Service type<select required><option>RO repair</option><option>Installation</option><option>AMC visit</option><option>Product consultation</option></select></label>
-                    <label>Message<textarea placeholder="Purifier brand, issue, locality, and preferred time"></textarea></label>
-                    <button class="btn btn-primary" type="submit">Submit Request</button>
-                </form>
             </div>
         </section>
     </main>
@@ -175,5 +241,101 @@
         </div>
     </footer>
     <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const purifierBtns = document.querySelectorAll('#group-purifier-type .estimator-btn');
+            const issueBtns = document.querySelectorAll('#group-issue-type .estimator-btn');
+            const locationBtns = document.querySelectorAll('#group-location-type .estimator-btn');
+            const priceEl = document.getElementById('calc-price');
+            const summaryEl = document.getElementById('calc-summary');
+            const techsEl = document.getElementById('calc-techs');
+            const applyBtn = document.getElementById('btn-apply-estimate');
+            
+            const formService = document.getElementById('form-service');
+            const formMessage = document.getElementById('form-message');
+            
+            let factor = 1.0;
+            let base = 499;
+            let charge = 0;
+            
+            let systemName = "Domestic RO System";
+            let issueName = "General Maintenance";
+            let zoneName = "Core City Area";
+            
+            function updateEstimation() {
+                const total = Math.round((base * factor) + charge);
+                priceEl.innerHTML = `&#8377;${total}`;
+                summaryEl.innerText = `${systemName} &mdash; ${issueName} in ${zoneName}.`;
+                
+                // Dynamically update available dispatcher technicians count based on options
+                const baseTechs = base > 1000 ? 3 : 5;
+                const activeTechs = Math.max(1, baseTechs - (charge > 0 ? 2 : 0));
+                techsEl.innerText = `${activeTechs} Available`;
+            }
+            
+            purifierBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    purifierBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    factor = parseFloat(btn.dataset.factor);
+                    systemName = btn.innerText;
+                    updateEstimation();
+                });
+            });
+            
+            issueBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    issueBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    base = parseFloat(btn.dataset.base);
+                    issueName = btn.innerText;
+                    updateEstimation();
+                });
+            });
+            
+            locationBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    locationBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    charge = parseFloat(btn.dataset.charge);
+                    zoneName = btn.dataset.zone;
+                    updateEstimation();
+                });
+            });
+            
+            applyBtn.addEventListener('click', () => {
+                // Set form select dropdown value
+                if (base === 499) {
+                    formService.value = 'amc';
+                } else if (base === 1600 || base === 2200) {
+                    formService.value = 'repair';
+                }
+                
+                // Prefill message field
+                formMessage.value = `Hi ROCare team, I want to book a visit for my ${systemName}. Primary issue details: ${issueName}. Location zone: ${zoneName}. Please dispatch a technician for the next open slot.`;
+                
+                // Scroll to request-section smoothly
+                document.getElementById('request-section').scrollIntoView({ behavior: 'smooth' });
+                
+                // Applied trigger feed animation
+                applyBtn.innerText = "Estimate Applied!";
+                applyBtn.style.background = "var(--color-secondary)";
+                applyBtn.style.borderColor = "var(--color-secondary)";
+                setTimeout(() => {
+                    applyBtn.innerText = "Pre-fill Request Form";
+                    applyBtn.style.background = "";
+                    applyBtn.style.borderColor = "";
+                }, 2000);
+            });
+            
+            // Handle form submission with custom message
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert(`Thank you, ${document.getElementById('form-name').value || 'valued client'}. Your slot booking for "${formService.options[formService.selectedIndex].text}" has been logged in sector dispatch center. A coordinator will call you in a few minutes!`);
+                contactForm.reset();
+            });
+        });
+    </script>
 </body>
 </html>
