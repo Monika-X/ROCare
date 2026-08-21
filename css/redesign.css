@@ -2608,5 +2608,23 @@
   .lux-cta-parallax {
     padding: 60px 0 !important;
   }
+
+  /* Stack Home 2 CTA buttons vertically to prevent overflow */
+  .lux-hero-actions,
+  .lux-cta-buttons {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 280px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .lux-hero-actions .lux-btn,
+  .lux-cta-buttons .lux-btn {
+    width: 100% !important;
+    text-align: center !important;
+  }
 }
 
