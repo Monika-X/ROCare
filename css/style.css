@@ -1234,6 +1234,12 @@ p {
   .nav-actions {
     order: 2;
     justify-self: end;
+    gap: 6px;
+  }
+
+  .nav-actions .icon-btn:not(#theme-toggle),
+  .nav-actions .cta-btn {
+    display: none !important;
   }
 
   .menu-toggle {
@@ -1360,14 +1366,7 @@ p {
     display: none;
   }
 
-  .nav-actions {
-    gap: 6px;
-  }
 
-  .nav-actions .icon-btn:not(#theme-toggle),
-  .nav-actions .cta-btn {
-    display: none;
-  }
 
   .section-shell {
     padding: 62px 0;
