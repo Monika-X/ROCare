@@ -950,6 +950,9 @@
   position: absolute;
   inset: 0;
   background-color: #05070c;
+  background-image: linear-gradient(rgba(5, 7, 12, 0.78), rgba(5, 7, 12, 0.78)), url('https://i.pinimg.com/736x/18/57/d3/1857d359ff84f71a7c1a708cdadf7ce4.jpg');
+  background-size: cover;
+  background-position: center;
   z-index: 0;
 }
 
