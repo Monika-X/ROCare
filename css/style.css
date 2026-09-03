@@ -18,6 +18,9 @@
   --shadow-sm: 0 8px 24px rgba(23, 37, 42, 0.08);
   --shadow-md: 0 18px 48px rgba(23, 37, 42, 0.14);
   --transition: 0.25s ease;
+  --hero-min-height: 620px;
+  --hero-padding-top: 140px;
+  --hero-padding-bottom: 80px;
 }
 
 [data-theme="dark"] {
@@ -298,12 +301,14 @@ textarea {
 
 .hero-section {
   display: flex;
-  min-height: 96vh;
+  min-height: var(--hero-min-height);
   align-items: center;
-  padding-top: 128px;
+  padding-top: var(--hero-padding-top);
+  padding-bottom: var(--hero-padding-bottom);
   background:
     linear-gradient(90deg, rgba(7, 94, 103, 0.08), rgba(200, 95, 74, 0.08)),
     var(--color-background);
+  box-sizing: border-box;
 }
 
 .hero-grid,
@@ -1363,7 +1368,9 @@ p {
   }
 
   .hero-section {
-    min-height: auto;
+    min-height: 520px;
+    padding-top: 110px;
+    padding-bottom: 60px;
   }
 
   h1 {
@@ -1419,7 +1426,9 @@ p {
   }
 
   .hero-section {
-    padding-top: 108px;
+    min-height: 480px;
+    padding-top: 100px;
+    padding-bottom: 50px;
   }
 
   h1 {

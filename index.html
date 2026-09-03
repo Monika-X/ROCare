@@ -6,6 +6,9 @@
     <title>ROCare | Home</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/redesign.css">
 </head>
@@ -51,98 +54,145 @@
         </div>
     </header>
     <main class="home-premium">
-        <!-- Elevated Hero Section -->
-        <section class="hero-section section-shell">
-            <div class="container hero-grid">
-                <div class="hero-copy premium-glass-card reveal active" style="padding: 40px; border-radius: var(--radius-md);">
-                    <span class="eyebrow"><i class="ri-sparkling-fill" style="color: var(--color-secondary);"></i> Pure Luxury. Perfect Purity.</span>
-                    <h1 style="font-size: clamp(2.4rem, 4.5vw, 3.8rem); line-height: 1.15; font-weight: 800;">Water, Reimagined. <br>Purifier Care, <span class="gradient-text">Perfected.</span></h1>
-                    <p style="font-size: 1.08rem; line-height: 1.6; margin-bottom: 30px; color: var(--color-text-muted);">Pure luxury water management for architectural homes and wellness spaces. Experience premium RO installation, testing, and annual care.</p>
-                    <div class="hero-actions">
-                        <a class="btn btn-primary" href="pages/booking.html">Book Service</a>
+        <!-- Premium Hero – Centered single column (2-col vendam) + heavy RO background -->
+        <section class="hero-section section-shell home-hero home-hero--centered">
+            <div class="home-hero-bg-image" aria-hidden="true"></div>
+            <div class="home-hero-orb" aria-hidden="true"></div>
+            <div class="home-hero-orb home-hero-orb-2" aria-hidden="true"></div>
+            <div class="home-hero-grid-pattern" aria-hidden="true"></div>
+            <!-- Heavy RO background animation – represents water purification (subtle, Home2 vida konjam less) -->
+            <div class="hero-bg-ro-anim" aria-hidden="true">
+                <div class="bg-water-wave"></div>
+                <div class="bg-water-wave bg-water-wave-2"></div>
+                <span class="bg-bubble b1"></span>
+                <span class="bg-bubble b2"></span>
+                <span class="bg-bubble b3"></span>
+                <span class="bg-drop d1"></span>
+                <div class="bg-flow-track"><em></em></div>
+                <div class="bg-filter-node n1"><i class="ri-filter-3-line"></i></div>
+            </div>
+            <div class="container hero-side-layout" style="position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 32px; max-width: 1200px;">
+                <!-- Text card – left side -->
+                <div class="premium-glass-card hero-centered-card hero-centered-card--left reveal active" style="flex: 0 1 520px; max-width: 520px; text-align: left; margin: 0;">
+                    <span class="eyebrow hero-eyebrow-anim"><i class="ri-sparkling-fill" style="color: var(--color-secondary);"></i> Pure Luxury. Perfect Purity.</span>
+                    <h1 class="hero-title-anim">Water, Reimagined.<br>Purifier Care, <span class="gradient-text gradient-shimmer">Perfected.</span></h1>
+                    <p class="hero-lead-anim" style="margin-left: 0; margin-right: 0;">Pure luxury water management for architectural homes and wellness spaces. Premium RO installation, lab-grade testing and white-glove annual care.</p>
+                    <div class="hero-actions hero-actions-anim" style="justify-content: flex-start;">
+                        <a class="btn btn-primary btn-pulse" href="pages/booking.html">Book Service <i class="ri-arrow-right-line" style="margin-left:6px;"></i></a>
                         <a class="btn btn-outline" href="pages/services.html">View Services</a>
                     </div>
+                    <div class="home-hero-trust" aria-label="Trust indicators" style="justify-content: flex-start;">
+                        <span class="trust-chip-anim" style="animation-delay:0.1s"><i class="ri-shield-check-fill"></i> Certified technicians</span>
+                        <span class="trust-chip-anim" style="animation-delay:0.2s"><i class="ri-flashlight-fill"></i> 24 hr response</span>
+                        <span class="trust-chip-anim" style="animation-delay:0.3s"><i class="ri-home-heart-fill"></i> 3,500+ homes</span>
+                    </div>
                 </div>
-                <figure class="hero-media reveal active" style="position: relative;">
-                    <div style="position: absolute; top: -20px; right: -20px; width: 80px; height: 80px; background: radial-gradient(circle, rgba(20,154,154,0.3) 0%, transparent 70%); animation: float 4s infinite alternate; border-radius: 50%;"></div>
-                    <img src="https://i.pinimg.com/736x/f5/28/8c/f5288ce8bf905726fca8686ab93220f3.jpg" alt="Water, Reimagined. Purifier Care, Perfected." loading="eager" style="border-radius: var(--radius-md); box-shadow: var(--shadow-lg); width: 100%; height: 100%; object-fit: cover;">
-                    <figcaption>ROCare water service experience</figcaption>
-                </figure>
+                <!-- Image card – right side increased size -->
+                <div class="hero-ro-showcase hero-ro-showcase--right reveal active" style="flex: 1 1 620px; margin: 0; width: 620px; max-width: 620px;">
+                    <div class="hero-ro-frame">
+                        <img src="https://i.pinimg.com/736x/f5/28/8c/f5288ce8bf905726fca8686ab93220f3.jpg" alt="ROCare RO purifier – premium kitchen installation" loading="eager">
+                        <div class="hero-ro-glow"></div>
+                        <div class="hero-ro-ripple"></div>
+                        <div class="hero-ro-ripple hero-ro-ripple-2"></div>
+                        <span class="hero-ro-badge"><i class="ri-drop-line"></i> Pure RO • 8-stage</span>
+                    </div>
+                    <div class="hero-ro-water-drop">
+                        <i class="ri-water-flash-fill"></i>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Elevated Overview / Stats -->
+        <!-- Overview / Stats – clean centered layout -->
         <section class="section-shell">
             <div class="container section-intro">
                 <span class="eyebrow">Overview</span>
                 <h2>Designed around the way families actually use water</h2>
                 <p>From morning bottles to late-night cooking, every system we recommend is selected for stable flow, safer taste, and easy upkeep.</p>
-                <div class="stat-grid" style="margin-top: 50px;">
-                    <div class="stat-card premium-glass-card reveal active"><strong>24 hr</strong><span>service response</span></div>
-                    <div class="stat-card premium-glass-card reveal active"><strong>6 step</strong><span>water check</span></div>
-                    <div class="stat-card premium-glass-card reveal active"><strong>3,500+</strong><span>homes supported</span></div>
+                <div class="stat-grid">
+                    <div class="stat-card stat-premium premium-glass-card reveal active">
+                        <span class="stat-icon"><i class="ri-flashlight-line"></i></span>
+                        <strong>24 hr</strong><span>service response</span><small>Avg. on-time arrival</small>
+                    </div>
+                    <div class="stat-card stat-premium premium-glass-card reveal active">
+                        <span class="stat-icon"><i class="ri-test-tube-line"></i></span>
+                        <strong>6 step</strong><span>water check</span><small>TDS • hardness • flow</small>
+                    </div>
+                    <div class="stat-card stat-premium premium-glass-card reveal active">
+                        <span class="stat-icon"><i class="ri-home-heart-line"></i></span>
+                        <strong>3,500+</strong><span>homes supported</span><small>Chennai & beyond</small>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Elevated Highlights -->
+        <!-- Highlights – 3 column premium cards -->
         <section class="section-shell section-surface">
             <div class="container">
                 <div class="section-heading">
                     <span class="eyebrow">Highlights</span>
                     <h2>Premium Water Care</h2>
+                    <p style="color: var(--color-text-muted); margin-top: 10px; max-width: 560px;">Evidence-based diagnostics, tidy installation and proactive maintenance — curated for longevity and taste.</p>
                 </div>
                 <div class="card-grid">
-                    <article class="content-card premium-glass-card reveal active" style="padding: 35px; border-radius: var(--radius-md); transition: transform 0.3s ease, border-color 0.3s ease;">
-                        <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-soft); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                            <i class="ri-drop-line" style="font-size: 1.6rem; color: var(--color-primary);"></i>
-                        </div>
+                    <article class="content-card card-premium premium-glass-card reveal active">
+                        <span class="card-top-accent"></span>
+                        <span class="card-icon-wrap"><i class="ri-drop-line"></i></span>
+                        <span class="card-eyebrow">Diagnostics • Lab-grade</span>
                         <h3>Water testing</h3>
                         <p>TDS, hardness, taste, odor, and flow are checked before we recommend a system or service.</p>
+                        <a href="pages/services.html" class="card-link">Learn more <i class="ri-arrow-right-line"></i></a>
                     </article>
-                    <article class="content-card premium-glass-card reveal active" style="padding: 35px; border-radius: var(--radius-md); transition: transform 0.3s ease, border-color 0.3s ease;">
-                        <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-soft); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                            <i class="ri-tools-line" style="font-size: 1.6rem; color: var(--color-primary);"></i>
-                        </div>
+                    <article class="content-card card-premium premium-glass-card reveal active">
+                        <span class="card-top-accent"></span>
+                        <span class="card-icon-wrap"><i class="ri-tools-line"></i></span>
+                        <span class="card-eyebrow">Installation • White-glove</span>
                         <h3>Expert installation</h3>
-                        <p>Neat wall mounting, leak-safe fittings, pressure checks, and guided first use.</p>
+                        <p>Neat wall mounting, leak-safe fittings, pressure checks, and guided first use for every family member.</p>
+                        <a href="pages/services.html" class="card-link">Learn more <i class="ri-arrow-right-line"></i></a>
                     </article>
-                    <article class="content-card premium-glass-card reveal active" style="padding: 35px; border-radius: var(--radius-md); transition: transform 0.3s ease, border-color 0.3s ease;">
-                        <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-soft); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                            <i class="ri-refresh-line" style="font-size: 1.6rem; color: var(--color-primary);"></i>
-                        </div>
+                    <article class="content-card card-premium premium-glass-card reveal active">
+                        <span class="card-top-accent"></span>
+                        <span class="card-icon-wrap"><i class="ri-refresh-line"></i></span>
+                        <span class="card-eyebrow">Maintenance • AMC</span>
                         <h3>AMC care</h3>
-                        <p>Filter changes, membrane checks, sanitization, and reminders are bundled into simple plans.</p>
+                        <p>Filter changes, membrane checks, sanitization, and reminders are bundled into simple annual plans.</p>
+                        <a href="pages/services.html" class="card-link">Learn more <i class="ri-arrow-right-line"></i></a>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- TDS Quick Check Interactive Widget -->
+        <!-- Interactive Estimator – consistent 3-col layout -->
         <section class="section-shell">
-            <div class="container" style="max-width: 900px; text-align: center;">
-                <div class="section-heading">
+            <div class="container" style="max-width: 980px;">
+                <div class="section-heading" style="text-align:center; margin-left:auto; margin-right:auto;">
                     <span class="eyebrow">Interactive Estimator</span>
                     <h2>Find Your Perfect Purification Level</h2>
                     <p>Select your water source to instantly view the recommended filtration stages and target TDS.</p>
                 </div>
-                <div class="premium-glass-card" style="padding: 40px; margin-top: 30px; text-align: left; display: grid; grid-template-columns: 1.2fr 1fr 1.2fr; gap: 30px; align-items: center; border-radius: var(--radius-md);">
-                    <div>
-                        <h3 style="margin-bottom: 20px;">Source Water</h3>
-                        <div style="display: flex; flex-direction: column; gap: 16px;">
-                            <label style="display: flex; align-items: center; gap: 12px; font-weight: 700; cursor: pointer; font-size: 1rem;">
-                                <input type="radio" name="home-source" value="municipal" checked style="width: 20px; height: 20px; accent-color: var(--color-primary);"> Municipal / Tap
+                <div class="premium-glass-card home-estimator-card reveal active">
+                    <div class="home-estimator-source">
+                        <h3>Source Water</h3>
+                        <div class="home-source-options">
+                            <label class="home-source-option">
+                                <input type="radio" name="home-source" value="municipal" checked>
+                                <span class="home-source-icon"><i class="ri-water-flash-line"></i></span>
+                                <span class="home-source-text"><strong>Municipal / Tap</strong><small>TDS 100–250 ppm</small></span>
                             </label>
-                            <label style="display: flex; align-items: center; gap: 12px; font-weight: 700; cursor: pointer; font-size: 1rem;">
-                                <input type="radio" name="home-source" value="borewell" style="width: 20px; height: 20px; accent-color: var(--color-primary);"> Ground / Borewell
+                            <label class="home-source-option">
+                                <input type="radio" name="home-source" value="borewell">
+                                <span class="home-source-icon"><i class="ri-landscape-line"></i></span>
+                                <span class="home-source-text"><strong>Ground / Borewell</strong><small>TDS 500–1500+ ppm</small></span>
                             </label>
-                            <label style="display: flex; align-items: center; gap: 12px; font-weight: 700; cursor: pointer; font-size: 1rem;">
-                                <input type="radio" name="home-source" value="tanker" style="width: 20px; height: 20px; accent-color: var(--color-primary);"> Tanker Water
+                            <label class="home-source-option">
+                                <input type="radio" name="home-source" value="tanker">
+                                <span class="home-source-icon"><i class="ri-truck-line"></i></span>
+                                <span class="home-source-text"><strong>Tanker Water</strong><small>Variable TDS & pathogens</small></span>
                             </label>
                         </div>
                     </div>
                     
-                    <!-- Gauge Panel -->
                     <div class="lux-gauge-container">
                         <div class="lux-gauge">
                             <div class="lux-gauge-needle" id="home-gauge-needle"></div>
@@ -155,30 +205,31 @@
                         </div>
                     </div>
 
-                    <!-- Recommendation Panel -->
-                    <div id="home-recommendation-panel" style="padding: 24px; background: var(--color-soft); border-radius: var(--radius-sm); border-left: 4px solid var(--color-secondary); min-height: 180px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div id="home-recommendation-panel" class="home-recommendation-panel">
                         <div>
-                            <h4 style="color: var(--color-primary); margin-bottom: 8px; font-size: 1.15rem;" id="home-rec-title">RO + UV Active Carbon</h4>
-                            <p style="font-size: 0.9rem; line-height: 1.45; color: var(--color-text-muted);" id="home-rec-desc">Calibrated for chlorine reduction and organic particulate extraction. Ideal for municipal inputs.</p>
+                            <span class="home-rec-badge">Recommended System</span>
+                            <h4 id="home-rec-title">RO + UV Active Carbon</h4>
+                            <p id="home-rec-desc">Calibrated for chlorine reduction and organic particulate extraction. Ideal for municipal inputs.</p>
                         </div>
-                        <div style="margin-top: 15px; font-size: 0.85rem; font-weight: 800; color: var(--color-text-main);">
-                            Recommended Plan: <br><span style="color: var(--color-secondary); font-size: 1rem;" id="home-rec-plan">Standard Care Plan</span>
+                        <div class="home-rec-plan">
+                            <small>Recommended Plan</small>
+                            <span id="home-rec-plan">Standard Care Plan</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Elevated Process / Split Section -->
+        <!-- Process / Split Section – media + ordered steps -->
         <section class="section-shell split-section">
             <div class="container split-grid">
                 <div class="split-media reveal active">
-                    <img src="https://i.pinimg.com/736x/17/1b/98/171b98b67710b2de6571fd9afca70f9f.jpg" alt="Precise service visit" loading="lazy" style="border-radius: var(--radius-md); box-shadow: var(--shadow-lg); width: 100%; height: 100%; object-fit: cover;">
+                    <img src="https://i.pinimg.com/736x/17/1b/98/171b98b67710b2de6571fd9afca70f9f.jpg" alt="Technician performing precise RO service" loading="lazy">
                 </div>
-                <div class="split-copy premium-glass-card reveal active" style="padding: 40px; border-radius: var(--radius-md);">
+                <div class="split-copy premium-glass-card reveal active">
                     <span class="eyebrow">Process</span>
                     <h2>A service visit that feels precise, tidy, and transparent</h2>
-                    <p>Technicians arrive with the likely parts, record the issue clearly, and explain what changed before they leave.</p>
+                    <p>Technicians arrive with the likely parts, record the issue clearly, and explain what changed before they leave — no surprises.</p>
                     <ol class="step-list">
                         <li>Inspect inlet water, tank pressure, flow rate, and visible fittings.</li>
                         <li>Replace exhausted filters with compatible cartridges and sanitize wet parts.</li>
@@ -188,43 +239,57 @@
             </div>
         </section>
 
-        <!-- Elevated Solutions / Resources -->
+        <!-- Solutions / Resources -->
         <section class="section-shell section-surface">
             <div class="container">
                 <div class="section-heading">
                     <span class="eyebrow">Resources</span>
                     <h2>Popular ROCare solutions</h2>
+                    <p style="color: var(--color-text-muted); margin-top: 10px; max-width: 560px;">From emergency repairs to planned upgrades — choose the service that fits your water quality and lifestyle.</p>
                 </div>
                 <div class="resource-grid">
-                    <article class="content-card premium-glass-card reveal active" style="padding: 30px;">
+                    <article class="content-card card-premium resource-premium premium-glass-card reveal active">
+                        <span class="card-top-accent"></span>
+                        <span class="card-icon-wrap"><i class="ri-tools-line"></i></span>
+                        <span class="card-eyebrow">Repair • On-site diagnosis</span>
                         <h3>RO repair</h3>
-                        <p>Low flow, noisy pump, leakage, taste change, or rejected water concerns.</p>
+                        <p>Low flow, noisy pump, leakage, taste change, or rejected water concerns — diagnosed on-site.</p>
+                        <a href="pages/booking.html" class="card-link">Book Repair <i class="ri-arrow-right-line"></i></a>
                     </article>
-                    <article class="content-card premium-glass-card reveal active" style="padding: 30px;">
+                    <article class="content-card card-premium resource-premium premium-glass-card reveal active">
+                        <span class="card-top-accent"></span>
+                        <span class="card-icon-wrap"><i class="ri-home-8-line"></i></span>
+                        <span class="card-eyebrow">New systems • Curated</span>
                         <h3>New purifier</h3>
-                        <p>RO, UV, UF, alkaline, and commercial options matched to local water quality.</p>
+                        <p>RO, UV, UF, alkaline, and commercial options matched to local water quality and kitchen layout.</p>
+                        <a href="pages/services.html" class="card-link">Explore Options <i class="ri-arrow-right-line"></i></a>
                     </article>
-                    <article class="content-card premium-glass-card reveal active" style="padding: 30px;">
+                    <article class="content-card card-premium resource-premium premium-glass-card reveal active">
+                        <span class="card-top-accent"></span>
+                        <span class="card-icon-wrap"><i class="ri-calendar-check-line"></i></span>
+                        <span class="card-eyebrow">Plans • Zero hassle</span>
                         <h3>Annual care</h3>
-                        <p>Scheduled maintenance with visit history, reminders, and transparent parts.</p>
+                        <p>Scheduled maintenance with visit history, reminders, and transparent parts — one plan, zero hassle.</p>
+                        <a href="pages/services.html" class="card-link">View AMC Plans <i class="ri-arrow-right-line"></i></a>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- Elevated Final CTA -->
+        <!-- Final CTA – high contrast glass cards (fixed for light mode) -->
         <section class="section-shell final-cta">
             <div class="container cta-grid">
                 <div class="premium-glass-card reveal active" style="padding: 40px; border-radius: var(--radius-md);">
                     <span class="eyebrow">Next step</span>
                     <h2>Ready for cleaner water at home?</h2>
-                    <p>Book a visit, request a product recommendation, or ask for AMC renewal help.</p>
+                    <p>Book a visit, request a product recommendation, or ask for AMC renewal help — response within 24 hours.</p>
                     <a class="btn btn-primary" href="pages/booking.html">Book Service</a>
                 </div>
                 <div class="cta-panel premium-glass-card reveal active" style="padding: 40px; border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: center;">
-                    <i class="ri-customer-service-2-line" style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 15px;"></i>
+                    <i class="ri-customer-service-2-line" style="font-size: 2.5rem; color: var(--color-secondary); margin-bottom: 15px;"></i>
                     <strong>ROCare support</strong>
                     <span>Service booking, product help, AMC renewals, and urgent purifier care.</span>
+                    <a href="tel:+919876543210" style="margin-top:10px; font-weight:800; color: var(--color-primary); display:inline-flex; align-items:center; gap:6px;"><i class="ri-phone-fill"></i> +91 98765 43210</a>
                 </div>
             </div>
         </section>
@@ -275,7 +340,6 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
-    <!-- Home Page Recommendation Selector Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const sourceRadios = document.querySelectorAll('input[name="home-source"]');
@@ -316,11 +380,7 @@
                     recTitle.textContent = data.title;
                     recDesc.textContent = data.desc;
                     recPlan.textContent = data.plan;
-                    
-                    // Animate gauge
                     needle.style.transform = `rotate(${data.deg}deg)`;
-                    
-                    // Count up/down animation for TDS value
                     let start = parseInt(gaugeVal.textContent);
                     let end = data.tds;
                     let steps = 15;
@@ -329,9 +389,7 @@
                         currentStep++;
                         let nextVal = Math.round(start + (end - start) * (currentStep / steps));
                         gaugeVal.textContent = nextVal;
-                        if (currentStep >= steps) {
-                            clearInterval(interval);
-                        }
+                        if (currentStep >= steps) clearInterval(interval);
                     }, 30);
                 });
             });
