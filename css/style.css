@@ -1285,7 +1285,11 @@ p {
     order: 3;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 5px;
+    margin-left: auto;
+    margin-right: 6px;
+    margin-inline-start: auto;
+    margin-inline-end: 6px;
   }
 
   .nav-actions .cta-btn {
@@ -1416,7 +1420,11 @@ p {
   }
 
   .logo-copy small {
-    display: none;
+    display: block !important;
+    font-size: 0.60rem !important;
+    line-height: 1.1 !important;
+    white-space: nowrap !important;
+    opacity: 0.85;
   }
 
 

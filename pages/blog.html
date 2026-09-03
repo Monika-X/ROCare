@@ -54,28 +54,126 @@
         </div>
     </header>
     <main class="blog-premium">
-        <!-- Elevated Hero Section -->
-        <section class="hero-section section-shell">
-            <div class="container hero-grid">
-                <div class="hero-copy premium-glass-card reveal active" style="padding: 40px; border-radius: var(--radius-md);">
-                    <span class="eyebrow"><i class="ri-article-line" style="color: var(--color-secondary);"></i> The Water Journal</span>
-                    <h1 style="font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 4.5vw, 3.8rem); line-height: 1.15; font-weight: 600;">Insights on Purity & <span class="gradient-text">Wellness.</span></h1>
-                    <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 30px; color: var(--color-text-muted);">Explore professional guidance, filtration science, seasonal water diagnostic shifts, and buying guides prepared by ROCare specialists.</p>
-                    <div class="hero-actions">
-                        <a class="btn btn-primary" href="contact.html">Ask a Question</a>
-                        <a class="btn btn-outline" href="services.html">View Services</a>
+        <!-- Premium Hero – Redesigned proper alignment (light premium, slightly less than Home2) -->
+        <section class="hero-section section-shell home-hero blog-hero-premium">
+            <div class="home-hero-bg-image" aria-hidden="true" style="background-image: linear-gradient(rgba(255,255,255,0.58), rgba(247,250,248,0.78)), url('https://i.pinimg.com/736x/2a/bb/3a/2abb3ab7e9f21e794df86467e691bf43.jpg');"></div>
+            <div class="home-hero-orb" aria-hidden="true"></div>
+            <div class="home-hero-orb home-hero-orb-2" aria-hidden="true"></div>
+            <div class="home-hero-grid-pattern" aria-hidden="true"></div>
+            <div class="hero-bg-ro-anim" aria-hidden="true">
+                <div class="bg-water-wave"></div>
+                <div class="bg-water-wave bg-water-wave-2"></div>
+                <span class="bg-bubble b1"></span>
+                <span class="bg-bubble b2"></span>
+                <span class="bg-bubble b3"></span>
+                <span class="bg-drop d1"></span>
+                <div class="bg-flow-track"><em></em></div>
+                <div class="bg-filter-node n1"><i class="ri-article-line"></i></div>
+            </div>
+            <div class="container">
+                <div class="premium-glass-card hero-unified reveal active">
+                    <div class="hero-grid hero-grid--integrated">
+                        <div class="hero-copy hero-copy--plain">
+                            <span class="eyebrow hero-eyebrow-anim"><i class="ri-article-line" style="color: var(--color-secondary);"></i> The Water Journal</span>
+                            <h1 class="hero-title-anim" style="font-family: 'Playfair Display', serif;">Insights on Purity & <span class="gradient-text gradient-shimmer">Wellness.</span></h1>
+                            <p class="hero-lead-anim">Explore professional guidance, filtration science, seasonal water diagnostic shifts, and buying guides prepared by ROCare specialists — curated for taste, health and longevity.</p>
+                            <div class="hero-actions hero-actions-anim">
+                                <a class="btn btn-primary btn-pulse" href="#articles">Browse Articles <i class="ri-arrow-right-line" style="margin-left:6px;"></i></a>
+                                <a class="btn btn-outline" href="contact.html">Ask a Question</a>
+                            </div>
+                            <div class="home-hero-trust" aria-label="Trust indicators">
+                                <span class="trust-chip-anim" style="animation-delay:0.1s"><i class="ri-quill-pen-line"></i> 18+ expert articles</span>
+                                <span class="trust-chip-anim" style="animation-delay:0.2s"><i class="ri-calendar-line"></i> Weekly updates</span>
+                                <span class="trust-chip-anim" style="animation-delay:0.3s"><i class="ri-star-line"></i> Trusted by 3.5k</span>
+                            </div>
+                        </div>
+                        <div class="hero-ro-showcase hero-ro-showcase--side reveal active">
+                            <div class="hero-ro-frame">
+                                <img src="https://i.pinimg.com/736x/2a/bb/3a/2abb3ab7e9f21e794df86467e691bf43.jpg" alt="Insights on Purity and Wellness" loading="eager">
+                                <div class="hero-ro-glow"></div>
+                                <div class="hero-ro-ripple"></div>
+                                <div class="hero-ro-ripple hero-ro-ripple-2"></div>
+                                <span class="hero-ro-badge"><i class="ri-article-line"></i> New • TDS Guide</span>
+                            </div>
+                            <div class="hero-ro-water-drop">
+                                <i class="ri-drop-line"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <figure class="hero-media reveal active" style="position: relative;">
-                    <div style="position: absolute; top: -20px; right: -20px; width: 60px; height: 60px; background: radial-gradient(circle, rgba(20,154,154,0.2) 0%, transparent 75%); animation: float 6s infinite alternate; border-radius: 50%;"></div>
-                    <img src="https://i.pinimg.com/736x/2a/bb/3a/2abb3ab7e9f21e794df86467e691bf43.jpg" alt="Insights on Purity and Wellness" loading="eager" style="border-radius: var(--radius-md); box-shadow: var(--shadow-lg); width: 100%; height: 100%; object-fit: cover;">
-                    <figcaption>ROCare water service experience</figcaption>
-                </figure>
+            </div>
+        </section>
+
+        <!-- Featured Insights – More contents #1 -->
+        <section class="section-shell">
+            <div class="container">
+                <div class="section-heading" style="text-align: center; margin-left: auto; margin-right: auto; max-width: 720px; display: flex; flex-direction: column; align-items: center;">
+                    <span class="eyebrow">Featured Insights</span>
+                    <h2 style="font-family: 'Playfair Display', serif; text-align: center;">Editor's Picks — Start Here</h2>
+                    <p style="text-align: center; color: var(--color-text-muted); max-width: 560px;">Hand-picked by ROCare specialists for first-time readers — the fundamentals of pure water.</p>
+                </div>
+                <div class="card-grid">
+                    <article class="content-card card-premium premium-glass-card reveal active" style="position: relative; overflow: hidden; padding: 0;">
+                        <div style="height: 190px; overflow: hidden;"><img src="https://i.pinimg.com/1200x/89/60/41/896041a3dbb216952999be84648058dd.jpg" alt="TDS 101 water test" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                        <div style="padding: 24px;">
+                            <span class="card-eyebrow">Must-read • 5 min</span>
+                            <h3 style="font-family: 'Playfair Display', serif;"><a href="blog-details-19.html">TDS 101: What 60 vs 650 ppm Means</a></h3>
+                            <p style="font-size: 0.92rem;">The single metric that decides which filter your home needs — explained with pressure and taste context.</p>
+                            <a href="blog-details-19.html" class="card-link" style="margin-top: 12px;">Read now <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </article>
+                    <article class="content-card card-premium premium-glass-card reveal active" style="position: relative; overflow: hidden; padding: 0;">
+                        <div style="height: 190px; overflow: hidden;"><img src="https://i.pinimg.com/1200x/70/c6/ed/70c6ede236820e6dcc49687b50056e77.jpg" alt="RO Membrane" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                        <div style="padding: 24px;">
+                            <span class="card-eyebrow">Technology • 6 min</span>
+                            <h3 style="font-family: 'Playfair Display', serif;"><a href="blog-details-20.html">RO Membrane Lifespan</a></h3>
+                            <p style="font-size: 0.92rem;">Why pressure, pre-filters and TDS together decide when to replace — not just the calendar.</p>
+                            <a href="blog-details-20.html" class="card-link" style="margin-top: 12px;">Read now <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </article>
+                    <article class="content-card card-premium premium-glass-card reveal active" style="position: relative; overflow: hidden; padding: 0;">
+                        <div style="height: 190px; overflow: hidden;"><img src="https://i.pinimg.com/736x/01/78/3d/01783dd143f996d645c665bf56db0555.jpg" alt="Alkaline water" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                        <div style="padding: 24px;">
+                            <span class="card-eyebrow">Wellness • 4 min</span>
+                            <h3 style="font-family: 'Playfair Display', serif;"><a href="blog-details-21.html">Alkaline: Hype or Health?</a></h3>
+                            <p style="font-size: 0.92rem;">What pH 7.4 water actually does for digestion and taste — beyond marketing claims.</p>
+                            <a href="blog-details-21.html" class="card-link" style="margin-top: 12px;">Read now <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Browse by Topic – More contents #2 -->
+        <section class="section-shell section-surface" style="padding-top: 48px; padding-bottom: 48px;">
+            <div class="container">
+                <div class="section-heading" style="text-align: center; margin-left: auto; margin-right: auto; max-width: 720px; display: flex; flex-direction: column; align-items: center;">
+                    <span class="eyebrow">Explore by Topic</span>
+                    <h2 style="font-family: 'Playfair Display', serif; text-align: center;">Browse by Water Need</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 16px;">
+                    <a href="#articles" class="premium-glass-card" data-filter-topic="diagnostics" style="padding: 22px; text-align: center; border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; gap: 10px; text-decoration: none;">
+                        <span style="width: 48px; height: 48px; display: grid; place-items: center; border-radius: 12px; background: linear-gradient(135deg, rgba(7,94,103,0.08), rgba(20,154,154,0.14)); color: var(--color-primary); font-size: 1.4rem;"><i class="ri-test-tube-line"></i></span>
+                        <strong style="color: var(--color-text-main);">Diagnostics</strong><small style="color: var(--color-text-muted); font-weight: 600;">6 articles • TDS, pressure</small>
+                    </a>
+                    <a href="#articles" class="premium-glass-card" style="padding: 22px; text-align: center; border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; gap: 10px; text-decoration: none;">
+                        <span style="width: 48px; height: 48px; display: grid; place-items: center; border-radius: 12px; background: linear-gradient(135deg, rgba(7,94,103,0.08), rgba(20,154,154,0.14)); color: var(--color-primary); font-size: 1.4rem;"><i class="ri-cpu-line"></i></span>
+                        <strong style="color: var(--color-text-main);">Technology</strong><small style="color: var(--color-text-muted); font-weight: 600;">4 articles • RO, UV, UF</small>
+                    </a>
+                    <a href="#articles" class="premium-glass-card" style="padding: 22px; text-align: center; border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; gap: 10px; text-decoration: none;">
+                        <span style="width: 48px; height: 48px; display: grid; place-items: center; border-radius: 12px; background: linear-gradient(135deg, rgba(7,94,103,0.08), rgba(20,154,154,0.14)); color: var(--color-primary); font-size: 1.4rem;"><i class="ri-heart-pulse-line"></i></span>
+                        <strong style="color: var(--color-text-main);">Wellness</strong><small style="color: var(--color-text-muted); font-weight: 600;">4 articles • pH, minerals</small>
+                    </a>
+                    <a href="#articles" class="premium-glass-card" style="padding: 22px; text-align: center; border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; gap: 10px; text-decoration: none;">
+                        <span style="width: 48px; height: 48px; display: grid; place-items: center; border-radius: 12px; background: linear-gradient(135deg, rgba(7,94,103,0.08), rgba(20,154,154,0.14)); color: var(--color-primary); font-size: 1.4rem;"><i class="ri-tools-line"></i></span>
+                        <strong style="color: var(--color-text-main);">Maintenance</strong><small style="color: var(--color-text-muted); font-weight: 600;">4 articles • filters, AMC</small>
+                    </a>
+                </div>
             </div>
         </section>
 
         <!-- Dynamic Blog Deck Grid Section with 12 Cards -->
-        <section class="section-shell section-surface">
+        <section id="articles" class="section-shell section-surface">
             <div class="container">
                 <div style="text-align: center; margin-bottom: 40px;">
                     <span class="eyebrow">All Articles</span>
@@ -335,6 +433,45 @@
             </div>
         </section>
 
+        <!-- Water Wisdom – More contents #3 + Newsletter -->
+        <section class="section-shell">
+            <div class="container">
+                <div class="section-heading" style="text-align: center; margin-left: auto; margin-right: auto; max-width: 720px; display: flex; flex-direction: column; align-items: center;">
+                    <span class="eyebrow">Water Wisdom</span>
+                    <h2 style="font-family: 'Playfair Display', serif; text-align: center;">Quick Tips from Specialists</h2>
+                    <p style="text-align: center; color: var(--color-text-muted); max-width: 560px;">Bite-sized guidance you can apply today — no jargon, just practical care.</p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 18px; margin-top: 10px;">
+                    <div class="premium-glass-card" style="padding: 22px; border-radius: var(--radius-md); display: flex; gap: 14px; align-items: flex-start;">
+                        <span style="width: 40px; height: 40px; display: grid; place-items: center; border-radius: 10px; background: rgba(20,154,154,0.10); color: var(--color-primary); font-size: 1.2rem; flex-shrink: 0;"><i class="ri-drop-line"></i></span>
+                        <div><strong style="display: block; color: var(--color-text-main); font-size: 0.95rem;">Check TDS monthly</strong><span style="color: var(--color-text-muted); font-size: 0.85rem; line-height: 1.4;">A ₹300 meter can tell you when filters are truly exhausted.</span></div>
+                    </div>
+                    <div class="premium-glass-card" style="padding: 22px; border-radius: var(--radius-md); display: flex; gap: 14px; align-items: flex-start;">
+                        <span style="width: 40px; height: 40px; display: grid; place-items: center; border-radius: 10px; background: rgba(20,154,154,0.10); color: var(--color-primary); font-size: 1.2rem; flex-shrink: 0;"><i class="ri-time-line"></i></span>
+                        <div><strong style="display: block; color: var(--color-text-main); font-size: 0.95rem;">Replace pre-filter every 6 months</strong><span style="color: var(--color-text-muted); font-size: 0.85rem; line-height: 1.4;">Delay clogs the RO membrane and doubles cost.</span></div>
+                    </div>
+                    <div class="premium-glass-card" style="padding: 22px; border-radius: var(--radius-md); display: flex; gap: 14px; align-items: flex-start;">
+                        <span style="width: 40px; height: 40px; display: grid; place-items: center; border-radius: 10px; background: rgba(20,154,154,0.10); color: var(--color-primary); font-size: 1.2rem; flex-shrink: 0;"><i class="ri-flashlight-line"></i></span>
+                        <div><strong style="display: block; color: var(--color-text-main); font-size: 0.95rem;">Sanitize tank quarterly</strong><span style="color: var(--color-text-muted); font-size: 0.85rem; line-height: 1.4;">Prevents biofilm — especially after vacations.</span></div>
+                    </div>
+                    <div class="premium-glass-card" style="padding: 22px; border-radius: var(--radius-md); display: flex; gap: 14px; align-items: flex-start;">
+                        <span style="width: 40px; height: 40px; display: grid; place-items: center; border-radius: 10px; background: rgba(20,154,154,0.10); color: var(--color-primary); font-size: 1.2rem; flex-shrink: 0;"><i class="ri-customer-service-2-line"></i></span>
+                        <div><strong style="display: block; color: var(--color-text-main); font-size: 0.95rem;">Book AMC before expiry</strong><span style="color: var(--color-text-muted); font-size: 0.85rem; line-height: 1.4;">Save 20-30% vs. one-off repairs.</span></div>
+                    </div>
+                </div>
+                <div class="premium-glass-card" style="margin-top: 28px; padding: 28px; border-radius: var(--radius-md); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; background: linear-gradient(135deg, rgba(7,94,103,0.06), rgba(20,154,154,0.06)), var(--color-surface);">
+                    <div>
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; margin-bottom: 6px;">Get new articles in your inbox</h3>
+                        <p style="color: var(--color-text-muted); font-size: 0.92rem; margin: 0;">Filter care reminders + seasonal water alerts — no spam.</p>
+                    </div>
+                    <form class="newsletter-form" style="margin: 0; min-width: 320px; flex: 1 1 320px; max-width: 420px;">
+                        <input type="email" placeholder="Email address" aria-label="Email address" required>
+                        <button class="btn btn-primary" type="submit">Join <i class="ri-arrow-right-line"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
         <!-- Elevated Final CTA -->
         <section class="section-shell final-cta">
             <div class="container cta-grid">
@@ -400,47 +537,56 @@
     <script src="../js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const filterBtns = document.querySelectorAll('.lux-filter-btn');
-            const blogCards = document.querySelectorAll('.card-grid .content-card');
+            const articlesSection = document.getElementById('articles');
+            if (!articlesSection) return;
+            
+            const filterBtns = articlesSection.querySelectorAll('.lux-filter-btn');
+            const blogDeck = articlesSection.querySelector('.card-grid');
+            if (!blogDeck) return;
+            
+            // Scope exclusively to articles deck so Featured Insights cards are never touched
+            const blogCards = Array.from(blogDeck.querySelectorAll('.content-card'));
             const viewMoreBtn = document.getElementById('btn-view-more');
             const viewMoreContainer = document.getElementById('view-more-container');
             
             let activeFilter = 'all';
-            let visibleCount = 3;
+            let visibleCount = 3; // Default 3 cards visible
             
             function updateCardVisibility() {
-                // Get all cards matching the active filter
-                const filteredCards = Array.from(blogCards).filter(card => {
+                // Get cards in this deck matching active filter
+                const filteredCards = blogCards.filter(card => {
                     return activeFilter === 'all' || card.dataset.category === activeFilter;
                 });
                 
-                // Hide all cards first with animation reset
+                // Hide all cards in this deck first
                 blogCards.forEach(card => {
                     card.style.display = 'none';
                     card.style.opacity = '0';
-                    card.style.transform = 'scale(0.95)';
+                    card.style.transform = 'scale(0.96)';
                 });
                 
-                // Show cards in matching list up to visibleCount
+                // Show matching cards up to visibleCount (default 3, +3 on each View More click)
                 filteredCards.forEach((card, index) => {
                     if (index < visibleCount) {
                         card.style.display = 'flex';
-                        // Stagger entrance transitions slightly
                         setTimeout(() => {
                             card.style.opacity = '1';
                             card.style.transform = 'scale(1)';
-                        }, 50 + (index % 3) * 40);
+                        }, 25 + (index % 3) * 45);
                     }
                 });
                 
-                // Display View More button if more elements remain to show
-                if (filteredCards.length > visibleCount) {
-                    viewMoreContainer.style.display = 'block';
-                } else {
-                    viewMoreContainer.style.display = 'none';
+                // Toggle "View More Articles" button: visible if more cards remain to show
+                if (viewMoreContainer) {
+                    if (filteredCards.length > visibleCount) {
+                        viewMoreContainer.style.display = 'block';
+                    } else {
+                        viewMoreContainer.style.display = 'none';
+                    }
                 }
             }
             
+            // Filter click handler: resets to 3 cards for selected category
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
                     filterBtns.forEach(b => {
@@ -456,17 +602,20 @@
                     btn.style.color = 'var(--color-primary)';
                     
                     activeFilter = btn.dataset.filter;
-                    visibleCount = 3; // Reset to default 3 cards on filter change
+                    visibleCount = 3; // Reset to 3 cards on filter change
                     updateCardVisibility();
                 });
             });
             
-            viewMoreBtn.addEventListener('click', () => {
-                visibleCount += 3;
-                updateCardVisibility();
-            });
+            // View More click handler: reveals next 3 cards on each click
+            if (viewMoreBtn) {
+                viewMoreBtn.addEventListener('click', () => {
+                    visibleCount += 3;
+                    updateCardVisibility();
+                });
+            }
             
-            // Trigger initial load
+            // Initial render: show default 3 cards
             updateCardVisibility();
         });
     </script>
